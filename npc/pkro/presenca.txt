@@ -1,0 +1,264 @@
+viridian,93,117,5	script	Marcador de Presença	899,{ 
+set @npc$,"[^ff9900 "+StrNpcInfo(1)+" ^000000]";
+ 
+	mes @npc$;
+	mes ""+strcharinfo(0)+", bem-vind"+(Sex?"o":"a")+" ao sistema de presença.";
+	mes "O que deseja fazer hoje?";
+	if(getgmlevel() >= 80) set .@m$,"Configurar sistema";
+	switch(select("Marcar frequência","Trocar meus pontos","Ver meus pontos",.@m$,"Informações","Sair"))
+	{
+		case 1:
+		next;
+		mes @npc$;
+		if(!#counting)
+		{
+			set #online_time, gettimetick(2) + $time;
+			set #counting,1;
+			mes "Tempo marcado, volte dentro de "+((#online_time-gettimetick(2))/60)+" minuto(s)!";
+			close2;
+			//dispbottom "Para verificar o tempo que resta, mande uma MP para npc:"+strnpcinfo(1)+".";
+			end;
+		}
+		if(#online_time >= gettimetick(2))
+		{	
+			mes "Você ainda deve aguardar "+((#online_time-gettimetick(2))/60)+" minuto(s).";
+			close;
+		}
+		mes "Receba agora seu ponto de presença.";
+		set #point_presence,#point_presence + $point;
+		set #counting,0;
+		close;
+ 
+		case 2:
+		next;
+		mes @npc$;
+		mes "Escolha um item";
+		mes "^00bfff[Preço]^000000 - ^ff0000Quantidade^000000x ^ff9900Item^000000";
+		callsub OnItemRemaker;
+		set .@Choose,$@Choose;
+		next;
+		mes @npc$;
+		mes "Item escolhido: ^ff0000"+GetItemName($presence_id[.@Choose])+"^000000";
+		mes "Quantidade do item: ^ff0000"+getd("$presenceamount_"+.@Choose+"["+.@num+"]")+"^000000";
+		mes "Preço: ^ff0000"+getd("$presencepoint_"+.@Choose+"["+.@num+"]")+"^000000";
+		if(select("Comprar:Cancelar") == 2)
+		{
+			next;
+			mes @npc$;
+			mes "Volte quando quiser.";
+			close;
+		}
+		if(#point_presence < getd("$presencepoint_"+.@Choose+"["+.@num+"]"))
+		{
+			next;
+			mes @npc$;
+			mes "Você não tem a quantidade necessária de pontos.";
+			close;
+		}
+		set #point_presence,#point_presence - getd("$presencepoint_"+.@Choose+"["+.@num+"]");
+		getitem $presence_id[.@Choose], getd("$presenceamount_"+.@Choose+"["+.@num+"]");
+		close;
+ 
+		case 3:
+		next;
+		mes @npc$;
+		mes "Atualmente você possui "+#point_presence+" pontos de frequência.";
+		close;
+ 
+		case 4:
+		switch(select("Adicionar item:Remover item:Remover todos os itens:Alterar tempo de espera:Alterar quantidade de pontos ganhos:Voltar"))
+		{
+			case 1:
+			next;
+			mes @npc$;
+			mes "Você escolheu 'Adicionar item'.";
+			mes "Por favor, digite o ID do item que o jogador poderá comprar com pontos de frequência.";
+			input .@getitem[0];
+			next;
+			mes @npc$;
+			mes "Por favor, digite a quantidade desse item.";
+			input .@amount[0];
+			next;
+			mes @npc$;
+			mes "Agora digite quantos pontos de frequência serão necessários para o jogador comprar esse item.";
+			input .@point[0];
+			next;
+			mes @npc$;
+			mes "Item: ^ff0000"+GetItemName(.@getitem[0])+"^000000";
+			mes "Quantidade: ^ff0000"+.@amount[0]+"^000000";
+			mes "Preço: ^ff0000"+.@point[0]+"^000000";
+			if(select("Cancelar:Confirmar") == 1) { callsub OnExit; }
+			next;
+			mes @npc$;
+			set .@QuestId,0;
+			set .@Size,getarraysize($presence_id);
+			set .@loop,1;
+			set .@num,0;
+			while(.@loop)
+			{
+				if($presence_id[.@num] == 0 || .@num == .@size)
+					set .@loop,0;
+				else
+					set .@num, .@num + 1;
+			}
+			set .@QuestId, .@num;
+			set $presence_id[.@QuestId],.@getitem[0];
+			setd "$presenceamount_"+.@QuestId+"[0]",.@amount[0];
+			setd "$presencepoint_"+.@QuestId+"[0]",.@point[0];
+			set .@Size,getarraysize(.@getitem);
+			for(set .@num, 1; .@num <= .@Size; set .@num, .@num + 1)
+				setd "$presenceq_"+.@QuestId+"["+.@num+"]",.@getitem[.@num];
+				setd "$presenceamount_"+.@QuestId+"["+.@num+"]",.@amount[.@num];
+				setd "$presencepoint_"+.@QuestId+"["+.@num+"]",.@point[.@num];
+			mes "Item adicionado.";
+			close;
+ 
+			case 2:
+			callsub OnItemRemaker;
+			set .@Choose,$@Choose;
+			next;
+			mes @npc$;
+			mes "Gostaria de remover o item ^ff0000"+GetItemName($presence_id[.@Choose])+"^000000?";
+			if(select("Não:Sim") == 1) { callsub OnExit; }
+			next;
+			mes @npc$;
+			set .@Size,getarraysize(getd("$presenceq_"+.@Choose));
+			for(set .@num,1; .@num < .@Size; set .@num,.@num + 1)
+			{
+				setd "$presenceq_"+.@Choose+"["+.@num+"]",0;
+				setd "$presenceamount_"+.@Choose+"["+.@num+"]",0;
+				setd "$presencepoint_"+.@Choose+"["+.@num+"]",0;
+			}
+			set $presence_id[.@Choose],0;
+			setd "$presenceamount_"+.@Choose+"[0]",0;
+			setd "$presencepoint_"+.@Choose+"[0]",0;
+			mes "Item removido.";
+			close;
+ 
+			case 3:
+			next;
+			mes @npc$;
+			mes "Deseja remover todos os itens de troca?";
+			if(select("Não:Sim") == 1) { callsub OnExit; }
+			next;
+			mes @npc$;
+			set .@Size,getarraysize($presence_id);
+			for(set .@num,0; .@num < .@Size; set .@num, .@num + 1)
+			{
+				set .@Size2,getarraysize(getd("$presenceq_"+.@num));
+				for(set .@num2,1; .@num2 < .@Size2; set .@num2, .@num2 + 1)
+				{
+					setd "$presenceq_"+.@num+"["+.@num2+"]",0;
+					setd "$presenceamount_"+.@num+"["+.@num2+"]",0;
+					setd "$presencepoint_"+.@num+"["+.@num2+"]",0;
+				}
+				set $presence_id[.@num],0;
+				setd "$presenceamount_"+.@num+"[0]",0;
+				setd "$presencepoint_"+.@num,0;
+			}
+			mes "Todos os itens foram removidos.";
+			close;
+ 
+			case 4:
+			next;
+			mes @npc$;
+			mes "Você escolheu 'Alterar tempo de frequência'.";
+			mes "Por favor, digite o novo tempo que o jogador precisará ficar online para retirar seu ponto de frequência. [em segundos]";
+			input @time_digit;
+			next;
+			mes @npc$;
+			mes "Novo tempo em segundos: ^ff0000"+@time_digit+"^000000";
+			mes "Novo tempo em minutos: ^ff0000"+@time_digit/60+"^000000";
+			if(select("Cancelar:Confirmar") == 1) { callsub OnExit; }
+			next;
+			mes @npc$;
+			set $time,@time_digit;
+			set $new_time,1;
+			mes "Tempo de espera alterado.";
+			close;
+ 
+			case 5:
+			next;
+			mes @npc$;
+			mes "Você escolheu 'Alterar quantidade de pontos ganhos'.";
+			mes "Digite a nova quantidade de pontos que o jogador ganhará ao marcar frequência.";
+			input @point_digit;
+			next;
+			mes @npc$;
+			mes "Nova quantidade de pontos: ^ff0000"+@point_digit+"^000000";
+			if(select("Cancelar:Confirmar") == 1) { callsub OnExit; }
+			next;
+			mes @npc$;
+			mes "Quantidade de pontos alterada.";
+			set $point,@point_digit;
+			set $new_point,1;
+			close;
+ 
+			case 6:
+			callsub OnExit;
+		}
+	case 5:
+	next;
+	mes @npc$;
+	mes "Aqui você poderá ganhar pontos por tempo online no servidor.";
+	next;
+	mes @npc$;
+	mes "A cada "+$time/60+" minutos, você ganhará "+$point+" ponto(s).";
+	next;
+	mes @npc$;
+	mes "Você pode trocar os pontos acumulados por itens.";
+	mes "Aproveite!";
+	close;
+ 
+	case 6:
+ 	callsub OnExit;
+	}
+ 
+OnItemRemaker:
+	set .@Size,getarraysize($presence_id);
+	set .@Size2,getarraysize(getd("$presenceamount_"+.@num));
+	for(set .@num,0; .@num < .@Size; set .@num, .@num + 1)
+		set .@ChooseMenu$, .@ChooseMenu$+ "^00bfff["+getd ("$presencepoint_"+.@num+"["+.@num2+"]")+"]^000000"+" ^ff0000- "+getd ("$presenceamount_"+.@num+"["+.@num2+"]")+"x^000000 ^ff9900"+GetItemName(getd("$presence_id"+"["+.@num+"]"))+"^000000:";
+	set .@ChooseMenu$,.@ChooseMenu$+"Cancelar";
+	set $@Choose,select(.@ChooseMenu$)-1;
+	if(($@Choose+1) > .@num) { callsub OnExit; }
+	return;
+ 
+OnExit:
+	next;
+	mes @npc$;
+	mes "Estarei aqui caso precisar.";
+	close;
+ 
+OnWhisperGlobal:
+	if(!#counting)
+	{
+		dispbottom "Você ainda não marcou sua presença.";
+		end;
+	}
+	dispbottom "Faltam ainda "+((#online_time-gettimetick(2))/60)+" minuto(s).";
+	end;
+ 
+OnPCLogoutEvent:
+	if(#counting == 1)
+	{
+		if(checkvending(strcharinfo(0)))
+		{
+			set #counting,0;
+		}
+		set #offline_time,#online_time - gettimetick(2);
+		end;
+	}
+ 
+OnPCLoginEvent:
+	if(#counting == 1)
+	{
+		set #online_time, gettimetick(2) + #offline_time;
+		end;
+	}
+ 
+OnInit:
+	if(!$new_time) { set $time,3600; }
+	if(!$new_point) { set $point,1; }
+end;
+}

@@ -1,0 +1,136 @@
+//////////////////////////////////////////
+//NPC: Chat Global		   	//
+//////////////////////////////////////////
+//Description: npc Que manda menssagem	//
+// global parecido com torpedo vip	//
+//////////////////////////////////////////
+//Changelog:				//
+// V1.0 - Script Original por Douglas 	//
+// V2.0 - Script Reformulador por Rick	//
+//  	adicionado cobran�a de zeny	//
+//	por cada menssagem		//
+//	+ menssagem vip onde � cobrado	//
+//	uma quantia menor de zeny	//
+//////////////////////////////////////////
+-	script	mapa	-1,{
+
+OnWhisperGlobal:
+
+Set @mapa,5000; // Zeny Cobrado de Player free Para Mandar Mensagem para o mapa
+
+If (Zeny < @mapa) {
+	mes "Message Price:"+@mapa+"z";
+	mes "Insufficient Zeny to send Message.";
+	Close;
+}
+	set zeny,zeny-@mapa;
+getmapxy .@mapname$, .@x, .@y, 0;
+mapannounce .@mapname$,strcharinfo(0)+":"+@whispervar0$, bc_map,0xFF0000;
+dispbottom "Message cost is: "+@mapa+"z";
+
+end;
+}
+-	script	global	-1,{
+
+OnWhisperGlobal:
+
+Set @global,20000; //Zeny Cobrado de player free para mandar Mensagem para todo servidor
+
+If (Zeny < @global) {
+	mes "Message Price: "+@global+"z";
+	mes "Insufficient Zeny to send Message.";
+	Close;
+}
+Set Zeny, Zeny - @global;
+announce ""+strcharinfo(0)+" : "+@whispervar0$+"",bc_blue|bc_all;
+dispbottom "Message cost is: "+@global+"z";
+end;
+}
+-	script	mapavip	-1,{
+
+OnWhisperGlobal:
+
+Set @mapavip,3000; // Zeny Cobrado de Player vip Para Mandar Mensagem para o mapa
+Set @viplevel,1;
+If (GetGmLevel () < @viplevel) {
+	mes "You cannot use my Services.";
+	Close;
+}
+
+If (Zeny < @mapavip) {
+	mes "Message Price: "+@mapavip+"z";
+	mes "Insufficient Zeny to send Message.";
+	Close;
+}
+	set zeny,zeny-@mapavip;
+getmapxy .@mapname$, .@x, .@y, 0;
+mapannounce .@mapname$,strcharinfo(0)+":"+@whispervar0$, bc_map,0xFF0000;
+dispbottom "Message cost is: "+@mapavip+"z";
+
+end;
+}
+
+-	script	globalvip	-1,{
+
+OnWhisperGlobal:
+
+Set @globalvip,10000; // Zeny Cobrado de Player vip Para Mandar Mensagem para todo servidor
+Set @viplevel,1;
+If (GetGmLevel () < @viplevel) {
+	mes "You cannot use my Services.";
+	Close;
+}
+
+If (Zeny < @globalvip) {
+	mes "Message Price: "+@globalvip+"z";
+	mes "Insufficient Zeny to send Message.";
+	Close;
+}
+	set zeny,zeny-@globalvip;
+announce ""+strcharinfo(0)+" : "+@whispervar0$+"",bc_blue|bc_all;
+dispbottom "Message cost is: "+@globalvip+"z";
+end;
+}
+
+viridian.gat,106,90,6	script	Sistema de Whisper	817,{
+
+Set .Zenymapa,5000; // Zeny Cobrado de Player free Para Mandar Mensagem para o mapa
+Set .Zenyglobal,20000; // Zeny Cobrado de Player free Para Mandar Mensagem para o Todo servidor
+Set .Zenymapavip,3000; // Zeny Cobrado de Player VIP Para Mandar Mensagem para o mapa
+Set .Zenyglobalvip,10000; // Zeny Cobrado de Player VIP Para Mandar Mensagem para o Todo servidor
+Set .ReqLevel, 1; // level Vip do seu servidor
+
+If (GetGmLevel () < .ReqLevel) {
+mes "Chat System Explanation:";
+next;
+mes "You are able to speek with anyone connected.";
+mes "To use, type/whisper ^FF0000npc:global^000000 in the small left box.";
+mes "To use, type/whisper^FF0000npc:mapa^000000, if you have the map.";
+next;
+mes "You can go about all you want..";
+mes " Unless you are out of money to payback.";
+next;
+mes "A fee will be charged for each " + .Zenymapa + " zeny to message all over the entire map";
+mes "For every service costs: " + .Zenyglobal + " zenys.";
+next;
+mes "No insults, spamming, botting or hacking will be tolerated.";
+mes "You will be banned!";
+close;
+}
+
+mes "VIP System";
+next;
+mes "You are able to speak with anyone connected.";
+mes "To use, type/whisper ^FF0000npc:globalvip^000000 in the small left box.";
+mes "To use, type/whisper ^FF0000npc:mapavip^000000, if you have the map.";
+next;
+mes "You can go about all you want..";
+mes " Unless you are out of money to payback.";
+next;
+mes "A fee will be charged for each" + .Zenymapavip + " zeny to message all over the map";
+mes "For every service costs: " + .Zenyglobalvip + " zenys.";
+next;
+mes "No insults, spamming, botting or hacking will be tolerated.";
+mes "You will be banned!";
+close;
+}

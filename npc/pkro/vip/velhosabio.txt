@@ -1,0 +1,55 @@
+housein,103,70,4	script	Old Wise Man	120,{
+
+Query_SQL "SELECT `prizebox` FROM `login` WHERE `account_id`='"+getcharid(3)+"'",.@lock;
+
+if(.@lock > 0){
+mes "[Old Wise Man]";
+mes "You still have an other box.";
+close;
+}
+
+mes "[Old Wise Man]";
+mes "Hey there!";
+mes "For years I have been working on this special box.";
+mes "It contains unfathomable power, gives insane buffs to anyone whom use it.";
+next;
+mes "[Old Wise Man]";
+mes "Vejo que voc� � um jogador especial. Por isso vou le dar uma Prize Box.";
+mes "Would you like this magical box?.";
+menu "Yes",i_s,"No",n_n;
+
+i_s:
+next;
+mes "[Old Wise Man]";
+mes "Alright, here it is.";
+mes "Just give me one moment...";
+sleep2 2000;
+getitem 19126,1;
+Query_SQL "UPDATE `login` SET `prizebox`='1' WHERE `account_id`='"+getcharid(3)+"'";
+mes "Enjoy!";
+close;
+
+n_n:
+next;
+mes "[Old Wise Man]";
+mes "If you decide to change your mind come back!";
+close;
+
+
+end;
+}
+
+
+
+
+-	script	Controle PrizeBox	-1,{
+
+OnClock0000:
+OnClock0600:
+OnClock1200:
+OnClock1800:
+
+Query_SQL "UPDATE `login` SET `prizebox`='0' WHERE `prizebox`>'0'";
+
+end;
+}

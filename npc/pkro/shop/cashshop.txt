@@ -1,0 +1,14 @@
+housein,111,66,5	cashshop	Vendedor Vip#vip	110,18004:10000,8022:10000,8029:10000,714:5000,692:15,18005:30,18012:60,18006:120,672:10,676:100,670:1000;
+
+cpmarkin1,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Viri	110
+cpmarkin2,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Pewt	110
+cpmarkin3,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Ceru	110
+cpmarkin4,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Saff	110
+cpmarkin5,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Cela	110
+cpmarkin6,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Verm	110
+cpmarkin7,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Lave	110
+cpmarkin8,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Fuch	110
+cpmarkin9,154,131,5	duplicate(Vendedor Vip#vip)	Vendedor Vip#Cinn	110
+
+
+

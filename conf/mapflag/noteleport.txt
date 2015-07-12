@@ -1,0 +1,15 @@
+//===== Cronus Script ========================================
+//= Map flags that disable use of fly wings
+//===== Por: =================================================
+//= eAthena Dev Team
+//===== Versão Atual: ========================================
+//= 1.6a [Lupus]
+//===== Changelog: ===========================================
+//= 
+//============================================================
+
+// Cities ========================
+//ayo_in01	mapflag	noteleport
+//gon_in	mapflag	noteleport
+
+housein	mapflag	noteleport

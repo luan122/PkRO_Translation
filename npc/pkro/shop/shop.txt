@@ -1,0 +1,24 @@
+pallet,60,42,5	shop	Vendedora#Pallet	72,19149:250,19070:1200,692:1000,18005:2500;
+
+cpmarkin1,164,132,5	shop	Mark#Viridian	822,19149:250,19070:1200,19184:4500,19081:8500,692:1000,18005:2500,18012:5000,18006:10000;
+
+cpmarkin2,164,132,5	duplicate(Mark#Viridian)	Mark#Pewter	822
+cpmarkin3,164,132,5	duplicate(Mark#Viridian)	Mark#Cerulean	822
+cpmarkin4,164,132,5	duplicate(Mark#Viridian)	Mark#Saffron	822
+cpmarkin5,164,132,5	duplicate(Mark#Viridian)	Mark#Celadon	822
+cpmarkin6,164,132,5	duplicate(Mark#Viridian)	Mark#Vermilion	822
+cpmarkin7,164,132,5	duplicate(Mark#Viridian)	Mark#Lavender	822
+cpmarkin8,164,132,5	duplicate(Mark#Viridian)	Mark#Fuchsia	822
+cpmarkin9,164,132,5	duplicate(Mark#Viridian)	Mark#Cinnabar	822
+
+
+housein,109,66,5	shop	Mark#Vip	822,19149:250,19070:1200,19184:4500,19081:8500,18013:850,18014:2125,18015:4250,18016:8500,692:1000,18005:2500,18012:5000,18006:10000;
+
+
+
+
+
+
+
+
+

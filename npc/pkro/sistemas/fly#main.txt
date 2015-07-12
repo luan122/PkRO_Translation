@@ -1,0 +1,136 @@
+-	script	fly#main	-1,{
+
+setarray .@menu$[1],"Pallet","Viridiana","Pewter","Cerulean","Saffron","Celadon","Vermilion","Lavender","Fuchsia","Cinnabar";
+//if(city1 == 0)set .@menu$[1],"^CC3300Pallet^000000";
+if(city1 == 0)set .@menu$[2],"^CC3300Viridian^000000";
+if(city2 == 0)set .@menu$[3],"^CC3300Pewter^000000";
+if(city3 == 0)set .@menu$[4],"^CC3300Cerulean^000000";
+if(city4 == 0)set .@menu$[5],"^CC3300Saffron^000000";
+if(city5 == 0)set .@menu$[6],"^CC3300Celadon^000000";
+if(city6 == 0)set .@menu$[7],"^CC3300Vermilion^000000";
+if(city7 == 0)set .@menu$[8],"^CC3300Lavender^000000";
+if(city8 == 0)set .@menu$[9],"^CC3300Fuchsia^000000";
+if(city9 == 0)set .@menu$[10],"^CC3300Cinnabar^000000";
+
+
+//menu "^CC3300Bulbasaur^000000",bulbasaur,"Ivysaur",ivysaur,"Venusaur",venusaur;
+
+
+select(.@menu$[1],.@menu$[2],.@menu$[3],.@menu$[4],.@menu$[5],.@menu$[6],.@menu$[7],.@menu$[8],.@menu$[9],.@menu$[10]);
+switch(@menu)
+{
+case 1:
+//if(city1 ==0){
+//mes "Voce n�o tem permiss�o para voar para esta cidade";
+//close2;
+//break;
+//}
+mes "You chose the city of "+.@menu$[1];
+close2;
+atcommand "@warp pallet 53 51";
+break;
+
+case 2:
+if(city1 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[2];
+close2;
+atcommand "@warp viridian 123 91";
+break;
+
+case 3:
+if(city2 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[3];
+close2;
+atcommand "@warp pewter 101 33";
+break;
+
+case 4:
+if(city3 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[4];
+close2;
+atcommand "@warp cerulean 93 108";
+break;
+
+case 5:
+if(city4 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[5];
+close2;
+atcommand "@warp saffron 31 34";
+break;
+
+case 6:
+if(city5 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[6];
+close2;
+atcommand "@warp celadon 80 32";
+break;
+
+case 7:
+if(city6 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[7];
+close2;
+atcommand "@warp vermilion 153 126";
+break;
+
+case 8:
+if(city7 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[8];
+close2;
+atcommand "@warp lavender 36 103";
+break;
+
+case 9:
+if(city8 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[9];
+close2;
+atcommand "@warp fuchsia 118 161";
+break;
+
+case 10:
+if(city9 ==0){
+mes "You have permission to Fly to this City.";
+close2;
+break;
+}
+mes "You chose the city of "+.@menu$[10];
+close2;
+atcommand "@warp cinnabar 66 39";	
+break;
+
+close;
+
+}
+
+}

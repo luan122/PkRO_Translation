@@ -1,0 +1,5 @@
+housein.gat,174,133,5	script	ChangePokeSql	57,{
+
+//  query_sql "UPDATE `homunculus` SET `int` = `int` + `int` / 4  WHERE `class`='2542'";
+
+}

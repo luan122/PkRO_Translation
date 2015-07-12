@@ -1,0 +1,57 @@
+//                                                                                                 
+//                                                                                                    
+//  DDDDDDDD      D                          D       DDDDDDDDDD                                       
+// DDDDDDDDDDD  DDDD                      DDDDD      DDDDDDDDDDD                                      
+//  DDDDDDDDDD DDDDD                      DDDDD       DDDD  DDDD                                      
+//   DDDD  DDDD DD                        DDDDD       DDDD    DD                                      
+//   DDDD  DDDD    D    DD   DD     DD     DDDD       DDDD          DD       DD  D     D   D    D     
+//   DDDD  DDDD DDDD  DDDDDD DDD  DDDDDD   DDDD       DDDD  D     DDDDDD   DDDD DDD DDDD DDDD DDDDD   
+//   DDDD  DDDDDDDDD  DDDDDD DD  DDD  DD   DDDD       DDDD DD    DD  DDD  DDDDDDDDD DDDDDDDDDDDDDDD   
+//   DDDDDDDDD  DDDD   DDDDD D   DDD  DDD  DDDD       DDDDDDD    DD  DDDD  DDDDDDDD DDDDDDDDDD DDDD   
+//   DDDDDDDD   DDDD    DDDDDD  DDDDDDDDD  DDDD       DDDDDDD        DDDD  DDDD DD  DDDD  DDDD DDDD   
+//   DDDDDD     DDDD     DDDD   DDDDDDDDD  DDDD       DDDD  D     DDDDDDD  DDDD     DDDD  DDDD  DDD   
+//   DDDD       DDDD    DDDDDD  DDDD       DDDD       DDDD  D    DDD DDDD  DDDD     DDDD  DDDD  DDD   
+//   DDDD       DDDD    D DDDD   DDD       DDDD       DDDD      DDDD DDDD  DDDD     DDDD  DDDD DDDD   
+//   DDDD       DDDD   DD DDDDD  DDDD  DD  DDDD       DDDD      DDDD DDDDD DDDD     DDDD  DDDD DDDD   
+//  DDDDDD     DDDDDD DDD DDDDDD DDDDDDD  DDDDDD    DDDDDDD     DDDDDDDDD DDDDDD    DDDDDDDDDD DDDDD  
+//  DDDDDD     DDDDDDDDDD DDDDDD  DDDDD   DDDDD      DDDDDD      DDDD DDD DDDDDD   DDDDD DDDDD DDDDD  
+// ===========================================================
+//===== Script ========================================
+//= Sistema Rank
+//=====================================================
+housein,106,60,0	script	ranks	915,{
+
+
+mes "Qual ranking deseja ver?";
+menu "Caughts",caught,"Level-Jogador",level,"Level-Pokemon",level2;
+
+caught:
+next;
+query_sql "SELECT `value`,`char_id` FROM `global_reg_value` WHERE `str` = 'caught' AND `char_id` <> 150031 AND `char_id` <> 150037 AND `char_id` <> 150225 AND `char_id` <> 150116 AND `char_id` <> 150160 AND `char_id` <> 150125 AND `char_id` <> 150036 AND `char_id` <> 150035 ORDER BY `value` DESC,`char_id` DESC LIMIT 10",.@caught,.@char_id;
+mes "[Top 10 Caughts]";
+	for (set .@i,0; .@i<getarraysize(.@char_id); set .@i,.@i+1)
+		mes .@char_id[.@i] + ":  " + ((.@caught[.@i] >=0) ? "^008000"+.@caught[.@i] : "^FF0000-"+.@caught[.@i]) + " Caughts^000000";
+	close;
+
+
+
+level:
+next;
+query_sql "SELECT `name`,`base_level` FROM `char` WHERE `account_id` > 2000010 AND `account_id` <> 2000135 ORDER BY `base_level` DESC,`job_level` DESC,`char_id` DESC LIMIT 10", .@name$,.@level;
+	mes "[Top 10 Level]";
+	for (set .@i,0; .@i<getarraysize(.@name$); set .@i,.@i+1)
+		mes .@name$[.@i] + ":  " + ((.@level[.@i] >=0) ? "^008000 Level "+.@level[.@i] : "^FF0000-"+.@level[.@i]) + " ^000000";
+	close;
+
+
+              
+level2:
+next;
+query_sql "SELECT `name`,`level`,`char_id` FROM `homunculus` WHERE `char_id` <> 150031 AND `char_id` <> 150116 AND `char_id` <> 150037 AND `char_id` <> 150225 AND `char_id` <> 150160 AND `char_id` <> 150125 AND `char_id` <> 150036 AND `char_id` <> 150035 ORDER BY `level` DESC,`char_id` DESC LIMIT 10", .@namepk$,.@level,.@char_id;
+	mes "[Top 10 Level Pokemon]";
+	for (set .@i,0; .@i<getarraysize(.@namepk$); set .@i,.@i+1)
+		mes .@char_id + " - " +.@namepk$[.@i] + ":  " + ((.@level[.@i] >=0) ? "^008000 Level "+.@level[.@i] : "^FF0000-"+.@level[.@i]) + " ^000000";
+	close;	
+	
+
+}

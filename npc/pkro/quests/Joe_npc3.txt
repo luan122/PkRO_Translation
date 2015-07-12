@@ -1,0 +1,67 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+saffron,41,30,4	script	Joe	807,{
+
+	
+	if(npc3p1 == 1){
+	
+	if(npc3p5 == 0){
+	
+	if(npc3p4 == 0){
+	
+	mes "[^CC0000Joe^000000]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Em que posso ajudar?";
+	next;
+	if( select("Como posso obter um Trevo de Quatro Folhas?:Em nada") == 2 )
+	{
+		mes "[^CC0000Joe^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	mes "[^CC0000Joe^000000]";
+	mes "Bom, recentemente descobri que um amigo achou um Trevo nas montanhas.";
+	mes "Ele se chama Dilan. Soube também que algum pokemon roubou um item raro que ele possuia.";
+	mes "Ele costuma ficar na cidade de Vermilion, se você puder ajudar ele, creio que ele possa le dar o Trevo.";
+	mes "Boa sorte.";
+	set npc3p2,1;
+	close;
+	
+	}else{
+	mes "[^CC0000Joe^000000]";
+	mes "Soube que ajudou meu amigo. Grandes treinadores merecem grandes honras.";	
+	mes "Pegue estes premios.";
+	next;		
+			mes "^CC0000Obs: Você ganhará um bonus de experiência. Certifique-se que possui um pokemon ativo.^000000";	
+			if( select("Receber o Premio agora:Receber o premio depois") == 2 )
+			{
+				mes "[^CC0000Joe^000000]";
+				mes "Tudo bem, estarei aqui caso queira a recompensa.";
+				close;
+			}
+
+	next;
+			additem 692,400;
+			getexp 350000,0;	
+			set npc3p5,1;
+			close;
+	
+	}
+	
+	
+	}else{
+	mes "[^CC0000Joe^000000]";
+	mes "Boa sorte na sua jornada.";		
+	close;
+	}
+	
+	
+	}else{
+	mes "[^CC0000Joe^000000]";
+	mes "Olá aventureiro, espero que goste da cidade.";
+	close;	
+	}
+	
+	
+}

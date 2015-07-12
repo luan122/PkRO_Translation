@@ -1,0 +1,121 @@
+//=====Flex Scripts ================================================
+//===== Quest Boina Alada Colorida
+//===== Por: ==========================================================
+//= César Augusto - Flexx~* «
+//===== Current Version: ==============================================
+//= 1.0
+//===== Compatível com: ===============================================
+//= Cronus
+//===== Funções: ====================================================
+//= NPC de Quest para obtenção das Boinas Aladas Coloridas.
+//= É nescessário possuir o pack adicionado no servidor.
+//= Você pode encontra-lo no Cronus-Emulator(http://cronus-emulator.com/forum/index.php?/topic/62250-boina-alada-colorida/)
+//= ou no meu Blog de Recursos (Em construção) http://flex-resources.blogspot.com/
+//===== Comentários adicionais: =======================================
+//= Não Retire os Créditos
+//= Não publique este NPC em nenhum lugar exceto no Cronus-Emulator http://www.cronus-emulator.com/forum
+//================================Não Retire os Creditos===============
+//
+//
+//
+fuchsia,21,103,4	script	Porteiro#Entrada		904,{
+
+
+show "[Porteiro]";
+show "Olá, Gostaria de entrar na zona do Saffari?";
+next;
+switch(select("-Sim","- Não")){
+
+	case 1:
+	show "[Porteiro]";
+	show "Certo. Você deseja comprar 30 saffari balls ou utilizar as suas?.";
+	switch(select("-Comprar 30 Saffari Balls","- Utilizar as minhas")){
+	
+
+	case 1:
+	show "[Porteiro]";
+	show "Ok! você deve pagar uma taxa de 80k, e ganhará 30 Saffari Balls.";
+	show "Você não pode levar nenhum tipo de pokeball fora as Saffari balls com você.";
+	show "Gostaria de entrar agora?";
+	next;
+	switch(select("-Sim","- Não")){
+
+case 1:
+if(countitem(692)>0 || countitem(18005)>0 || countitem(18006)>0 || countitem(18012)>0){
+	show "[Porteiro]";
+	show "Desculpe, você não pode entrar com outros tipos de pokeballs aqui.";
+	close;
+}
+
+if(Zeny < 80000){
+	show "[Porteiro]";
+	show "Desculpe, você não possue zeny o suficiente.";
+	close;
+}
+
+set Zeny, Zeny - 80000;
+additem 18007,30;
+atcommand "@warp saffari 358 220";
+close;
+end;
+
+case 2:
+show "Volte quando quizer";
+close;
+end;
+}
+
+
+case 2:
+if(countitem(18007)>0){
+
+
+if(countitem(692)>0 || countitem(18005)>0 || countitem(18006)>0 || countitem(18012)>0){
+	show "[Porteiro]";
+	show "Desculpe, você não pode entrar com outros tipos de pokeballs aqui.";
+	close;
+}
+
+	show "[Porteiro]";
+	show "Entendi. Boa sorte então.";
+	close2;
+	atcommand "@warp saffari 358 220";
+	close;
+	end;
+}else{
+	show "[Porteiro]";
+	show "Desculpe, você não possue Saffari Balls.";
+	close;
+}
+}
+case 2:
+show "Volte quando quizer";
+close;
+end;
+
+}
+
+}
+
+
+
+saffari,360,222,4	script	Porteiro#Saida		904,{
+
+show "[Porteiro]";
+show "Olá, Gostaria de sair da zona do Saffari?";
+next;
+switch(select("-Sim","- Não")){
+
+case 1:
+atcommand "@warp fuchsia 24 103";
+close;
+end;
+
+case 2:
+show "Volte quando quizer";
+close;
+end;
+}
+
+
+}

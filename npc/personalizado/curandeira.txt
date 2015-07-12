@@ -1,0 +1,45 @@
+//===== Cronus Script ======================================== 
+//= Curandeira
+//===== Por: =================================================
+//= DennyLoko
+//===== Versão Atual: ======================================== 
+//= 1.3a
+//===== Descrição: =========================================== 
+//= Recupera HP e SP gratuitamente
+//= Usado as cordenadas do NPC do eAthena
+//===== Changelog: =========================================== 
+//= 1.0 Iniciado o Npc [DennyLoko]
+//= 1.1 Organizado o NPc [Kamper]
+//= 1.1b corrigindo erro na duplicate de rachel [Tiu Skan]
+//= - Removidos ".gat" 
+//= Script Reestruturado [Mehah]
+//= 1.2 Removido falas, adicionado cura de Homunculo e Moscóvia. [RoM]
+//= 1.3 Adicionado a opção paga. [RoM]
+//= 1.3a Removido show [Keoy]
+//============================================================
+
+prontera,150,184,5	script	Curandeira#hG1-1::HealerG	91,{
+
+
+announce "eae",bc_all,0xFF0000;
+
+}
+
+morocc,159,96,5	duplicate(HealerG)	Curandeira#hG2-2	91
+ayothaya,155,111,5	duplicate(HealerG)	Curandeira#hG2-3	91
+geffen,121,61,5	duplicate(HealerG)	Curandeira#hG2-4	91
+umbala,94,162,5	duplicate(HealerG)	Curandeira#hG2-5	91
+payon,180,105,5	duplicate(HealerG)	Curandeira#hG2-6	91
+alberta,185,144,5	duplicate(HealerG)	Curandeira#hG2-7	91
+aldebaran,134,123,5	duplicate(HealerG)	Curandeira#hG2-8	91
+izlude,125,118,5	duplicate(HealerG)	Curandeira#hG2-9	91
+xmas,149,136,5	duplicate(HealerG)	Curandeira#hG2-10	91
+comodo,188,162,5	duplicate(HealerG)	Curandeira#hG2-11	91
+amatsu,200,80,5	duplicate(HealerG)	Curandeira#hG2-12	91
+gonryun,164,130,5	duplicate(HealerG)	Curandeira#hG2-13	91
+yuno,152,186,5	duplicate(HealerG)	Curandeira#hG2-14	91
+niflheim,188,180,5	duplicate(HealerG)	Curandeira#hG2-15	91
+louyang,225,103,5	duplicate(HealerG)	Curandeira#hG2-16	91
+rachel,131,117,5	duplicate(HealerG)	Curandeira#hG2-17	91
+veins,212,124,5	duplicate(HealerG)	Curandeira#hG2-18	91
+moscovia,221,192,5	duplicate(HealerG)	Curandeira#hG2-19	91

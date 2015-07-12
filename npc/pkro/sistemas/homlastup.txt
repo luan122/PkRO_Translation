@@ -1,0 +1,12 @@
+-	script	homlastup	-1,{
+
+
+set .@id, homlastupid();
+set .@lvl, homlastuplvl();
+
+
+
+Query_SQL "UPDATE `homunculus` SET `lastup`="+.@lvl+" WHERE `homun_id`="+.@id+"";
+
+
+}

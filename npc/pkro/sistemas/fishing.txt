@@ -1,0 +1,157 @@
+//                                                                                                 
+//                                                                                                    
+//  DDDDDDDD      D                          D       DDDDDDDDDD                                       
+// DDDDDDDDDDD  DDDD                      DDDDD      DDDDDDDDDDD                                      
+//  DDDDDDDDDD DDDDD                      DDDDD       DDDD  DDDD                                      
+//   DDDD  DDDD DD                        DDDDD       DDDD    DD                                      
+//   DDDD  DDDD    D    DD   DD     DD     DDDD       DDDD          DD       DD  D     D   D    D     
+//   DDDD  DDDD DDDD  DDDDDD DDD  DDDDDD   DDDD       DDDD  D     DDDDDD   DDDD DDD DDDD DDDD DDDDD   
+//   DDDD  DDDDDDDDD  DDDDDD DD  DDD  DD   DDDD       DDDD DD    DD  DDD  DDDDDDDDD DDDDDDDDDDDDDDD   
+//   DDDDDDDDD  DDDD   DDDDD D   DDD  DDD  DDDD       DDDDDDD    DD  DDDD  DDDDDDDD DDDDDDDDDD DDDD   
+//   DDDDDDDD   DDDD    DDDDDD  DDDDDDDDD  DDDD       DDDDDDD        DDDD  DDDD DD  DDDD  DDDD DDDD   
+//   DDDDDD     DDDD     DDDD   DDDDDDDDD  DDDD       DDDD  D     DDDDDDD  DDDD     DDDD  DDDD  DDD   
+//   DDDD       DDDD    DDDDDD  DDDD       DDDD       DDDD  D    DDD DDDD  DDDD     DDDD  DDDD  DDD   
+//   DDDD       DDDD    D DDDD   DDD       DDDD       DDDD      DDDD DDDD  DDDD     DDDD  DDDD DDDD   
+//   DDDD       DDDD   DD DDDDD  DDDD  DD  DDDD       DDDD      DDDD DDDDD DDDD     DDDD  DDDD DDDD   
+//  DDDDDD     DDDDDD DDD DDDDDD DDDDDDD  DDDDDD    DDDDDDD     DDDDDDDDD DDDDDD    DDDDDDDDDD DDDDD  
+//  DDDDDD     DDDDDDDDDD DDDDDD  DDDDD   DDDDD      DDDDDD      DDDD DDD DDDDDD   DDDDD DDDDD DDDDD  
+// ===========================================================
+//===== Cronus Script ========================================
+//= Sistema Vip
+//===== Por: =================================================
+//= Pixel Farm
+//===== Versão Atual: ========================================
+//= 1.0
+//===== Compatibilidade: =====================================
+//= Cronus Emulador
+//===== Descrição: ===========================================
+// Administrador de vip com as opções:
+// Adicionar dias vip.
+// Remover dias vip.
+// Ver dias vip.
+// O jogador adquirir dias vip por cash.
+// Leva o jogador para a sala vip.
+//============================================================
+housein,153,125,4	script	fishtest	723,{
+
+//	progressbar(blue,3);
+	//specialeffect2(200);
+//	Sleep(10000) - (JobLevel*100));
+	//fishing(2501,bulba);
+
+
+if(getequipid(3) == 19207){
+	progressbar("blue",4);
+
+	set @fish, rand(27);
+	if(@fish == 1){
+	atcommand "@monster 2560";
+	}else if(@fish == 2){
+	atcommand "@monster 2590";
+	}else if(@fish == 3){
+	atcommand "@monster 2629";
+	}else if(@fish == 4){
+	atcommand "@monster 2616";
+	}else if(@fish == 5){
+	atcommand "@monster 2618";
+	}else if(@fish == 6){
+	atcommand "@monster 2586";
+	}else if(@fish == 7){
+	atcommand "@monster 2572";
+	}else if(@fish == 8){
+	atcommand "@monster 2620";
+	}else if(@fish == 9){
+	atcommand "@monster 2598";
+	}
+
+
+}else if(getequipid(3) == 19208){
+	progressbar("blue",4);
+
+
+	set @fish, rand(25);
+	if(@fish == 1){
+	atcommand "@monster 2561";
+	}else if(@fish == 2){
+	atcommand "@monster 2621";
+	}else if(@fish == 3){
+	atcommand "@monster 2599";
+	}else if(@fish == 4){
+	atcommand "@monster 2617";
+	}else if(@fish == 5){
+	atcommand "@monster 2619";
+	}
+
+
+}
+
+
+end;
+
+//*npcskilleffect <id da habilidade>,<número>,<x>,<y>;
+//*npcskilleffect "<nome da habilidade>",<número>,<x>,<y>;
+
+
+
+}
+
+
+
+
+rota12,75,353,5	duplicate(fishtest)	Fishing Spot#1	723
+rota12,60,322,5	duplicate(fishtest)	Fishing Spot#2	723
+rota12,124,335,5	duplicate(fishtest)	Fishing Spot#3	723
+rota12,125,301,5	duplicate(fishtest)	Fishing Spot#4	723
+rota12,166,320,5	duplicate(fishtest)	Fishing Spot#5	723
+rota12,204,335,5	duplicate(fishtest)	Fishing Spot#6	723
+rota12,237,320,5	duplicate(fishtest)	Fishing Spot#7	723
+rota12,145,266,5	duplicate(fishtest)	Fishing Spot#8	723
+rota12,130,233,5	duplicate(fishtest)	Fishing Spot#9	723
+rota12,107,200,5	duplicate(fishtest)	Fishing Spot#10	723
+rota12,65,188,5	duplicate(fishtest)	Fishing Spot#11	723
+rota12,104,270,5	duplicate(fishtest)	Fishing Spot#12	723
+rota12,65,275,5	duplicate(fishtest)	Fishing Spot#13	723
+rota12,80,238,5	duplicate(fishtest)	Fishing Spot#14	723
+rota12,65,208,5	duplicate(fishtest)	Fishing Spot#15	723
+rota12,60,156,5	duplicate(fishtest)	Fishing Spot#16	723
+rota12,87,135,5	duplicate(fishtest)	Fishing Spot#17	723
+rota12,133,115,5	duplicate(fishtest)	Fishing Spot#18	723
+rota12,190,123,5	duplicate(fishtest)	Fishing Spot#19	723
+rota12,185,165,5	duplicate(fishtest)	Fishing Spot#20	723
+rota12,222,145,5	duplicate(fishtest)	Fishing Spot#22	723
+rota12,245,186,5	duplicate(fishtest)	Fishing Spot#23	723
+rota12,220,105,5	duplicate(fishtest)	Fishing Spot#24	723
+rota12,170,178,5	duplicate(fishtest)	Fishing Spot#25	723
+rota12,170,225,5	duplicate(fishtest)	Fishing Spot#26	723
+rota12,190,269,5	duplicate(fishtest)	Fishing Spot#27	723
+rota12,190,98,5	duplicate(fishtest)	Fishing Spot#28	723
+rota12,170,63,5	duplicate(fishtest)	Fishing Spot#29	723
+rota12,143,45,5	duplicate(fishtest)	Fishing Spot#30	723
+rota12,95,65,5	duplicate(fishtest)	Fishing Spot#31	723
+
+passagem2,50,88,5	duplicate(fishtest)	Fishing Spot#32	723
+passagem2,77,35,5	duplicate(fishtest)	Fishing Spot#33	723
+
+cerubeach,206,181,5	duplicate(fishtest)	Fishing Spot#34	723
+cerubeach,155,183,5	duplicate(fishtest)	Fishing Spot#35	723
+cerubeach,105,168,5	duplicate(fishtest)	Fishing Spot#36	723
+cerubeach,47,196,5	duplicate(fishtest)	Fishing Spot#37	723
+
+rota10,150,74,5	duplicate(fishtest)	Fishing Spot#38	723
+rota10,137,130,5	duplicate(fishtest)	Fishing Spot#39	723
+
+passagem3,40,120,5	duplicate(fishtest)	Fishing Spot#40	723
+passagem3,52,25,5	duplicate(fishtest)	Fishing Spot#41	723
+passagem3,20,40,5	duplicate(fishtest)	Fishing Spot#42	723
+
+
+
+
+
+
+
+
+
+
+
+

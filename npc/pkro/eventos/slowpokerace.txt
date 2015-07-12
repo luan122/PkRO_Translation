@@ -1,0 +1,284 @@
+//===== Athena Script ========================================
+//= Poring Race System
+//===== By: ==================================================
+//= Zell_ff8
+//= -Made for Daegaladh, www.Sha-Ro.com Admin
+//= -and RUNE, http://ro-enhanced.net
+//= Some Rights Reserved
+//= http://creativecommo...y-nc-sa/2.5/ar/
+//===== Current Version: =====================================
+//= 0.78
+//===== Compatible With: =====================================
+//= eAthena SVN 9991+ && Cronus SVN 1268+
+//===== Description: =========================================
+//= Slowpoke Race
+//===== Additional Comments: =================================
+//= Tested, eA SVN Stable r10128 working 100%
+//= Need a lot of clean up... but, WORKS!! WTH xD
+//= Sorry to C&P the position check after a selection, it's a
+//= fast fix and don't have time to make it a function.
+//===== Mapflags: =============================================
+
+
+-	script	Evento	Slowrace#noskill -1,{
+OnInit:
+
+setmapflag "p_track01",12;
+
+end;
+}
+
+
+
+
+
+//====== Teleporte: ============================================
+viridian.gat,101,107,4	script	Slowpoke Race#prace0	882,{
+if($prace_gate == 0){
+mes "[Warper]";
+mes "Desculpe, mas a Corrida dos Slowpokes está fechada.";
+close;
+}
+mes "[Warper]";
+mes "Olá "+StrCharInfo(0)+", você quer ir";
+mes "para a Corrida dos Slowpokes?";
+if(select("Entrar["+getmapusers ("p_track01")+"]:Não, obrigado.") == 2) close;
+close2; homvaporize(); sleep2(1000); warp "p_track01",55,41; end;
+}
+
+
+
+p_track01.gat,53,48,4	script	Teleportadora#sr	882,{
+mes "[Warper]";
+mes "Olá "+StrCharInfo(0)+", você quer sair";
+mes "da Corrida dos Slowpokes?";
+if(select("Sim, claro.:Não, obrigado.") == 2) close;
+close2; warp "viridian",123,90;
+}
+
+
+
+//====== Warps: ================================================
+//====== Checker: ==============================================
+p_track01,41,43,0	script	Checker#prace0	-1,{
+end;
+
+OnChequeo:
+set .@prace_prize,19126; // ID do prêmio para quem vencer.[Padrão: ????]
+set .@prace_prize_quantity,1; // Quantidade do prêmio. [Padrão: 1]
+
+set $prace_gate,0;
+for(set .@i,0; .@i < (getarraysize($prace_bidders)); set .@i, .@i + 1){
+if(attachrid($prace_bidders[.@i])){
+if (@prace_playing!=1) end;
+set @z, rand(150000,400000);
+dispbottom "O vencedor é o "+$prace_winner$+" e você apostou em "+@prace_winner$+".";
+if (@prace_winner$==$prace_winner$ && @prace_winner$!=""){
+dispbottom "Você venceu! Prêmio: 1 "+getitemname(.@prace_prize); mapannounce "p_track01"," Parabéns! "+strcharinfo(0)+" venceu!",1,0xFFAB54;
+getitem .@prace_prize,.@prace_prize_quantity; emotion 21,1;// warp "prontera",150,170;
+} else { dispbottom "Você perdeu."; emotion 28,1; }// warp "prontera",150,170; }
+set @prace_winner$,"";set @prace_playing,0;
+} //else { announce .@i+" || "+$prace_bidders[.@i],bc_all; } //debug
+}
+for(set .@i,0; .@i < (getarraysize($prace_bidders)); set .@i, .@i + 1) set $prace_bidders[.@i],0;
+}
+
+-	script	Timers#prace0	-1,{
+
+OnMinute30:
+
+//OnCalll:
+set $prace_gate,1;
+announce "A 'Corrida dos Slowpokes' irá começar em breve, façam suas apostas!",bc_all|bc_yellow;
+end;
+}
+//====== Principal: ============================================
+p_track01,41,50,4	script	Bidder#prace0	765,{
+
+set .@prace_zeny,15000; // Preço para apostar. [Padrão: 3500]
+
+if ($prace_random < 1) callsub OnInit;
+if (@prace_playing==1) callsub AlreadyPlaying;
+
+if($prace_gate == 0){ mes "[Bidder]"; mes "Uma corrida está em andamento..."; close; }
+
+getmapxy(.@mapname$,.@x1,.@y,1,"Slowpoke1#prace1");
+getmapxy(.@mapname$,.@x2,.@y,1,"Slowpoke2#prace2");
+getmapxy(.@mapname$,.@x3,.@y,1,"Slowpoke3#prace3");
+getmapxy(.@mapname$,.@x4,.@y,1,"Slowpoke4#prace4");
+getmapxy(.@mapname$,.@x5,.@y,1,"Slowpoke5#prace5");
+getmapxy(.@mapname$,.@x6,.@y,1,"Slowpoke6#prace6");
+if (.@x1 != 58 || .@x2 != 58 || .@x3 != 58 || .@x4 != 58 || .@x5 != 58 || .@x6 != 58){
+mes "[Bidder]"; mes "Uma corrida está em andamento..."; close;
+}
+mes "[Bidder]"; mes "Escolha o Slowpoke em que deseja apostar:";mes "Irá custar "+.@prace_zeny+" Zeny.";next;
+switch(select("Slowpoke1","Slowpoke2","Slowpoke3","Slowpoke4","Slowpoke5","Slowpoke6")){
+case 1: callfunc "OnBid","Slowpoke1";
+case 2: callfunc "OnBid","Slowpoke2";
+case 3: callfunc "OnBid","Slowpoke3";
+case 4: callfunc "OnBid","Slowpoke4";
+case 5: callfunc "OnBid","Slowpoke5";
+case 6: callfunc "OnBid","Slowpoke6";
+}
+
+OnReady:
+set $prace_bets,$prace_bets+1;
+set $prace_bidders[$prace_bets],getcharid(3);
+set @prace_playing,1;
+mes "[Bidder]";
+mes "Eu tenho "+$prace_bets+" apostas.";
+setnpctimer 60000; startnpctimer;
+npctalk strcharinfo(0)+" fez sua aposta!";
+close;
+
+Start1: setnpctimer 0; startnpctimer; end;
+AlreadyPlaying: mes "[Bidder]"; mes "Você apostou em ^00bb00"+@prace_winner$+"^000000."; close;
+
+StartRace:
+donpcevent "Slowpoke3#prace3::OnRace";
+donpcevent "Slowpoke1#prace1::OnRace";
+donpcevent "Slowpoke6#prace6::OnRace";
+donpcevent "Slowpoke2#prace2::OnRace";
+donpcevent "Slowpoke5#prace5::OnRace";
+donpcevent "Slowpoke4#prace4::OnRace";
+end;
+
+OnStopRace:
+donpcevent "Slowpoke1#prace1::OnStop";
+donpcevent "Slowpoke2#prace2::OnStop";
+donpcevent "Slowpoke3#prace3::OnStop";
+donpcevent "Slowpoke4#prace4::OnStop";
+donpcevent "Slowpoke5#prace5::OnStop";
+donpcevent "Slowpoke6#prace6::OnStop";
+if ($prace_winner$!="") callsub WinRace;
+end;
+
+ReturnRace:
+donpcevent "Slowpoke1#prace1::OnReturn";
+donpcevent "Slowpoke2#prace2::OnReturn";
+donpcevent "Slowpoke3#prace3::OnReturn";
+donpcevent "Slowpoke4#prace4::OnReturn";
+donpcevent "Slowpoke5#prace5::OnReturn";
+donpcevent "Slowpoke6#prace6::OnReturn";
+end;
+
+WinRace:
+set $prace_gate,0;
+mapannounce "p_track01","O vencedor é o "+$prace_winner$+".",1,0xFFAB54;
+donpcevent "Checker#prace0::OnChequeo";
+setnpctimer 30000;startnpctimer;
+end;
+
+OnInit:
+set $prace_random,70;
+set $prace_random2,600;
+set $prace_winner$,"";
+set $prace_bets,0;
+set $prace_bidders,0;
+end;
+
+OnTimer500: mapannounce "p_track01","Slowpokes, em suas marcas...",1,0xFFAB54; end;
+OnTimer3000: mapannounce "p_track01","...3...",1,0xFFAB54; end;
+OnTimer4000: mapannounce "p_track01","...2...",1,0xFFAB54; end;
+OnTimer5000: mapannounce "p_track01","...1...",1,0xFFAB54; callsub StartRace; end;
+OnTimer6000: stopnpctimer; mapannounce "p_track01","Gooo!!!",1,0xFFAB54; end;
+OnTimer35000: set $prace_winner$,""; set $prace_bets,0; stopnpctimer; callsub ReturnRace;
+OnTimer90000: npctalk "Eu tenho "+$prace_bets+" aposta(s). Alguém mais?"; end;
+OnTimer110000: npctalk "A corrida irá começar em breve. Última chance."; end;
+OnTimer120000: callsub Start1;
+}
+
+//====== Função Apostar: =======================================
+function	script	OnBid	{
+
+getmapxy(.@mapname$,.@x1,.@y,1,"Slowpoke1#prace1");
+getmapxy(.@mapname$,.@x2,.@y,1,"Slowpoke2#prace2");
+getmapxy(.@mapname$,.@x3,.@y,1,"Slowpoke3#prace3");
+getmapxy(.@mapname$,.@x4,.@y,1,"Slowpoke4#prace4");
+getmapxy(.@mapname$,.@x5,.@y,1,"Slowpoke5#prace5");
+getmapxy(.@mapname$,.@x6,.@y,1,"Slowpoke6#prace6");
+if (.@x1 == 58 || .@x2 == 58 || .@x3 == 58 || .@x4 == 58 || .@x5 == 58 || .@x6 == 58){
+//if (Zeny < .@prace_zeny) { callsub OnZeny; }// else { set Zeny,Zeny - .@prace_zeny; }
+if(Zeny >= 15000){
+	set Zeny, Zeny - 15000;
+}else{
+set @prace_winner$,""; mes "[Bidder]"; mes "Você não tem Zeny suficiente."; close;
+}
+
+set @prace_winner$,getarg(0); callsub OnReady;
+}
+mes "[Bidder]"; mes "Uma corrida está em andamento..."; close;
+
+//OnZeny: set @prace_winner$,""; mes "[Bidder]"; mes "Você não tem Zeny suficiente."; close;
+
+OnReady: set $prace_bets,$prace_bets+1; set $prace_bidders[$prace_bets],getcharid(3);
+set @prace_playing,1; mes "[Bidder]"; mes "Eu tenho "+$prace_bets+" apostas.";
+setnpctimer 60000; startnpctimer; npctalk strcharinfo(0)+" fez sua aposta!"; close;
+}
+//====== Monstros: ==============================================
+p_track01,58,38,2	script	Slowpoke1#prace1	2579,{
+end;
+OnRace: initnpctimer; startnpctimer; end;
+OnStop: stopnpctimer; end;
+OnReturn: npcwalkto 58,38; end;
+OnTimer1100:
+getmapxy(.@mapname$,.@x,.@y,1,"Slowpoke1#prace1");
+if(rand(100) < $prace_random) npcwalkto .@x-1,.@y;
+setnpctimer rand($prace_random2); startnpctimer;
+if ((.@x-1) == 29) { set $prace_winner$,"Slowpoke1"; emotion 29; donpcevent "Bidder#prace0::OnStopRace"; }
+}
+p_track01,58,36,2	script	Slowpoke2#prace2	2579,{
+end;
+OnRace: initnpctimer; startnpctimer; end;
+OnStop: stopnpctimer; end;
+OnReturn: npcwalkto 58,36; end;
+OnTimer1100:
+getmapxy(.@mapname$,.@x,.@y,1,"Slowpoke2#prace2");
+if(rand(100) < $prace_random) npcwalkto .@x-1,.@y;
+setnpctimer rand($prace_random2); startnpctimer;
+if ((.@x-1) == 29) { set $prace_winner$,"Slowpoke2"; emotion 29; donpcevent "Bidder#prace0::OnStopRace"; }
+}
+p_track01,58,34,2	script	Slowpoke3#prace3	2579,{
+end;
+OnRace: initnpctimer; startnpctimer; end;
+OnStop: stopnpctimer; end;
+OnReturn: npcwalkto 58,34; end;
+OnTimer1100:
+getmapxy(.@mapname$,.@x,.@y,1,"Slowpoke3#prace3");
+if(rand(100) < $prace_random) npcwalkto .@x-1,.@y;
+setnpctimer rand($prace_random2); startnpctimer;
+if ((.@x-1) == 29) { set $prace_winner$,"Slowpoke3"; emotion 29; donpcevent "Bidder#prace0::OnStopRace"; }
+}
+p_track01,58,32,2	script	Slowpoke4#prace4	2579,{
+end;
+OnRace: initnpctimer; startnpctimer; end;
+OnStop: stopnpctimer; end;
+OnReturn: npcwalkto 58,32; end;
+OnTimer1100:
+getmapxy(.@mapname$,.@x,.@y,1,"Slowpoke4#prace4");
+if(rand(100) < $prace_random) npcwalkto .@x-1,.@y;
+setnpctimer rand($prace_random2); startnpctimer;
+if ((.@x-1) == 29) { set $prace_winner$,"Slowpoke4"; emotion 29; donpcevent "Bidder#prace0::OnStopRace"; }
+}
+p_track01,58,30,2	script	Slowpoke5#prace5	2579,{
+end;
+OnRace: initnpctimer; startnpctimer; end;
+OnStop: stopnpctimer; end;
+OnReturn: npcwalkto 58,30; end;
+OnTimer1100:
+getmapxy(.@mapname$,.@x,.@y,1,"Slowpoke5#prace5");
+if(rand(100) < $prace_random) npcwalkto .@x-1,.@y;
+setnpctimer rand($prace_random2); startnpctimer;
+if ((.@x-1) == 29) { set $prace_winner$,"Slowpoke5"; emotion 29; donpcevent "Bidder#prace0::OnStopRace"; }
+}
+p_track01,58,28,2	script	Slowpoke6#prace6	2579,{
+end;
+OnRace: initnpctimer; startnpctimer; end;
+OnStop: stopnpctimer; end;
+OnReturn: npcwalkto 58,28; end;
+OnTimer1100:
+getmapxy(.@mapname$,.@x,.@y,1,"Slowpoke6#prace6");
+if(rand(100) < $prace_random) npcwalkto .@x-1,.@y;
+setnpctimer rand($prace_random2); startnpctimer;
+if ((.@x-1) == 29) { set $prace_winner$,"Slowpoke6"; emotion 29; donpcevent "Bidder#prace0::OnStopRace"; }
+}

@@ -1,0 +1,208 @@
+rota1,158,350,4	script	Bug Catcher	962,{
+
+
+	if(pokehat2 == 1){
+	
+	if( select("Continuar:Escolher outro pokemon") == 2 ){
+	set pokehat1, 0;
+	set pokehat2, 0;
+	set pokehat3, 0;
+	close;
+	}
+	
+	if(pokehat1 == 2510)
+	set .@pokemon$, "Caterpie";
+	else if(pokehat1 == 2513)
+	set .@pokemon$, "Weedle";
+	else
+	close;	
+	
+	set .@pokes, countitem(8040);
+	mes "[Bug Catcher]";
+	mes "Gostaria de me dar todos os "+.@pokes+" "+.@pokemon$+" que possui com vocÍ nesse momento?";	
+	if( select("Sim:N„o") == 2 ) close;
+
+	if(countitem(8040) < .@pokes){
+	mes "[Bug Catcher]";
+	mes "VocÍ n„o possui mais "+.@pokes+" "+.@pokemon$+" com vocÍ.";	
+	close;
+	}
+	
+	delitem 8040, .@pokes;
+	set pokehat3, pokehat3 + .@pokes;
+	
+	if(pokehat3 > 39){
+	next;
+	mes "[Bug Catcher]";
+	mes "ParabÈns, vocÍ j· me trouxe o suficiente.";
+	mes "Agora pegue seu premio.";
+	
+	if(pokehat1 == 2510)
+	additem 19212, 1;
+	else if(pokehat1 == 2513)
+	additem 19213, 1;
+	else
+	close;
+	
+	set pokehat1, 0;
+	set pokehat2, 0;
+	set pokehat3, 0;	
+	close;
+
+	}else{
+	
+	next;
+	mes "[Bug Catcher]";
+	mes "VocÍ j· me entregou "+pokehat3+" "+.@pokemon$+" .";
+	close;
+	}
+	}
+	
+	
+	mes "[Bug Catcher]";
+	mes "Ol· amigo, eu sou o futuro maior capturador de Insetos";
+	mes "do mundo! hahahaha...";	
+	next;
+	mes "[Bug Catcher]";
+	mes "Diga para mim, vocÍ acha mais legal um Caterpie, ou um Weedle?";	
+	
+	if( select("Caterpie:Weedle") == 1 ){
+	mes "…, ele È bem dÛcil e carinhoso!";
+	enablenpc "Caterpie";
+	next;
+	mes "[Bug Catcher]";
+	mes "Saia da frente!!!!!!!!!!!!!!!!!!!!!!";
+	next;
+	donpcevent "CaterpieS::OnEffect";
+	disablenpc "Caterpie";
+	mes "...";
+	sleep2(1000);
+	mes ".........";
+	sleep2(1000);
+	mes "...............";	
+	sleep2(1000);
+	mes "..........................";	
+	sleep2(1000);
+	mes "...................................... Escapou!";		
+	next;
+	mes "Ahhhhhhhhhhhhhhhhhhhhhhh!.";
+	mes "Malditos pokemons, sempre fogem de mim!";
+	mes "Bu·········!";
+	set pokehat1, 2510;
+	next;
+	
+
+	}else{
+	mes "…, ele È bem agressivo e r·pido!";		
+	enablenpc "Weedle";
+	next;
+	mes "[Bug Catcher]";
+	mes "Saia da frente!!!!!!!!!!!!!!!!!!!!!!";
+	next;
+	donpcevent "WeedleS::OnEffect";
+	disablenpc "Weedle";
+	mes "...";
+	sleep2(1000);
+	mes ".........";
+	sleep2(1000);
+	mes "...............";	
+	sleep2(1000);
+	mes "..........................";	
+	sleep2(1000);
+	mes "...................................... Escapou!";	
+	next;
+	mes "Ahhhhhhhhhhhhhhhhhhhhhhh!.";
+	mes "Malditos pokemons, sempre fogem de mim!";
+	mes "Bu·········!";	
+	set pokehat1, 2513;
+	next;
+
+	}
+
+	mes "[Bug Catcher]";
+	mes "Ei, espere! J· sei!";
+	mes "VocÍ parece ser um bom treinador pokemon...";	
+	mes "Ent„o pode capturar os pokemons para mim ficar com a fama!";
+	next;
+	mes "[Bug Catcher]";
+	mes "Gostaria de me ajudar capturando pokemons?";
+	
+	if( select("Ok, eu ajudo.:V· se virar sozinho.") == 2 ){	
+	mes "[Bug Catcher]";
+	mes "Ahhh malditos treinadores... se acham muito.";
+	close;
+	}
+	
+	if(pokehat1 == 2510)
+	set .@pokemon$, "Caterpie";
+	else if(pokehat1 == 2513)
+	set .@pokemon$, "Weedle";
+	else
+	close;
+	
+	next;
+	mes "[Bug Catcher]";
+	mes "Muito bem, vejo que se animou quando tentei capturar aquele "+.@pokemon$+" selvagem";	
+	mes "Ent„o vou te pedir alguns deles...";		
+	next;
+	mes "[Bug Catcher]";
+	mes "Vamos fazer o seguinte, vocÍ me tras 40 "+.@pokemon$+" e eu te dou um premio super legal.";
+	next;
+	mes "[Bug Catcher]";
+	mes "Eae, vai atras dos 40 "+.@pokemon$+" pra mim?";
+
+	if( select("Gaught is my Life.:40 È muito.") == 2 ){	
+	mes "[Bug Catcher]";
+	mes "Vejo que vocÍ È muito preguiÁoso mesmo...";
+	close;
+	}
+	
+	next;
+	mes "[Bug Catcher]";
+	mes "Muito bem, pode ir trazendo aos poucos para n„o pesar muito.";
+	mes "Estarei aqui recolhendo eles...";
+	mes "Boa sorte na sua miss„o!";
+	set pokehat2, 1;
+	close;
+	
+}
+
+
+
+rota1,160,350,4	script	Caterpie	2510,{
+mes "Caterpieeeeeeeeeeeeeeeeeee....";
+close;
+}
+
+rota1,160,350,4	script	CaterpieS	844,{
+
+end;
+
+OnEffect:
+specialeffect 112;
+sleep2(4000);
+end;
+}
+
+rota1,156,350,4	script	Weedle	2513,{
+mes "Weedle, Weedle...";
+close;
+}
+
+rota1,156,350,4	script	WeedleS	844,{
+
+end;
+
+OnEffect:
+specialeffect 112;
+sleep2(4000);
+end;
+}
+
+rota1,160,350,4	script	poeksoff	-1,{
+
+OnInit:
+	disablenpc "Caterpie";
+	disablenpc "Weedle";
+end;
+}

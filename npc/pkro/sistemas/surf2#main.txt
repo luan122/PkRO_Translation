@@ -1,0 +1,188 @@
+-	script	surf2#main	-1,{
+
+setarray .@menu$[1],"Squirtle","Wartortle","Blastoise","Golduck","Poliwag","Poliwhirl","Poliwrath","Tentacool","Tentacruel","Seel","Dewgong","Cloyster","Kingler","Seadra","Goldeen","Seaking","Staryu","Starmie","Gyarados","Lapras","Vaporeon","Omanyte","Omastar","Snorlax";
+
+if( countitem(8037) == 0 )set .@menu$[1],"";
+if( countitem(8038) == 0 )set .@menu$[2],"";
+if( countitem(8039) == 0 )set .@menu$[3],"";
+if( countitem(8085) == 0 )set .@menu$[4],"";
+if( countitem(8090) == 0 )set .@menu$[5],"";
+if( countitem(8091) == 0 )set .@menu$[6],"";
+if( countitem(8092) == 0 )set .@menu$[7],"";
+if( countitem(8102) == 0 )set .@menu$[8],"";
+if( countitem(8103) == 0 )set .@menu$[9],"";
+if( countitem(8116) == 0 )set .@menu$[10],"";
+if( countitem(8117) == 0 )set .@menu$[11],"";
+if( countitem(8121) == 0 )set .@menu$[12],"";
+if( countitem(8129) == 0 )set .@menu$[13],"";
+if( countitem(8147) == 0 )set .@menu$[14],"";
+if( countitem(8148) == 0 )set .@menu$[15],"";
+if( countitem(8149) == 0 )set .@menu$[16],"";
+if( countitem(8150) == 0 )set .@menu$[17],"";
+if( countitem(8151) == 0 )set .@menu$[18],"";
+if( countitem(8160) == 0 )set .@menu$[19],"";
+if( countitem(8161) == 0 )set .@menu$[20],"";
+if( countitem(8164) == 0 )set .@menu$[21],"";
+if( countitem(8168) == 0 )set .@menu$[22],"";
+if( countitem(8169) == 0 )set .@menu$[23],"";
+if( countitem(8173) == 0 )set .@menu$[24],"";
+
+if( surf == 0 ){
+
+	mes "                      ^CC3300[Surf]^000000";
+	select(.@menu$[1],.@menu$[2],.@menu$[3],.@menu$[4],.@menu$[5],.@menu$[6],.@menu$[7],.@menu$[8],.@menu$[9],.@menu$[10],.@menu$[11],.@menu$[12],.@menu$[13],.@menu$[14],.@menu$[15],.@menu$[16],.@menu$[17],.@menu$[18],.@menu$[19],.@menu$[20],.@menu$[21],.@menu$[22],.@menu$[23],.@menu$[24]);
+	
+switch(@menu)
+{
+case 1:
+surfcmd(2507);
+setstate(1);
+close;
+break;
+
+case 2:
+surfcmd(2508);
+setstate(1);
+close;
+break;
+
+case 3:
+surfcmd(2509);
+setstate(1);
+close;
+break;
+
+case 4:
+surfcmd(2555);
+setstate(1);
+close;
+break;
+
+case 5:
+surfcmd(2560);
+setstate(1);
+close;
+break;
+
+case 6:
+surfcmd(2561);
+setstate(1);
+close;
+break;
+
+case 7:
+surfcmd(2562);
+setstate(1);
+close;
+break;
+
+case 8:
+surfcmd(2572);
+setstate(1);
+close;
+break;
+
+case 9:
+surfcmd(2573);
+setstate(1);
+close;
+break;
+
+case 10:
+surfcmd(2586);
+setstate(1);
+close;
+break;
+
+case 11:
+surfcmd(2587);
+setstate(1);
+close;
+break;
+
+case 12:
+surfcmd(2591);
+setstate(1);
+close;
+break;
+
+case 13:
+surfcmd(2599);
+setstate(1);
+close;
+break;
+
+case 14:
+surfcmd(2617);
+setstate(1);
+close;
+break;
+
+case 15:
+surfcmd(2618);
+setstate(1);
+close;
+break;
+
+case 16:
+surfcmd(2619);
+setstate(1);
+close;
+break;
+
+case 17:
+surfcmd(2620);
+setstate(1);
+close;
+break;
+
+case 18:
+surfcmd(2621);
+setstate(1);
+close;
+break;
+
+case 19:
+surfcmd(2630);
+setstate(1);
+close;
+break;
+
+case 20:
+surfcmd(2631);
+setstate(1);
+close;
+break;
+
+case 21:
+surfcmd(2634);
+setstate(1);
+close;
+break;
+
+case 22:
+surfcmd(2638);
+setstate(1);
+close;
+break;
+
+case 23:
+surfcmd(2639);
+setstate(1);
+close;
+break;
+
+case 24:
+surfcmd(2643);
+setstate(1);
+close;
+break;
+
+}
+}else{
+surfcmd(0);
+setstate(0);
+close;
+}
+
+}

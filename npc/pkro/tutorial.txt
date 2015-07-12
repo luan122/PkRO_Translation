@@ -1,0 +1,102 @@
+-	script	tutorial#1log	-1,{
+
+OnPCLoginEvent:
+
+if(tuto == 0){
+
+mes "[Tutorial]";
+mes "Welcome to PkRO!";
+mes "I would like to read the tutorial of the game?";
+next;
+
+menu "Yes",-,"No",no;
+
+mes "[Tutorial]";
+mes "A game based on the anime Pokemon, nonprofit that aims to divulge entertainment all fans and others of this Game.";
+next;
+
+mes "[Tutorial]";
+mes "Once you start, to recieve your first Pokemon, go to the laboratory of Professor Oak in Pallet, and talk to him.";
+next;
+
+mes "[Tutorial]";
+mes "The basics of Pokemon system works through 2 items, the Pokeball and an item to return your pokemon back with a delay of 5 seconds to reuse the item.";
+next;
+
+mes "[Tutorial]";
+mes "Pressing Alt + R you open the control panel of your Pokemon among the information and boats, to display notes on worth, hunger bar, and the loyalty of your Pokemon.";
+next;
+
+mes "[Tutorial]";
+mes "You should feed your Pokemon periodically for it to gain loyalty with you. There are several types of foods that are acquired in-game. Loyalty ranges from 0 ~ 1000 being represented by levels as.. Low, Alta, among others. ";
+next;
+
+mes "[Tutorial]";
+mes "Each filled starvation point, your pokemon gets a point of loyalty. This loyalty influences the damage of your pokemon skills and can increase by 10% at the end damage. If your pokemon die of hunger (Hunger = 0) , he reset his loyalty, and if he dies in battle, he loses 5% of the current loyalty. ";
+next;
+
+mes "[Tutorial]";
+mes "Next to his first pokemon, you receive a pokedex that can record wild Pokemon. You get various information about them. It has 3 functions: Registering a pokemon on data from Pokedex, read the recorded information, and explainations. ";
+next;
+
+mes "[Tutorial]";
+mes "The third function of pokedex a set limit that is in development, to be done in a more practical way. If you attack a target without pokedex equipped, your character walk . toward the target (WHAT hinders the gameplay) So keep your pokedex the equipped all the time, to attack from afar. ";
+next;
+
+mes "[Tutorial]";
+mes "In order to open a chat, to trade on someone, sit, among other basic functions, you must move from level your skill called Basic Skill.";
+next;
+
+mes "[Tutorial]";
+mes "Your pokemon learn new skills to convey it over the reach. For these skills apaream the pokemon's skill window, you should remove it and releases it again. The level that each pokemon learn new skills, can be seen in pokedex. ";
+next;
+
+mes "[Tutorial]";
+mes "For your pokemon walk a certain place, hold the Alt button and press the desired location with the right mouse button.";
+next;
+
+mes "[Tutorial]";
+mes "For your pokemon stop attacking a target, you have two options: either orders him to walk anywhere, or use thestop command.";
+next;
+
+mes "[Tutorial]";
+mes "On the limits of the game, at certain times your pokemon can stop following it. For the same again accompany you, use the Alt + T combination, if the right goes, use oj commented stop command. ";
+next;
+
+mes "[Tutorial]";
+mes "Several commands are available for you in the game (s Some esto released for VIP players) To see which commands you can use, typecommands..";
+next;
+
+mes "[Tutorial]";
+mes "There are various types of pokeballs the game, each with a certain chance of capturing is smaller pokemon HP and the same level, the greater the chance of being captured..";
+next;
+
+mes "[Tutorial]";
+mes "For you do not miss the experience of pokemon that tried to capture the life of the same must be less than 10% at the time of capture. So you and your active ganharoa pokemon experience it usually . ";
+next;
+
+mes "[Tutorial]";
+mes "Any problem or bug in the game, rpidamente let our http://pkro.forumj.net forum, if it is proven that a player abused Bugs to benefit the game, he could be banned from this server . ";
+next;
+
+mes "[Tutorial]";
+mes "Any doubt, ask more experienced players, post them in the forum, or at attempt to contact someone of Staff, who quickly your problem is solved.";
+next;
+
+mes "[Tutorial]";
+mes "I hope we have passed le at least obsico to help in your journey Many other things need, and sero learned during their experience in this world The tutorial ends here Good luck...";
+set tuto, 1;
+close;
+
+
+no:
+mes "[Tutorial]";
+mes "Okay Good luck on your journey..";
+mes "The tutorial always be available in the book Prof. Oak in Pallet";
+set tuto, 0;
+close;
+
+}
+
+end;
+}

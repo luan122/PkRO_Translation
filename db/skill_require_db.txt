@@ -1,0 +1,158 @@
+// Skill Requirements Database
+//
+// Structure of Database:
+// SkillID,HPCost,MaxHPTrigger,SPCost,HPRateCost,SPRateCost,ZenyCost,RequiredWeapons,RequiredAmmoTypes,RequiredAmmoAmount,RequiredState,SpiritSphereCost,RequiredItemID1,RequiredItemAmount1,RequiredItemID2,RequiredItemAmount2,RequiredItemID3,RequiredItemAmount3,RequiredItemID4,RequiredItemAmount4,RequiredItemID5,RequiredItemAmount5,RequiredItemID6,RequiredItemAmount6,RequiredItemID7,RequiredItemAmount7,RequiredItemID8,RequiredItemAmount8,RequiredItemID9,RequiredItemAmount9,RequiredItemID10,RequiredItemAmount10
+//
+// If HP/SPratecost is positive, it is a percent of your current life, otherwise it is a percent of your max life.
+//
+// Legend for 'RequiredState' field:
+// none = Nothing special
+// move_enable = Requires to be able to move
+// recover_weight_rate = Requires to be less than 50% weight
+// water = Requires to be standing on a water cell
+// cart = Requires a Pushcart
+// riding = Requires to ride a Peco, Dragon or Gryphon
+// falcon = Requires a Falcon
+// sight = Requires Sight skill activated
+// hiding = Requires Hiding skill activated
+// cloaking = Requires Cloaking skill activated
+// explosionspirits = Requires Fury skill activated
+// cartboost = Requires a Pushcart and Cart Boost skill activated
+// shield = Requires a 0,shield equipped
+// dragon = Requires to ride a Dragon
+// warg = Requires to have an active warg (unmounted)
+// ridingwarg = Requires to ride a Warg or active warg.
+// mado = Requires to have an active mado
+// poisonweapon = Requires to be under Poisoning Weapon.
+// rollingcutter = Requires at least one Rotation Counter from Rolling Cutter.
+// elementalspirit = Requires to have an Elemental Spirit summoned.
+
+
+6,0,0,4:5:6:7:8:9:10:11:12:13,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //SM_PROVOKE#Provocar #
+
+26,0,0,10:9,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//AL_TELEPORT#テレポ?ト#
+
+30,0,0,15:17:19:21:23:25:27:29:31:33,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //AL_DECAGI#Diminuir Agilidade #
+
+41,0,0,30,0,0,0,99,0,0,cart,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//MC_VENDING#露店開設#
+
+61,0,0,1,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //KN_AUTOCOUNTER#Counter Attack #
+74,0,0,10:9,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//PR_MAGNIFICAT#マグニフィカ?ト#
+75,0,0,10:9,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//PR_GLORIA#グロリア#
+76,0,0,4:5:6:7:8:9:10:11:12:13,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+78,0,0,4:5:6:7:8:9:10:11:12:13,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //PR_LEXAETERNA#Lex Aeterna #
+93,0,0,1,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0	//WZ_ESTIMATION#モンスタ?情報#
+211,0,0,15,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //RG_STEALCOIN#Afanar #
+244,0,0,50,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //AM_REST #Vaporizar
+
+258,0,0,10:9,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //CR_SPEARQUICKEN#Spear Quicken #
+
+489,0,0,40,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //CG_TAROTCARD#Destino das Cartas #
+
+
+
+
+
+
+1500,0,0,1:2:3:4:5:6:7:8:9:10,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_EMBER#Ember #
+1501,0,0,20,0,0,0,13:14,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_HEALAREA,Healarea #
+1502,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_EARTHQUAKE,Earth Quake #
+1503,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_MAGMASTORM,Magma Storm #
+1504,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0//MOB_LEAVESDANCE,Leaves Dance #
+1505,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_HEADBUTT,Headbutt #
+1506,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_LEAFSTORM,Leaf Storm #
+1507,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_WATERGUN,Water Gun #
+1508,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_WATERTORNADO,Water Tornado #
+1509,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_RECOVER,Recover #
+1510,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_ICESPIKES,Ice Spikes #
+1511,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_BLIZZARD,Blizzard #
+1512,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_ROCKTHROW,Rock Throw #
+1513,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_HARDEN,Harden #
+1514,0,0,28:32:36:40:44,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_STONECONCUSSION,Stone Concussion #
+1515,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_METEORFLAME,Meteor Flame #
+1516,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_THUNDERSHOCK,Thunder Shock #
+1517,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_THUNDERPUNCH,Thunder Punch #
+1518,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_THUNDERSTORM,Thunder Storm #
+1519,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_GUST,Gust #
+1520,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_WINGATTACK,Wing Attack #
+1521,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_TORNADO,Tornado #
+1522,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_DRACOMETEOR,Draco Meteor #
+1523,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_PSYBEAM,Psy Beam #
+1524,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_HYDROPUMP,Hydropump #
+1525,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_CONFUSION,Confusion #
+1526,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_PSYCHIC,Psychic #
+1527,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_DARKBALL,Dark Ball #
+1528,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_SHADOWPUNCH,Shadow Punch #
+1529,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_QUICKATTACK,Quick Attack #
+1530,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_SHADOWSTORM,Shadow Storm #
+1531,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_EXTREMEAGILITY,Extreme Agility #
+1532,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_RAGE,Rage #
+1533,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_DEMONKICK,Demon Kick #
+1534,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_BODYSLAM,Body Slam #
+1535,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_REST,Rest #
+1536,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_MEGAPUNCH,Mega Punch #
+1537,0,0,20,0,0,0,13:14,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_SLEEPPOWER,Sleep Power #
+1538,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_FLAMETHROW,Flame Throw #
+1539,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_TACKLE,Tackle #
+1540,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_ABSORV,Absorv #
+1541,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_TRIPLEBLOW,Triple Blow #
+1542,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_POISONATTACK,Poison Attack #
+1543,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //MOB_POISONGAS,Poison Gas #
+
+
+
+8001,0,0,1:2:3:4:5:6:7:8:9:10,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FIRE_EMBER#Ember #
+8002,0,0,20,0,0,0,13:14,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_HEALAREA,Healarea #
+8003,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //EARTH_EARTHQUAKE,Earth Quake #
+8004,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FIRE_MAGMASTORM,Magma Storm #
+8005,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //LEAF_LEAVESDANCE,Leaves Dance #
+8006,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_HEADBUTT,Headbutt #
+8007,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //LEAF_LEAFSTORM,Leaf Storm #
+8008,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //WATER_WATERGUN,Water Gun #
+8009,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //WATER_WATERTORNADO,Water Tornado #
+8010,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //PSY_RECOVER,Recover #
+8011,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //ICE_ICESPIKES,Ice Spikes #
+8012,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //ICE_BLIZZARD,Blizzard #
+8013,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //STONE_ROCKTHROW,Rock Throw #
+8014,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //STONE_HARDEN,Harden #
+8015,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //STONE_STONECONCUSSION,Stone Concussion #
+8016,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FIRE_METEORFLAME,Explosion #
+8017,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //ELETRIC_THUNDERSHOCK,Thunder Shock #
+8018,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //ELETRIC_THUNDERPUNCH,Thunder Punch #
+8019,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //ELETRIC_THUNDERSTORM,Thunder Storm #
+8020,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FLY_GUST,Gust #
+8021,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FLY_WINGATTACK,Wing Attack #
+8022,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FLY_TORNADO,Tornado #
+8023,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //DRAGON_DRACOMETEOR,Draco Meteor #
+8024,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //PSY_PSYBEAM,Psy Beam #
+8025,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //WATER_HYDROPUMP,Hydropump #
+8026,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //PSY_CONFUSION,Confusion #
+8027,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //PSY_PSYCHIC,Psychic #
+8028,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //GHOST_DARKBALL,Dark Ball #
+8029,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //GHOST_SHADOWPUNCH,Shadow Punch #
+8030,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_QUICKATTACK,Quick Attack #
+8031,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //GHOST_SHADOWSTORM,Shadow Storm #
+8032,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FIGHT_EXTREMEAGILITY,Extreme Agility #
+8033,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FIGHT_RAGE,Rage #
+8034,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FIGHT_DEMONKICK,Demon Kick #
+8035,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_BODYSLAM,Body Slam #
+8036,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_REST,Rest #
+8037,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_MEGAPUNCH,Mega Punch #
+8038,0,0,20,0,0,0,13:14,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_SLEEPPOWER,Sleep Power #
+8039,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //FIRE_FLAMETHROW,Flame Throw #
+8040,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //NORMAL_TACKLE,Tackle #
+8041,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //BUG_ABSORV,Absorv #
+8042,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //BUG_TRIPLEBLOW,Triple Blow #
+8043,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //POISON_POISONATTACK,Poison Attack #
+8044,0,0,2,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //POISON_POISONGAS,Poison Gas #
+
+
+
+
+
+
+// Guild Skills
+10010,0,0,1,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //GD_BATTLEORDER#Comando de Batalha #
+10011,0,0,1,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //GD_REGENERATION#Regenera鈬o #
+10012,0,0,1,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //GD_RESTORE#Restaura鈬o #
+10013,0,0,1,0,0,0,99,0,0,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 //GD_EMERGENCYCALL#Chamado Urgente #

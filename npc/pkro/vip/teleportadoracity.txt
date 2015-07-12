@@ -1,0 +1,158 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+housein,122,66,4	script	Teleportadora	70,{
+	mes "[^CC0000Teleport Vip^000000]";
+	mes "Would you like to use my VIP Teleport Services?";
+	next;
+	if( select("Sim:N�o") == 2 )
+	{
+		mes "[^CC0000Teleport Vip^000000]";
+		mes "Tudo bem, estarei aqui se voc� mudar de id�ia.";
+		close;
+	}
+	
+	mes "[^CC0000Teleportadora Vip^000000]";
+//	mes "Certo, o pre�o de meus servi�os � de 15k.";
+	mes " Where would you like to go?";
+	next;
+	menu "Pallet",c1,"Viridian",c2,"Pewter",c3,"Cerulean",c4,"Saffron",c5,"Celadon",c6,"Vermilion",c7,"Lavender",c8,"Fuchsia",c9,"Cinnabar",c10,"Nenhum",c11;	
+
+c1:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp pallet 53 51";		
+		end;
+
+c2:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp viridian 123 91";		
+		end;		
+			
+	
+c3:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp pewter 101 33";	
+		end;
+		
+c4:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp cerulean 93 108";		
+		end;
+		
+c5:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp saffron 31 34";		
+		end;
+	
+c6:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp celadon 80 32";		
+		end;
+		
+c7:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp vermilion 153 126";		
+		end;
+	
+c8:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp lavender 36 103";	
+		end;
+		
+c9:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp fuchsia 118 161";	
+		end;
+
+c10:
+//		if(Zeny < 15000){
+//			mes "[^CC0000Teleport Vip^000000]";
+//			mes "Desculpe, voc� n�o tem zeny suficiente para isto.";
+//			close;
+//		}
+		
+		mes "[^CC0000Teleport Vip^000000]";
+mes "Sure, have a safe adventure!";
+		close2;
+		atcommand "@warp cinnabar 66 39";		
+		end;
+
+	
+c11:		
+		mes "[^CC0000Teleport Vip^000000]";
+		mes "Come back whenever you please!";
+		close;
+
+}

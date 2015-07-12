@@ -1,0 +1,9 @@
+-	script	ride#main	-1,{
+
+OnPCLoginEvent:
+
+if(ride > 1){
+atcommand "@disguise "+ride;
+atcommand "@speed "+ride2;
+}
+}

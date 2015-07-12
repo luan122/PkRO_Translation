@@ -1,0 +1,20 @@
+﻿Build started 29/03/2014 12:30:30.
+     1>Project "C:\Users\Brunno\Desktop\Projeto PkRO\vcproj-10\login-server_sql.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "login-server_sql\Debug\login-server_sql.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+       Manifest:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "login-server_sql\Debug\login-server_sql.unsuccessfulbuild".
+         Touching "login-server_sql\Debug\login-server_sql.lastbuildstate".
+     1>Done Building Project "C:\Users\Brunno\Desktop\Projeto PkRO\vcproj-10\login-server_sql.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06

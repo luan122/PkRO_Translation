@@ -1,0 +1,32 @@
+2527 SANDSHREW
+2528 SANDSLASH
+2529 nada
+2530 nidorana
+2531 nidoqueen
+2532 nidoran m
+2533 nidorino
+2534 nidoking
+2535 clefary
+2536 clebable
+2537 vulpix
+2538 ninetales
+2539 nidoran f
+2540 wigglypuff
+2541 zulbat
+2542 golbat
+2543 odish
+2544 gloom
+2545 vileplume
+2546 paras
+2547 parasect
+2548 venonat
+2549 jigglypuff
+2550 diglet
+2551 dugtrio
+2552 meowth
+2553 persian
+2554 psyduck
+2555 golduck
+2556 mankey
+2557 primeape
+2558 growlithe

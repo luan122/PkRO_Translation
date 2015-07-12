@@ -1,0 +1,314 @@
+//id,range,hit,inf,element,nk,splash,max,list_num,castcancel,cast_defence_rate,inf2,maxcount,skill_type,blow_count,name,description
+// 01 ID
+// 02 range (combo skills do not check for range when used,
+//           if range is < 5, the skill is considered melee-range)
+// 03 hit (8- repeated hitting, 6- single-hit)
+// 04 inf (0- passive, 1- enemy, 2- place, 4- self, 16- friend, 32- trap)
+// 05 element (0 - neutral, 1 - water, 2 - earth, 3 - fire, 4 - wind, 5 - poison,
+//             6 - holy, 7 - dark, 8 - ghost, 9 - undead, -1 - use weapon element
+//             -2 - use endowed element, -3 - use random element.)
+// 06 nk (skill damage properties):
+//    0x01 - No damage skill
+//    0x02 - Has splash area
+//    0x04 - Damage should be split among targets
+//    0x08 - Skill ignores caster's % damage cards (misc type always ignores)
+//    0x10 - Skill ignores elemental adjustments
+//    0x20 - Skill ignores target's defense (misc type always ignores)
+
+//    0x40 - Skill ignores target's flee (magic type always ignores)
+//    0x80 - Skill ignores target's def cards
+// 07 splash/effect range (-1 for screen-wide)
+// 08 MaxLv
+// 09 Number of hits (when positive, damage is increased by hits, 
+//    negative values just show number of hits without increasing total damage)
+// 10 Cast interrupted when hit?
+// 11 defense-reduction rate during cast.
+// 12 inf2 (skill information 2):
+//    0x0001- quest skill
+//    0x0002- npc skill
+//    0x0004- wedding skill
+//    0x0008- spirit skill
+//    0x0010- guild skill
+//    0x0020- song/dance
+//    0x0040- ensemble skill
+//    0x0080- trap
+
+//    0x0100- skill that damages/targets yourself
+//    0x0200- cannot be casted on self (if inf = 4, auto-select target skill)
+//    0x0400- usable only on party-members (and enemies if skill is offensive)
+//    0x0800- usable only on guild-mates (and enemies if skill is offensive)
+//    0x1000- disable usage on enemies (for non-offensive skills).
+//    0x2000- chorus skill
+// 13 maxcount: max amount of skill instances to place on the ground when
+//    player_land_skill_limit/monster_land_skill_limit is enabled. For skills
+//    that attack using a path, this is the path length to be used.
+// 14 attack type (none, weapon, magic, misc)
+// 15 Blowcount (amount of tiles skill knockbacks)
+// 16 Name
+// 17 Description
+
+// Novice
+1,0,0,0,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+
+
+
+6,9,6,1,0,1,0,10,1,no,0,0,0,none,0,		SM_PROVOKE,Provocar
+
+
+26,0,6,4,0,0x1,0,2,1,yes,0,0,0,magic,0,		AL_TELEPORT,Teleport
+
+30,9,6,1,0,1,0,10,1,no,0,0,0,none,0,		AL_DECAGI,Diminuir Agilidade
+
+41,1,6,4,0,0x1,0,10,1,no,0,0,0,none,0,		MC_VENDING,Vending
+
+61,0,6,4,0,0x1,0,2,1,yes,0,0,0,magic,0,		KN_AUTOCOUNTER,Counter Attack
+
+
+
+258,0,6,4,0,0x1,0,2,1,yes,0,0,0,magic,0,		CR_SPEARQUICKEN,Spear Quicken
+
+74,0,6,4,0,0x1,0,2,1,yes,0,0,0,magic,0,		PR_MAGNIFICAT,Magnificat
+75,0,6,4,0,0x1,0,2,1,yes,0,0,0,magic,0,		PR_GLORIA,Gloria
+
+76,9,6,1,0,1,0,10,1,no,0,0,0,none,0,		PR_LEXDIVINA,Lex Divina
+78,9,6,1,0,1,0,10,1,no,0,0,0,none,0,		PR_LEXAETERNA,Lex Aeterna
+80,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+93,9,6,1,0,0x1,0,1,1,yes,0,0,0,magic,0,		WZ_ESTIMATION,Sense
+115,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+116,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+117,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+118,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+119,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+120,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+121,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+122,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+123,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+140,0,0,2,0,0,0,9,0,no,0,0,0,none,0,		NV_BASIC,Habilidades Básicas
+
+
+
+
+211,9,6,1,0,1,0,10,1,no,0,0,0,none,0,		RG_STEALCOIN,Afanar
+
+
+
+244,0,0,4,0,0x1,0,1,0,no,0,0,0,none,0,		AM_REST,Vaporizar
+
+258,0,6,4,0,0x1,0,10,1,no,0,0,0,weapon,0,	CR_SPEARQUICKEN,Rapidez com Lança
+
+
+489,9,6,1,0,1,0,10,1,no,0,0,0,none,0,		CG_TAROTCARD,Destino das Cartas
+
+
+
+1500,9,6,1,3,0,0,10,1,yes,0,0,0,weapon,0,		MOB_EMBER,Ember
+//-----------------------------------------------------------------------------------
+1501,0,6,4,0,0xA,5,10,1,no,0,0,0,magic,0,		MOB_HEALAREA,Healarea
+//-----------------------------------------------------------------------------------
+1502,0,6,4,11,0xA,7,10,1,no,0,0,0,magic,0,		MOB_EARTHQUAKE,Earth Quake
+//-----------------------------------------------------------------------------------
+1503,0,6,4,3,0xA,5,10,1,no,0,0,0,magic,2,		MOB_MAGMASTORM,Magma Storm
+//-----------------------------------------------------------------------------------
+1504,0,6,4,7,0xA,3,10,1,no,0,0,0,magic,0,		MOB_LEAVESDANCE,Leaves Dance
+//-----------------------------------------------------------------------------------
+1505,2,6,1,0,0,0,10,1,yes,0,0,0,magic,0,		MOB_HEADBUTT,Headbutt      
+//-----------------------------------------------------------------------------------
+1506,0,6,4,7,0xA,8,10,1,no,0,0,0,magic,0,		MOB_LEAFSTORM,Leaf Storm
+//-----------------------------------------------------------------------------------
+1507,9,6,1,1,0,0,10,1,yes,0,0,0,magic,0,		MOB_WATERGUN,Water Gun        
+//-----------------------------------------------------------------------------------
+1508,0,6,4,1,0xA,3,10,1,no,0,0,0,magic,1,		MOB_WATERTORNADO,Water Tornado
+//-----------------------------------------------------------------------------------
+1509,0,6,4,0,0,0,10,1,no,0,0,0,magic,0,			MOB_RECOVER,Recover
+//-----------------------------------------------------------------------------------
+1510,9,6,1,14,0x02,4,10,1,yes,0,0,0,magic,0,		MOB_ICESPIKES,Ice Spikes
+//-----------------------------------------------------------------------------------
+1511,0,6,4,14,0xA,7,10,1,no,0,0,0,magic,0,		MOB_BLIZZARD,Blizzard
+//-----------------------------------------------------------------------------------
+1512,9,6,1,2,0,0,10,1,yes,0,0,0,magic,0,		MOB_ROCKTHROW,Rock Throw
+//-----------------------------------------------------------------------------------
+1513,0,6,4,0,0x2,2,5,1,no,0,0,0,magic,0,		MOB_HARDEN,Harden
+//-----------------------------------------------------------------------------------
+1514,9,8,2,2,0,0,5,1:2:3:4:5,yes,0,0,0,magic,0,		MOB_STONECONCUSSION,Stone Concussion  
+//-----------------------------------------------------------------------------------
+1515,9,6,1,3,0,6,10,1,yes,0,0,0,magic,1,			MOB_METEORFLAME,Meteor Flame    
+//-----------------------------------------------------------------------------------
+1516,9,6,1,9,0,0,10,1,yes,0,0,0,magic,0,		MOB_THUNDERSHOCK,Thunder Shock
+//-----------------------------------------------------------------------------------
+1517,2,6,1,9,0,0,10,1,yes,0,0,0,magic,0,		MOB_THUNDERPUNCH,Thunder Punch
+//-----------------------------------------------------------------------------------
+1518,0,6,4,9,0xA,6,10,1,no,0,0,0,magic,0,		MOB_THUNDERSTORM,Thunder Storm
+//-----------------------------------------------------------------------------------
+1519,9,6,1,4,0,0,10,1,yes,0,0,0,magic,0,		MOB_GUST,Gust
+//-----------------------------------------------------------------------------------
+1520,9,6,1,4,0,0,10,1,yes,0,0,0,magic,0,		MOB_WINGATTACK,Wing Attack
+//-----------------------------------------------------------------------------------
+1521,0,6,4,4,0xA,5,10,1,no,0,0,0,magic,3,		MOB_TORNADO,Tornado
+//-----------------------------------------------------------------------------------
+1522,0,6,4,12,0xA,10,10,1,no,0,0,0,magic,0,		MOB_DRACOMETEOR,Draco Meteor
+//-----------------------------------------------------------------------------------
+1523,9,6,1,6,0,0,10,1,yes,0,0,0,magic,0,		MOB_PSYBEAM,Psy Beam
+//-----------------------------------------------------------------------------------
+1524,0,6,4,1,0x2,2,10,1,yes,0,0,0,magic,0,		MOB_HYDROPUMP,Hydropump
+//-----------------------------------------------------------------------------------
+1525,9,6,1,6,0,0,10,1,yes,0,0,0,magic,0,		MOB_CONFUSION,Confusion
+//-----------------------------------------------------------------------------------
+1526,9,6,1,6,0,0,10,1,yes,0,0,0,magic,0,		MOB_PSYCHIC,Psychic
+//-----------------------------------------------------------------------------------
+1527,9,6,1,8,0,0,10,1,yes,0,0,0,magic,0,		MOB_DARKBALL,Dark Ball
+//-----------------------------------------------------------------------------------
+1528,2,6,1,8,0,0,10,1,yes,0,0,0,magic,0,		MOB_SHADOWPUNCH,Shadow Punch
+//-----------------------------------------------------------------------------------
+1529,9,6,1,0,0x2,6,10,1,yes,0,0,0,weapon,3,		MOB_QUICKATTACK,Quick Attack
+//-----------------------------------------------------------------------------------
+1530,0,6,4,8,0xA,5,10,1,no,0,0,0,magic,0,		MOB_SHADOWSTORM,Shadow Storm
+//-----------------------------------------------------------------------------------
+1531,0,6,4,0,0x2,2,10,1,no,0,0,0,magic,0,		MOB_EXTREMEAGILITY,Extreme Agility
+//-----------------------------------------------------------------------------------
+1532,0,6,4,0,0x2,2,5,1,no,0,0,0,magic,0,		MOB_RAGE,Rage
+//-----------------------------------------------------------------------------------
+1533,0,6,4,10,0xA,3,10,2,no,0,0,0,weapon,0,		MOB_DEMONKICK,Demon Kick
+//-----------------------------------------------------------------------------------
+1534,2,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,		MOB_BODYSLAM,Body Slam
+//-----------------------------------------------------------------------------------
+1535,0,6,4,0,0,0,10,1,no,0,0,0,magic,0,			MOB_REST,Rest                   
+//-----------------------------------------------------------------------------------
+1536,2,6,1,10,0,0,10,1,yes,0,0,0,weapon,0,		MOB_MEGAPUNCH,Mega Punch
+//-----------------------------------------------------------------------------------
+1537,0,6,4,0,0xA,5,10,1,no,0,0,0,magic,0,		MOB_SLEEPPOWER,Sleep Power  
+//-----------------------------------------------------------------------------------
+1538,9,6,1,3,0x02,2,10,1,yes,0,0,0,magic,0,		MOB_FLAMETHROW,Flame Throw
+//-----------------------------------------------------------------------------------
+1539,2,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,		MOB_TACKLE,Tackle
+//-----------------------------------------------------------------------------------
+1540,9,6,1,13,0,0,10,1,yes,0,0,0,magic,0,		MOB_ABSORV,Absorv
+//-----------------------------------------------------------------------------------
+1541,2,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,		MOB_TRIPLEBLOW,Triple Blow
+//-----------------------------------------------------------------------------------
+1542,2,6,1,5,0,0,10,1,yes,0,0,0,magic,0,		MOB_POISONATTACK,Poison Attack
+//-----------------------------------------------------------------------------------
+1543,0,6,4,5,0xA,6,10,1,no,0,0,0,magic,0,		MOB_POISONGAS,Poison Gas
+
+
+
+
+
+
+
+
+
+
+8001,9,6,1,3,0,0,10,1,no,0,0,0,magic,0,		FIRE_EMBER,Ember
+//-----------------------------------------------------------------------------------
+8002,0,6,4,0,0xA,5,10,1,no,0,0,0,magic,0,		NORMAL_HEALAREA,Healarea
+//-----------------------------------------------------------------------------------
+8003,0,6,4,11,0xA,6,10,1,no,0,0,0,magic,0,		EARTH_EARTHQUAKE,Earth Quake
+//-----------------------------------------------------------------------------------
+8004,0,6,4,3,0xA,4,10,1,no,0,0,0,magic,2,		FIRE_MAGMASTORM,Magma Storm
+//-----------------------------------------------------------------------------------
+8005,0,6,4,7,0xA,3,10,1,no,0,0,0,magic,0,		LEAF_LEAVESDANCE,Leaves Dance
+//-----------------------------------------------------------------------------------
+8006,2,6,1,0,0,0,10,1,yes,0,0,0,magic,0,		NORMAL_HEADBUTT,Headbutt      
+//-----------------------------------------------------------------------------------
+8007,0,6,4,7,0xA,7,10,1,no,0,0,0,magic,0,		LEAF_LEAFSTORM,Leaf Storm
+//-----------------------------------------------------------------------------------
+8008,9,6,1,1,0,0,10,1,yes,0,0,0,magic,0,		WATER_WATERGUN,Water Gun        
+//-----------------------------------------------------------------------------------
+8009,0,6,4,1,0xA,3,10,1,no,0,0,0,magic,1,		WATER_WATERTORNADO,Water Tornado
+//-----------------------------------------------------------------------------------
+8010,0,6,4,0,0,0,10,1,no,0,0,0,magic,0,			PSY_RECOVER,Recover
+//-----------------------------------------------------------------------------------
+8011,9,6,1,14,0x2,6,10,1,yes,0,0,0,magic,0,		ICE_ICESPIKES,Ice Spikes
+//-----------------------------------------------------------------------------------
+8012,0,6,4,14,0xA,6,10,1,no,0,0,0,magic,0,		ICE_BLIZZARD,Blizzard
+//-----------------------------------------------------------------------------------
+8013,9,6,1,2,0,0,10,1,yes,0,0,0,magic,0,		STONE_ROCKTHROW,Rock Throw
+//-----------------------------------------------------------------------------------
+8014,0,6,4,0,0x2,2,5,1,no,0,0,0,magic,0,		STONE_HARDEN,Harden
+//-----------------------------------------------------------------------------------
+8015,0,6,4,2,0xA,5,10,1,no,0,0,0,magic,0,		STONE_STONECONCUSSION,Stone Concussion  
+//-----------------------------------------------------------------------------------
+8016,9,6,1,3,0x02,8,10,1,no,0,0,0,magic,0,			FIRE_METEORFLAME,Meteor Flame    
+//-----------------------------------------------------------------------------------
+8017,9,6,1,9,0,0,10,1,yes,0,0,0,magic,0,		ELETRIC_THUNDERSHOCK,Thunder Shock
+//-----------------------------------------------------------------------------------
+8018,2,6,1,9,0,0,10,1,yes,0,0,0,magic,0,		ELETRIC_THUNDERPUNCH,Thunder Punch
+//-----------------------------------------------------------------------------------
+8019,0,6,4,9,0xA,4,10,1,no,0,0,0,magic,0,		ELETRIC_THUNDERSTORM,Thunder Storm
+//-----------------------------------------------------------------------------------
+8020,9,6,1,4,0,0,10,1,yes,0,0,0,magic,0,		FLY_GUST,Gust
+//-----------------------------------------------------------------------------------
+8021,9,6,1,4,0,0,10,1,yes,0,0,0,magic,0,		FLY_WINGATTACK,Wing Attack
+//-----------------------------------------------------------------------------------
+8022,0,6,4,4,0xA,3,10,1,no,0,0,0,magic,3,		FLY_TORNADO,Tornado
+//-----------------------------------------------------------------------------------
+8023,0,6,4,12,0xA,8,10,1,no,0,0,0,magic,0,		DRAGON_DRACOMETEOR,Draco Meteor
+//-----------------------------------------------------------------------------------
+8024,9,6,1,6,0,0,10,1,yes,0,0,0,magic,0,		PSY_PSYBEAM,Psy Beam
+//-----------------------------------------------------------------------------------
+8025,0,6,4,1,0xA,5,10,1,yes,0,0,0,magic,0,		WATER_HYDROPUMP,Hydropump
+//-----------------------------------------------------------------------------------
+8026,9,6,1,6,0,0,10,1,yes,0,0,0,magic,0,		PSY_CONFUSION,Confusion
+//-----------------------------------------------------------------------------------
+8027,9,6,1,6,0,0,10,1,yes,0,0,0,magic,0,		PSY_PSYCHIC,Psychic
+//-----------------------------------------------------------------------------------
+8028,9,6,1,8,0,0,10,1,yes,0,0,0,magic,0,		GHOST_DARKBALL,Dark Ball
+//-----------------------------------------------------------------------------------
+8029,2,6,1,8,0,0,10,1,yes,0,0,0,magic,0,		GHOST_SHADOWPUNCH,Shadow Punch
+//-----------------------------------------------------------------------------------
+8030,9,6,1,0,0x2,6,10,1,yes,0,0,0,weapon,3,		NORMAL_QUICKATTACK,Quick Attack
+//-----------------------------------------------------------------------------------
+8031,0,6,4,8,0xA,6,10,1,no,0,0,0,magic,0,		GHOST_SHADOWSTORM,Shadow Storm
+//-----------------------------------------------------------------------------------
+8032,0,6,4,0,0x2,2,10,1,no,0,0,0,magic,0,		FIGHT_EXTREMEAGILITY,Extreme Agility
+//-----------------------------------------------------------------------------------
+8033,0,6,4,0,0x2,2,5,1,no,0,0,0,magic,0,		FIGHT_RAGE,Rage
+//-----------------------------------------------------------------------------------
+8034,0,6,4,10,0xA,2,10,1,no,0,0,0,weapon,0,		FIGHT_DEMONKICK,Demon Kick
+//-----------------------------------------------------------------------------------
+8035,2,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,		NORMAL_BODYSLAM,Body Slam
+//-----------------------------------------------------------------------------------
+8036,0,6,4,0,0,0,10,1,no,0,0,0,magic,0,			NORMAL_REST,Rest                   
+//-----------------------------------------------------------------------------------
+8037,2,6,1,10,0,0,10,1,yes,0,0,0,weapon,0,		NORMAL_MEGAPUNCH,Mega Punch
+//-----------------------------------------------------------------------------------
+8038,0,6,4,0,0xA,5,10,1,no,0,0,0,magic,0,		NORMAL_SLEEPPOWER,Sleep Power
+//-----------------------------------------------------------------------------------
+8039,9,6,1,3,0x02,2,10,1,yes,0,0,0,magic,0,		FIRE_FLAMETHROW,Flame Throw
+//-----------------------------------------------------------------------------------
+8040,2,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,		NORMAL_TACKLE,Tackle
+//-----------------------------------------------------------------------------------
+8041,9,6,1,13,0,0,10,1,yes,0,0,0,magic,0,		BUG_ABSORV,Absorv
+//-----------------------------------------------------------------------------------
+8042,2,6,1,0,0,0,10,1,yes,0,0,0,weapon,0,		BUG_TRIPLEBLOW,Triple Blow
+//-----------------------------------------------------------------------------------
+8043,-2,6,1,5,0,0,10,1,yes,0,0,0,magic,0,		POISON_POISONATTACK,Poison Attack
+//-----------------------------------------------------------------------------------
+8044,0,6,4,5,0xA,5,10,1,no,0,0,0,magic,0,		POISON_POISONGAS,Poison Gas
+//-----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+// Guild Skills
+10000,0,0,0,0,0,0,1,0,no,0,0x10,0,none,0,		GD_APPROVAL,Autorização Oficial
+10001,0,0,0,0,0,0,1,0,no,0,0x10,0,none,0,		GD_KAFRACONTRACT,Contrato com Kafra
+10002,0,0,0,0,0,0,1,0,no,0,0x10,0,none,0,		GD_GUARDRESEARCH,Comandar Guardiões
+10003,0,0,0,0,0,0,1,0,no,0,0x10,0,none,0,		GD_GUARDUP,Fortalecer Guardiões
+10004,0,0,0,0,0,0,10,0,no,0,0x10,0,none,0,		GD_EXTENSION,Expandir Clã
+10005,0,0,0,0,0,0,1,0,no,0,0x10,0,none,0,		GD_GLORYGUILD,Glória da Guilda
+10006,0,0,0,0,0,2,1,0,no,0,0x10,0,none,0,		GD_LEADERSHIP,Grande Liderança
+10007,0,0,0,0,0,2,1,0,no,0,0x10,0,none,0,		GD_GLORYWOUNDS,Ferimentos de Glória
+10008,0,0,0,0,0,2,1,0,no,0,0x10,0,none,0,		GD_SOULCOLD,Coração de Frio
+10009,0,0,0,0,0,2,1,0,no,0,0x10,0,none,0,		GD_HAWKEYES,Olhar Apurado
+10010,0,0,4,0,0x3,15,1,0,yes,0,0x10,0,none,0,		GD_BATTLEORDER,Comando de Batalha
+10011,0,0,4,0,0x3,15,3,0,yes,0,0x10,0,none,0,		GD_REGENERATION,Regeneração
+10012,0,0,4,0,0x3,15,1,0,yes,0,0x10,0,none,0,		GD_RESTORE,Restauração
+10013,0,0,4,0,0x3,0,1,0,yes,0,0x10,0,none,0,		GD_EMERGENCYCALL,Chamado Urgente
+10014,0,0,0,0,0,0,1,0,no,0,0x10,0,none,0,		GD_DEVELOPMENT,Desenvolvimento Permanente
+//10015,0,0,0,0,0,0,1,0,no,0,0x10,0,none,0,      GD_ITEMEMERGENCYCALL,Unknown Skill

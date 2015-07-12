@@ -1,0 +1,6 @@
+viridian,106,111,4	script	Treiners Battle	953,{
+mes "[Treiners Battle]";
+mes "Olá "+StrCharInfo(0)+", gostaria de batalhar contra outros treinadores?";
+if(select("Entrar ["+getmapusers ("guild_vs5")+"]:Não, obrigado.") == 2) close;
+close2; warp "guild_vs5",0,0;
+}

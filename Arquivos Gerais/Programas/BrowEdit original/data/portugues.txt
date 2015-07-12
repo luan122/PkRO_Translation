@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language>
+	<net>
+		<HOSTNOTFOUND>Não foi possível encontrar o host '%s', você está conectado a internet?</HOSTNOTFOUND>
+		<NOSOCKET>Não foi possível criar o socket, por favor, reinicie.</NOSOCKET>
+		<VERSIONERROR>Você não tem a ultima versão do Browedit</VERSIONERROR>
+	</net>
+	<file>
+		<LOADING>Cargando arquivo %s</LOADING>
+		<DONELOADING>Arquivo %s carregado</DONELOADING>
+		<COULDNOTOPEN>Não foi possível abrir %s</COULDNOTOPEN>
+	</file>
+	<UNKNOWNCONFIG>Opção de configuração não reconhecida: %s = %s</UNKNOWNCONFIG>
+	<DONEINIT>Inicializazando lista</DONEINIT>
+	<CALCMODEL>Calculando  %i de %i (%.2%%)</CALCMODEL>
+	<PERCENTAGE>%f %%</PERCENTAGE>
+	<PLUGIN>
+		<LOAD>Cargando plugin: '%s'</LOAD>
+		<INVALID>%s náo é um plugin válido</INVALID>
+		<VERSIONERROR>%s é um plugin compilado para a versão %i do Browedit. Por favor, recompile com a última versão do SDK</VERSIONERROR>
+		<NOINSTANCE>%s não contem nenhum comando</NOINSTANCE>
+	</PLUGIN>
+	<QUIT>Sair do Brow Edit?</QUIT>
+	<menu>
+		<file>
+			<TITLE>Arquivo</TITLE>
+			<NEW>Novo</NEW>
+			<OPEN>Abrir</OPEN>
+			<OPENGRF>Abrir da GRF</OPENGRF>
+			<CLOSE>Fechar mapa</CLOSE>
+			<SAVE>Salvar</SAVE>
+			<QUICKSAVE>Salvar Rápido</QUICKSAVE>
+			<SAVEAS>Salvar Como</SAVEAS>
+			<IMPORTARCTURUS>Importar mapas de Arcturus</IMPORTARCTURUS>
+			<EXPORTMAPFILES>Exportar arquivos do Mapa</EXPORTMAPFILES>
+			<REBUILDTEXTUREFILE>Reconstruir arquivo de texturas</REBUILDTEXTUREFILE>
+			<REBUILDMODELFILE>Reconstruir arquivo de modelos</REBUILDMODELFILE>
+			<REBUILDSOUNDSFILE>Reconstruir arquivo de sons</REBUILDSOUNDSFILE>
+			<MAPDATABASE>Database Online de Mapas</MAPDATABASE>
+			<SAVEONLINE>Salvar online</SAVEONLINE>
+			<EXIT>Sair</EXIT>
+		</file>
+		<generate>
+			<TITLE>Criar</TITLE>
+			<RANDOM1>Colinas</RANDOM1>
+			<RANDOM2>Mazmorra subterrânea</RANDOM2>
+			<RANDOM4>Montanhas</RANDOM4>
+			<RANDOM5>Labirinto</RANDOM5>
+			<MAZESTUFF>Cosas de Labirinto</MAZESTUFF>
+			<QUADTREE>Quadtree</QUADTREE>
+			<CALCULATELIGHTMAPS>Calcular Lightmaps</CALCULATELIGHTMAPS>
+			<CALCULATELIGHTMAPSLOCAL>Calcular Lightmaps selecionadas</CALCULATELIGHTMAPSLOCAL>
+			<CALCULATELIGHTMAPSLIGHT>Calcular Lightmaps para os focos selecionados</CALCULATELIGHTMAPSLIGHT>
+			<CALCULATELIGHTMAPSNOSHADOW>Calcular Lightmaps sem sombras</CALCULATELIGHTMAPSNOSHADOW>
+			<CLEARMAP>Limpar Mapa</CLEARMAP>
+			<DUN99>Generar 99 selos de mazmorra aleatórios</DUN99>
+		</generate>
+		<view>
+			<TITLE>Ver</TITLE>
+			<GRID>Grade</GRID>
+			<OBJECTS>Objetos</OBJECTS>
+			<TRANSPARENTOBJECTS>Objetos Transparentes</TRANSPARENTOBJECTS>
+			<BOUNDINGBOXES>Boundingboxes</BOUNDINGBOXES>
+			<LIGHTMAPS>Lightmaps</LIGHTMAPS>
+			<GLOBALLIGHTING>Show OGL Lighting</GLOBALLIGHTING>
+			<TILECOLORS>Tilecolors</TILECOLORS>
+			<SHOWWATER>Água</SHOWWATER>
+			<TOPCAMERA>Vista aérea</TOPCAMERA>
+			<SIDECAMERA>Câmera de interiores</SIDECAMERA>
+			<INVISIBLETILES>Tiles invisíveis</INVISIBLETILES>
+			<SHOWAMBIENTLIGHTING>Iluminação Ambiental</SHOWAMBIENTLIGHTING>
+			<WATERANIMATION>Animação da água</WATERANIMATION>
+			<GATTILES>Gat Tiles</GATTILES>
+			<SHOWDOT>Mostrar ponto</SHOWDOT>
+			<SHOWSPRITES>Mostrar Sprites</SHOWSPRITES>
+		</view>
+		<editmode>
+			<TITLE>Modo de Edição</TITLE>
+			<TEXTUREEDIT>Edição de texturas</TEXTUREEDIT>
+			<GLOBALHEIGHTEDIT>Edição Global</GLOBALHEIGHTEDIT>
+			<DETAILTERRAINEDIT>Edição do terreno...</DETAILTERRAINEDIT>
+			<WALLEDIT>Edição de muros</WALLEDIT>
+			<OBJECTEDIT>Edição de objetos</OBJECTEDIT>
+			<GATEDIT>Edição de GATs</GATEDIT>
+			<WATEREDIT>Edição da água</WATEREDIT>
+			<EFFECTSEDIT>Edição de efeitos</EFFECTSEDIT>
+			<SOUNDSEDIT>Edição de sons</SOUNDSEDIT>
+			<LIGHTSEDIT>Edição de luzes</LIGHTSEDIT>
+			<OBJECTGROUPEDIT>Editar grupo de objetos</OBJECTGROUPEDIT>
+			<SPRITEEDIT>Editar Sprites</SPRITEEDIT>
+			<TEXTUREPAINTEDIT>Editar e criar texturas</TEXTUREPAINTEDIT>
+		</editmode>
+		<edit>
+			<TITLE>Ações</TITLE>
+			<SPEED>Velocidade de edição de terreno</SPEED>
+			<SLOPING>Inclinações</SLOPING>
+			<SNAPOBJECTS>Pegar objetos a selo</SNAPOBJECTS>
+			<FILLAREA>Preencher área com a textura selecionada</FILLAREA>
+			<GATHEIGHT>Ajustar altura dos GATs</GATHEIGHT>
+			<RESETCOLORS>Resetar cores</RESETCOLORS>
+			<ADDWALLS>Adicionar/Modificar muros</ADDWALLS>
+			<GATCOLLISION>Ajustar colisões GAT</GATCOLLISION>
+			<CLEANLIGHTMAPS>Eliminar luzes</CLEANLIGHTMAPS>
+			<REMOVETEXTURES>Eliminar texturas não usadas</REMOVETEXTURES>
+			<CLEARLIGHTMAPSONEDIT>Eliminar luzes ao editar as texturas</CLEARLIGHTMAPSONEDIT>
+			<SELECTALL>Selecionar todos os tiles</SELECTALL>
+		</edit>
+		<effects>
+			<TITLE>Efeitos</TITLE>
+		</effects>
+		<windows>
+			<TITLE>Janela</TITLE>
+			<GLOBALLIGHTING>Luz Global</GLOBALLIGHTING>
+			<MODELWINDOW>Modelos/Objetos</MODELWINDOW>
+			<TEXTURES>Texturas</TEXTURES>
+			<PROPERTIES>Propriedades</PROPERTIES>
+			<WATER>Água</WATER>
+			<PREFERENCES>Preferências</PREFERENCES>
+			<RSMEDITOR>RSM Editor</RSMEDITOR>
+			<FAVLIGHTS>Luzes favoritas</FAVLIGHTS>
+			<OVERVIEW>Visão global do mapa</OVERVIEW>
+			<MAPINFO>Propriedades do mapa</MAPINFO>
+		</windows>
+		<tools>
+			<TITLE>Extra</TITLE>
+			<CLEARMAP>Limpar Mapa</CLEARMAP>
+			<CONVERT>Converter 3ds para RSM</CONVERT>
+			<generators>
+				<TITLE>Gerar</TITLE>
+				<MAZEGENERATOR>Labirintos</MAZEGENERATOR>
+				<CULVERTGENERATOR>Culvert</CULVERTGENERATOR>
+			</generators>
+			<gat>
+				<TITLE>GAT</TITLE>
+				<GATHEIGHT>Ajustar a altura geométrica</GATHEIGHT>
+			</gat>
+			<lightmap>
+				<TITLE>Lightmap</TITLE>
+				<IMPORT>Importar</IMPORT>
+				<EXPORT>Exportar</EXPORT>
+			</lightmap>
+		</tools>
+	</menu>
+	<fs>
+		<GRFOPENERROR>Erro: Erro ao abrir grf %s</GRFOPENERROR>
+		<GRFOPENDONE>Status: Lendo grf  %s</GRFOPENDONE>
+		<FILEERROR>Erro: Não foi possível abrir o arquivo %s</FILEERROR>
+	</fs>
+	<font>
+		<LOADING>Fonte: carregando fonte %s</LOADING>
+		<DONELOADING>Fonte: carregada %s</DONELOADING>
+	</font>
+
+	<graphics>
+		<INIT>Inicializando interface gráfica</INIT>
+		<INITFAIL>Inicializacão de video falhou: %s</INITFAIL>
+		<QUERYFAIL>Consulta de video falhou: %s</QUERYFAIL>
+		<VIDEOMODEFAIL>Ajuste de modo de video falhou: %s</VIDEOMODEFAIL>
+		<OPENGLFAIL>Inicializacão de OpenGL falhou</OPENGLFAIL>
+		<OPENINGTEXTURES>Abrindo texturas gerais</OPENINGTEXTURES>
+		<INITIALIZINGWM>Inicializando WM</INITIALIZINGWM>
+		<TEXTUREFAIL>Impossível ler a textura %s</TEXTUREFAIL>
+		<texturecache>
+			<UNLOADFAIL>Texturecache: Trying to unload texture %s, but this texture hasn't been loaded through the texturecache!</UNLOADFAIL>
+			<UNLOADALOT>Texturecache: Texture %s is being unloaded too often!</UNLOADALOT>
+			<STILLLOADED>Texturecache: Texture %s is still %i times loaded</STILLLOADED>
+		</texturecache>
+	</graphics>
+	<world>
+		<LOAD>Status: Carregando %s</LOAD>
+		<LOADFAIL>Erro: Impossível abrir %s</LOADFAIL>
+		<LOADDONE>Status: Carregado %s</LOADDONE>
+		<MODELFAIL>Erro: Impossível abrir modelo: %s</MODELFAIL>
+		<UNKNOWNOBJECT>Erro: Tipo de objeto desconhecido %i</UNKNOWNOBJECT>
+		<QUADTREECALC>Quadtree: olhando os modelos %i out of %i (%.2f%%)</QUADTREECALC>
+		<TOOMANYLIGHTMAPS>Sem lightmaps!</TOOMANYLIGHTMAPS>
+		<MODELCOUNT>Status: %i modelos criados</MODELCOUNT>
+		<TILESUSED>Status: %i tiles em uso</TILESUSED>
+		<TILESLEFT>Status: %i tiles calculados</TILESLEFT>
+	</world>
+	<wm>
+		<OK>Ok</OK>
+		<CANCEL>Cancelar</CANCEL>
+		<ambient>
+			<TITLE>Luz ambiente</TITLE>
+			<AMBIENT>Ambiente:</AMBIENT>
+			<DIFFUSE>Difusão:</DIFFUSE>
+			<SHADOW>Sombra:</SHADOW>
+			<ALPHA>Transparência:</ALPHA>
+		</ambient>
+		<confirm>
+			<TITLE>Por favor confirme...</TITLE>
+		</confirm>
+		<effect>
+			<TITLE>Efeito</TITLE>
+			<POS>Posição:</POS>
+			<SCALE>Escala:</SCALE>
+			<ROT>Rotação:</ROT>
+			<LOOPTIME>Loop Time:</LOOPTIME>
+		</effect>
+		<input>
+			<TITLE>Inserir...</TITLE>
+		</input>
+		<globallighting>
+			<TITLE>Luz Global</TITLE>
+			<DIFFUSETITLE>Luz</DIFFUSETITLE>
+			<DIFFUSECOLOR>Cor:</DIFFUSECOLOR>
+			<LONGITUDE>Longitude:</LONGITUDE>
+			<LATITUDE>Latitude:</LATITUDE>
+			<AMBIENTTITLE>Luz Ambiente</AMBIENTTITLE>
+			<AMBIENTCOLOR>Cor:</AMBIENTCOLOR>
+			<AMBINTENSITY>Intensidade:</AMBINTENSITY>
+		</globallighting>
+		<light>
+			<TITLE>Luz...</TITLE>
+			<NAME>Nome:</NAME>
+			<POSITION>Posição:</POSITION>
+			<COLOR>Cor:</COLOR>
+			<INTENSITY>Intensidade:</INTENSITY>
+			<RANGE>Distância:</RANGE>
+			<MAXLIGHTINCREMENT>Max. diferença claroscuro</MAXLIGHTINCREMENT>
+			<LIGHTFALLOFF>Degrade de luzes (0-1)</LIGHTFALLOFF>
+			<CASTSSHADOW>Inserir sombras</CASTSSHADOW>
+		</light>
+		<favlight>
+			<TITLE>Luzes favoritas</TITLE>
+			<NAME>Nome:</NAME>
+			<HEIGHT>Altura:</HEIGHT>
+			<COLOR>Cor:</COLOR>
+			<INTENSITY>Intensidade:</INTENSITY>
+			<RANGE>Distância:</RANGE>
+			<MAXLIGHTINCREMENT>Max. diferença claroscuro</MAXLIGHTINCREMENT>
+			<LIGHTFALLOFF>Degrade de luzes (0-1)</LIGHTFALLOFF>
+			<CASTSSHADOW>Inserir sombras</CASTSSHADOW>
+		</favlight>
+		<message>
+			<TITLE>Mensagem</TITLE>
+		</message>
+		<model>
+			<TITLE>Seleção de modelo...</TITLE>
+			<DELETECONFIRM>Tem certeza que quer eliminar este modelo da lista?</DELETECONFIRM>
+			<NODENAME>Inserir nome do novo modelo</NODENAME>
+		</model>
+		<object>
+			<TITLE>Objeto...</TITLE>
+			<OBJECT>Objeto:</OBJECT>
+			<POSITION>Posição:</POSITION>
+			<SCALE>Tamanho:</SCALE>
+			<ROTATION>Rotação:</ROTATION>
+			<LIGHTOPACITY>Opacidade (0 - 1):</LIGHTOPACITY>
+		</object>
+		<texture>
+			<TITLE>Seleção de texturas...</TITLE>
+		</texture>
+		<water>
+			<TITLE>Água...</TITLE>
+			<AMPLITUDE>Amplitude:</AMPLITUDE>
+			<HEIGHT>Altura:</HEIGHT>
+			<PHASE>Fase:</PHASE>
+			<SURFACECYCLE>Ciclo Superfície:</SURFACECYCLE>
+			<TEXTURECYCLE>Ciclo de textura:</TEXTURECYCLE>
+			<TYPE>Tipo:</TYPE>
+			<ANIMSPEED>Velocidade:</ANIMSPEED>
+		</water>
+		<preferences>
+			<TITLE>Preferências...</TITLE>
+		</preferences>
+		<areacopy>
+			<TITLE>Opções de área de cópia...</TITLE>
+			<MODELS>Modelos:</MODELS>
+			<TEXTURES>Texturas:</TEXTURES>
+			<HEIGHT>Altura:</HEIGHT>
+			<GAT>Gat:</GAT>
+			<WALLS>Muros:</WALLS>
+			<LIGHTS>Luzes:</LIGHTS>
+			<EFFECTS>Efeitos:</EFFECTS>
+			<SOUNDS>Sons:</SOUNDS>
+		</areacopy>
+		<sprite>
+			<TITLE>Sprite...</TITLE>
+		</sprite>
+		<overview>
+			<TITLE>Vista Global...</TITLE>
+		</overview>
+		<file>
+			<TITLE>Arquivo...</TITLE>
+			<SELECTMAP>Selecionar mapa</SELECTMAP>
+		</file>
+		<progress>
+			<TITLE>Progresso:</TITLE>
+		</progress>
+		<sound>
+			<TITLE>Sons...</TITLE>
+			<NAME>Nome:</NAME>
+			<FILE>Arquivo:</FILE>
+			<POSITION>Posição:</POSITION>
+			<SCALE>Tamanho:</SCALE>
+			<ROTATION>Rotação:</ROTATION>
+			<REPEATDELAY>Repetir cada:</REPEATDELAY>
+		</sound>
+		<soundselect>
+			<TITLE>Selecionar som</TITLE>
+		</soundselect>
+		<maps>
+			<TITLE>Base de dados online de mapas...</TITLE>
+		</maps>
+		<mapdetail>
+			<TITLE>Detalhes da base de dados...</TITLE>
+		</mapdetail>
+		<clearmap>
+			<TITLE>Limpar mapas</TITLE>
+			<TEXTURES>Texturas</TEXTURES>
+			<HEIGHT>Altura</HEIGHT>
+			<WALLS>Muros</WALLS>
+			<GAT>Gat</GAT>
+			<LIGHTMAPS>Luzes renderizadas</LIGHTMAPS>
+			<OBJECTS>Objetos</OBJECTS>
+			<LIGHTS>Luzes</LIGHTS>
+			<SOUNDS>Sons</SOUNDS>
+			<EFFECTS>Efeitos</EFFECTS>
+			<SPRITES>Sprites</SPRITES>
+		</clearmap>
+	</wm>
+</language>

@@ -1,0 +1,300 @@
+//Obs: fazer o script do sd->state.monster_ignore = 0; no OnPCLoadMapEvent     if (strcharinfo(3) == "ufcarena") end;     nomonsterignore (custom script)
+
+
+poring_w02,68,83,6	script	Juiz#1	882,{
+
+set .@use_price, 500000;   //pre�o pra entrar no duelo
+
+if(getcharid(0) == $user_id2){
+mes "Don't attempt to escape.";
+close;
+}
+
+if(getcharid(0) == $user_id1){
+mes "No turning back!";
+close;
+}
+
+if($on_use1 == 1){
+mes "A battle is currently in-session. Please wait until the battle is over.";
+close;
+}
+mes "[^FF0000Judge^000000]";
+mes "Hello "+strcharinfo(0)+", to enter the battle mode you must have "+.@use_price+" zeny.";
+mes "Would you like to Battle your Pokemon?";
+if(select("Yes, Please.:No, thanks.") == 2) close;
+
+
+close2;
+set $on_use1, 1;
+warp "poring_w02",73,82;
+set $user_id1, getcharid(0);
+set $user_name1$, strcharinfo(0);
+set $user1_pts, 0;
+donpcevent "System::OnCheck";
+if($on_use2 == 1){
+mapannounce "poring_w02","Player "+strcharinfo(0)+" is awaiting an oponent to enter the Pokemon-Arena to Battle!",1,0xFFAB54; end;
+}else{
+mapannounce "poring_w02","Player"+strcharinfo(0)+" has entered the Pokemon-Arena, and is looking for an opponent!",1,0xFFAB54; end;
+}
+end;
+}
+
+
+
+poring_w02,68,81,6	script	Juiz#2	882,{
+
+set .@use_price, 500000;   //pre�o pra entrar no duelo
+
+if(getcharid(0) == $user_id1){
+mes "Do not try to escape the other side.";
+close;
+}
+
+if(getcharid(0) == $user_id2){
+mes "No turning back!";
+close;
+}
+
+if($on_use2 == 1){
+mes "Sorry, another battle is in-session, please wait until the Battle is over.";
+close;
+}
+mes "[^FF0000Judge^000000]";
+mes "Hello "+strcharinfo(0)+", to enter the Pokemon-Arena you must have "+.@use_price+" zeny.";
+mes "Would you like to Battle?";
+if(select("Yes, Please.:No, thanks.") == 2) close;
+
+
+close2;
+set $on_use2, 1;
+warp "poring_w02",73,80;
+set $user_id2, getcharid(0);
+set $user_name2$, strcharinfo(0);
+set $user2_pts, 0;
+donpcevent "System::OnCheck";
+if($on_use1 == 1){
+mapannounce "poring_w02","Player "+strcharinfo(0)+" is awaiting an oponent to enter the Pokemon-Arena to Battle!",1,0xFFAB54; end;
+}else{
+mapannounce "poring_w02","Player "+strcharinfo(0)+" has entered the Pokemon-Arena, and is looking for an opponent!",1,0xFFAB54; end;
+}
+end;
+}
+
+
+prontera,148,170,6	script	System	-111,{
+
+OnCheck:
+if($on_use1 == 0 || $on_use2 == 0) end;
+stopnpctimer; setnpctimer 0; startnpctimer;
+mapannounce "poring_w02","Duel commencing in 10 secconds.",1,0xFFAB54;
+end;
+
+OnTimer10000: mapannounce "poring_w02","Enjoy the Battle!",1,0xFFAB54; pvpon "g_room1-1"; set $on_round, 1; set .@use_price, 500000; end;
+
+OnTimer70000:
+if($on_round != 1) end;
+pvpoff "g_room1-1";
+set $on_round, 2;
+if($pontuou == 0) mapannounce "poring_w02","First round over. No Player won. The second round begins in 10 seconds.",1,0xFFAB54;
+if($pontuou == 1) mapannounce "poring_w02","End of the first round. Player "+$pontuouname$+" has won the round. Second round begins in 10 seconds.",1,0xFFAB54;
+end;
+
+OnTimer80000:
+if($on_round != 2) end;
+mapannounce "poring_w02","Secound round begins!",1,0xFFAB54; pvpon "g_room1-1"; set $on_round, 2; end;
+
+OnTimer140000:
+if($on_round != 2) end;
+pvpoff "g_room1-1";
+set $on_round, 3;
+if($pontuou == 0) mapannounce "poring_w02","Second round over. No Player won. The third round begins in 10 seconds.",1,0xFFAB54;
+if($pontuou == 1) mapannounce "poring_w02","End of the second round. Player "+$pontuouname$+" has won the round. Third round begins in 10 seconds.",1,0xFFAB54;
+end;
+
+OnTimer150000:
+if($on_round != 3) end;
+mapannounce "poring_w02","Third round begins!",1,0xFFAB54; pvpon "g_room1-1"; set $on_round, 3; end;
+
+OnTimer210000:
+if($on_round != 3) end;
+pvpoff "g_room1-1";
+set $on_round, 4;
+if($pontuou == 0) mapannounce "poring_w02","Third round over. No Player won. The fourth round begins in 10 seconds.",1,0xFFAB54;
+if($pontuou == 1) mapannounce "poring_w02","End of the third round. Player "+$pontuouname$+" has won the round. Fourth round begins in 10 seconds.",1,0xFFAB54;
+end;
+
+OnTimer220000:
+if($on_round != 4) end;
+mapannounce "poring_w02","Fourth round begins!",1,0xFFAB54; pvpon "g_room1-1"; set $on_round, 4; end;
+
+OnTimer280000:
+if($on_round != 4) end;
+pvpoff "g_room1-1";
+set $on_round, 5;
+if($pontuou == 0) mapannounce "poring_w02","Fourth round over. No Player won. The fifth round begins in 10 seconds.",1,0xFFAB54;
+if($pontuou == 1) mapannounce "poring_w02","End of the fourth round. Player "+$pontuouname$+" has won the round. Fifth round begins in 10 seconds.",1,0xFFAB54;
+end;
+
+OnTimer290000:
+if($on_round != 5) end;
+mapannounce "poring_w02","Fifth round begins!",1,0xFFAB54; pvpon "g_room1-1"; set $on_round, 5; end;
+
+OnTimer350000:
+if($on_round != 5) end;
+pvpoff "g_room1-1";
+//set $on_round, 5;
+if($pontuou == 0) mapannounce "poring_w02","Fifth round over. No Player won.",1,0xFFAB54;
+if($pontuou == 1) mapannounce "poring_w02","Fifth round over. Player "+$pontuouname$+" has won the round.",1,0xFFAB54;
+end;
+
+OnTimer355000:
+if($user1_pts > 2){
+	announce "Player "+$user_name1$+" has just beaten "+$user_name2$+" in the Pokemon-Arena!",8;
+}else if($user2_pts > 2){
+	announce "Player "+$user_name2$+" has just beaten "+$user_name1$+" in the Pokemon-Arena!",8;
+}
+set $on_round, 0;
+set $on_use1, 0;
+set $user_id1, 0;
+set $on_use2, 0;
+set $user_id2, 0;
+set $user1_pts, 0;
+set $user2_pts, 0;
+end;
+
+OnPCKillEvent:
+if(getcharid(0) == $user_id2){
+	set $user2_pts, $user2_pts + 1;
+}
+if(getcharid(0) == $user_id1){
+	set $user1_pts, $user1_pts + 1;
+}
+
+sleep2 1000;
+atcommand "@heal";
+
+stopnpctimer;
+if($on_round == 1){
+setnpctimer 69000;
+set $pontuou, 1;
+set $pontuouname$, strcharinfo(0);
+startnpctimer;
+end;
+}
+if($on_round == 2){
+setnpctimer 139000;
+set $pontuou, 1;
+set $pontuouname$, strcharinfo(0);
+startnpctimer;
+end;
+}
+if($on_round == 3){
+
+if(getcharid(0) == $user_id2){
+	if($user2_pts > 2){
+	set Zeny, Zeny + .@use_price;
+	setnpctimer 354000;
+	startnpctimer;
+	warp "prontera",148,170;
+	end;
+	}
+}
+if(getcharid(0) == $user_id1){
+	if($user1_pts > 2){
+	set Zeny, Zeny + .@use_price;
+	setnpctimer 354000;
+	startnpctimer;
+	warp "prontera",148,170;
+	end;
+	}
+}
+
+setnpctimer 209000;
+set $pontuou, 1;
+set $pontuouname$, strcharinfo(0);
+startnpctimer;
+end;
+}
+if($on_round == 4){
+
+if(getcharid(0) == $user_id2){
+	if($user2_pts > 2){
+	set Zeny, Zeny + .@use_price;
+	setnpctimer 354000;
+	startnpctimer;
+	warp "prontera",148,170;
+	end;
+	}
+}
+if(getcharid(0) == $user_id1){
+	if($user1_pts > 2){
+	set Zeny, Zeny + .@use_price;
+	setnpctimer 354000;
+	startnpctimer;
+	warp "prontera",148,170;
+	end;
+	}
+}
+
+setnpctimer 279000;
+set $pontuou, 1;
+set $pontuouname$, strcharinfo(0);
+startnpctimer;
+end;
+}
+if($on_round == 5){
+
+if(getcharid(0) == $user_id2){
+	if($user2_pts > 2){
+	set Zeny, Zeny + .@use_price;
+	setnpctimer 354000;
+	startnpctimer;
+	warp "poring_w02",64,82;
+	end;
+	}
+}
+if(getcharid(0) == $user_id1){
+	if($user1_pts > 2){
+	set Zeny, Zeny + .@use_price;
+	setnpctimer 354000;
+	startnpctimer;
+	warp "poring_w02",64,82;
+	end;
+	}
+}
+
+
+setnpctimer 349000, "System";
+set $pontuou, 1;
+set $pontuouname$, strcharinfo(0);
+startnpctimer;
+end;
+}
+end;
+
+OnPcDieEvent:
+
+if($on_round == 0) end;
+
+if(getcharid(0) == $user_id1 && $user2_pts > 2){
+warp "poring_w02",64,82;
+end;
+}
+
+if(getcharid(0) == $user_id2 && $user1_pts > 2){
+warp "poring_w02",64,82;
+end;
+}
+
+sleep2 2000;
+atcommand "@alive";
+sleep2 1000;
+atcommand "@heal";
+sleep2 2000;
+
+end;
+
+
+
+}

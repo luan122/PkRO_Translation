@@ -1,0 +1,10 @@
+-	script	surf#main	-1,{
+
+OnPCLoginEvent:
+
+if(surf > 0){
+atcommand "@disguise "+surf;	
+end;
+}
+
+}

@@ -1,0 +1,68 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+lighthalzen,120,124,4	script	Brock	70,{
+	if(npc2p1 == 0){
+	mes "[^CC0000Brock^000000]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Eu estava andando pela cidade de celadon acabei perdendo minha carteira, há boatos de que jimmy tenha achado, ele esta escondido em algum lugar da cidade de celadon";
+	next;
+	if( select("Quero Saber mais:Não me interessa...") == 2 )
+	{
+		mes "[^CC0000Brock^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	mes "[^CC0000Brock^000000]";
+	mes "Estou Oferecendo uma recompensa para aquele que achar minha carteira...";
+	mes "[^CC0000Brock^000000]. A recompensa que estou oferecendo é de 20 pokeball.";
+	mes "Além da carteira estou pedindo mais alguns itens para que possa lhe dar a recompesa, Deseja saber quais são?";
+	next;
+	switch(select("Sim, desejo!:Deixa para depois..."))
+	{
+	case 1:
+		mes "[^CC0000Brock^000000]";
+		mes "Recompensa:";
+		mes "1x "+getitemname(19001);
+		mes " ";
+		mes "Requerimento:";
+		mes "1x "+getitemname(19002);
+		mes "500 Zenys";
+		next;
+		mes "[^CC0000Brock^000000]";
+		mes "Deseja completar a quest agora?";
+		next;
+		if( select("Sim!:Agora não...") == 2 )
+		{
+			mes "[^CC0000Brock^000000]";
+			mes "Tudo bem... Até mais!";
+			close;
+		}
+		if(countitem(19002) >= 1 && Zeny >= 500)
+		{
+			delitem 19002,1;
+			set Zeny,Zeny-500;
+			getitem 19001,1;
+	//		announce "O player "+strcharinfo(0)+" acaba de concluir a quest da "+getitemname(2410)+".",bc_yellow;
+			mes "[^CC0000Brock^000000]";
+			mes "Parabéns! Aqui está!";
+			set npc2p1,1;
+			close;
+		}
+		break;
+	case 2:
+		mes "[^CC0000Brock^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	mes "[^CC0000Brock^000000]";
+	mes "Me desculpe, mas você não tem todos os itens necessários para esta quest.";
+	mes "Volte quando você tiver todos os itens!";
+	close;
+	}else{
+	mes "[^CC0000Brock^000000]";
+	mes "Muito obrigado pela ajuda.";
+	close;
+	}
+
+}

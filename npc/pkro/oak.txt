@@ -1,0 +1,51 @@
+housein,64,125,4	script	Prof. Oak	46,{
+
+if(oak == 0){
+
+	atcommand "@save";
+	mes "[Prof. Oak]";
+	mes "Welcome young Trainer!";
+	mes "My name is Oak, and I can give you your first Pokemon to start your adventure!";
+	mes "Unfortunately I did not recieve the three Pokemon. All I have is this Pidgey.";
+	mes "He needs a lot of training, but has great potential to be a beast Pokemon.";
+	mes "With Pidgey, I shall also give you a Pokedex to record, register, and view explanations of Pokemon.";
+	mes "Also I will supply some bonus items such as Potions to help your Pokemon on your journey!";
+	mes "Are you ready to start your adventure?";	
+
+	menu "Yes",-,"No",o_nao;
+	
+	next;	
+	getitem 19149,25;
+	getitem 18002,1;
+	getitem 690,1;
+	makehomun 2516;
+	set oak, 1;
+
+	mes "[Prof. Oak]";
+	mes "Good luck young Trainer.";
+	close;
+
+
+	o_nao:
+	next;
+	mes "[Prof. Oak]";
+	mes "Take your time to prepare for your Journey.";
+	close;
+
+}else{
+	homvaporize();
+	progressbar("blue",1);
+	atcommand "@repairall";		
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+	heal2();
+	mes "[Prof. Oak]";
+	mes "Good luck on your Journey. I will heal your Pokemon for free to help you out!";
+	close;
+
+}
+
+
+end;
+}
+

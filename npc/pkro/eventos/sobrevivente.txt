@@ -1,0 +1,202 @@
+//|==========================================================================================|
+//|   __________     __________       __________   _____          _____   _____        _____ |
+//|  |::::::::::|   |::::::::: |     |::::::::::|  \::::\        /::::/	  \::::\      /::::/ |
+//|  |:: ____ ::|   |:: ____ ::|     |:: ____ ::|   \::::\      /::::/	   \::::\    /::::/  |
+//|  |::|    |::|   |::|    |::|     |::|    |::|    \::::\    /::::/       \::::\  /::::/   |
+//|  |::|    |::|   |::|    |::|     |::|    |::|     \::::\  /::::/         \::::\/::::/    |
+//|  |::|____|::|   |::|____|::|     |::|    |::|      \::::\/::::/           \::::::::/     |
+//|  |::::::::::|   |::::::::::\     |::|    |::| 	\::::::::/             \::::::/	     |
+//|  |::________|   |:: ____ :::\    |::|    |::|	 \::::::/	       	\::::/	     |
+//|  |::|	    |::|     \:::|   |::|____|::|	 /::::::\               |::::|	     |
+//|  |::|           |::|      |::|   |::      ::|       /::::::::\              |::::|       |
+//|  |::|           |::|      |::|   |::::::::::|      /::::/\::::\             |::::|       |
+//|  |__|	    |__|      |__|   |__________|     /____/  \____\	        |____|	     |
+//|        									   	     |
+//|==========================================================================================|
+//|   Script Criando por ragnaproxy | Cronus | Por Favor, Não Retire Os Créditos.            |
+//|==========================================================================================|
+//|         *************************Evento sobrevivente****************************         |
+//|==========================================================================================|
+
+
+viridian.gat,101,116,6	script	Sobrevivente	456,{
+
+
+
+//---------------------------CONFIGURAÇÕES---------------------------+
+//						     		     |
+//+=-=-=-=-=+-=-=-=-=-=+=-=-=-=-=-=-=+=-=-=-=-=-=-=-=-=+=-=-=-=-=-=-=+
+set .nome$,"^800000[Sobrevivente]^000000"; 			      // Nome do NPC de Entrada.
+//-=-=--=-=-=-=--=-=-=-=--=--=-=-=--=-=--=-=-=-=-=--===-=-=-=-=--=-=-|
+set $max,15;    						      // Limite máximo de Players
+//-=-=--=-=-=-=--=-=-=-=--=--=-=-=--=-=--=-=-=-=-=--===-=-=-=-=--=-=-|
+setarray $@Sobrevivente[0],19126,1;  // Id dos premeios e quantidade ,Os premeios são sorteado entre eles.
+//-=-=--=-=-=-=--=-=-=-=--=--=-=-=--=-=--=-=-=-=-=--===-=-=-=-=--=-=-|
+set .item$,"Prize Box";                     // Nome dos premios
+//+=-=-=-=-=+=-=-=-=-=-+-=-=-=-=-=-=-+=-=--=-=-=-=-=-=-+=-=-=-=-=-=-=+
+
+
+
+mes .nome$;
+mes "^ff6600Olá Bravo Guerreiro, o que deseja?^000000";
+next;
+switch(select("^0000ffEntrar no evento^000000 ["+getmapusers ("g_room1-1")+"]","^0000ffInformações^000000","^0000ffO que eu ganho?^000000")){
+	case 1:
+		if($sob_on == 0){ mes .nome$; mes "^ff6600O Evento sobrevivente não está aberto. Ele abre a cada 3 horas.^000000"; close; }
+		if(getmapusers("g_room1-1") == $max){ mes .nome$; mes "^ff6600Desculpe, o evento está lotado!^000000"; close; }
+		if($sob_on == 1){
+		mes .nome$;
+		mes "^FF6600Desejo uma Boa Sorte!^000000";
+		close2;
+		if(GetGmLeveL()<10) announce strcharinfo(0)+" conseguiu entrar no Evento Sobrevivente",8;
+		percentheal 100,100; warp "g_room1-1",74,182; end; }
+	case 2:
+		mes .nome$;
+		mes "^0000FFEvento Sobrevivente, tente fica vivo até o final do evento.";
+		mes "Suporta até "+$max+" Players no mapa.";
+		mes "Mate quantos puder e se você for o ultimo vivo no mapa, Ganhara uma Prize Box";
+		close;
+	case 3:
+		mes .nome$;
+		mes "^ff6600Você pode ganhar uma Prize Box.^000000";
+		close;
+
+
+		}
+	close;
+}
+
+g_room1-1,64,183,3	script	Saída	708,{
+
+
+set .nome2$,"^0000FF[Saída]^000000"; // Nome do NPC de Saída.
+
+//if($ganhou == 1){
+
+//	set $sob_on,0; warp "viridian",123,90; end; }
+	
+//if(getmapusers("g_room1-1") == 1){
+	
+//mes	.nome2$;
+//mes	"^008000Você foi muito bem hoje!";
+//mes	"Como recompensa, um item de presente.^000000";
+//close2;
+
+mes	.nome2$;
+mes	"^008000Acha que já matou treinadores o suficiente?";
+if(Select("Não","Sim")==1){
+close;
+}
+
+if( Rand(1,getmapusers("g_room1-1")) > 1 ){
+close2;
+set $sob_on,0; warp "viridian",123,90; end;
+end;
+}
+
+set @n,Rand(GetArraySize($@Sobrevivente)/2);
+	additem $@Sobrevivente[@n*2],$@Sobrevivente[@n*2+1];
+//set $ganhou,1;
+set $sob_on,0;
+warp "viridian",123,90;
+end;
+
+//}else{
+//mes	.nome2$;
+//mes	"^008000Ainda há Treinadores vivos para serem derrotados!";
+//mes	"^008000Deseja desistir?";
+//       if(Select("Não","Sim")==2){
+//close2;
+//warp "viridian",123,90;
+//end;
+//}
+//close;
+//}
+
+}
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
+//	    sobreviventeiHide		   |
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
+
+g_room1-1,64,181,5	script	sobreviventeiHide	-1,{
+
+
+OnClock0000:
+OnClock0300:
+OnClock0600:
+OnClock0900:
+OnClock1200:
+OnClock1500:
+OnClock1800:
+OnClock2100:
+
+
+	Announce "O Evento Sobrevivente está aberto, e em 5 minutos ele começará! Venha pegue sua vaga!",8;
+	disablenpc "Saída"; enablenpc "Joy#sobre"; initnpctimer; set $sob_on,1; killmonsterall "g_room1-1"; pvpoff "g_room1-1"; end;
+
+//OnTimer60000:	Announce "O Evento Sobrevivente está aberto, e em 4 minutos ele começará!",8;	end;
+//OnTimer90000:	Announce "Corra para conseguir sua vaga no O Evento Sobrevivente, são só "+$max+"!",8;	end;
+OnTimer120000:	Announce "O Evento Sobrevivente está aberto, e em 3 minutos ele começará!",8;	end;
+OnTimer150000:	Announce "Corra para conseguir sua vaga no O Evento Sobrevivente, são só "+$max+"!",8;	end;
+//OnTimer180000:	Announce "O Evento Sobrevivente está aberto, e em 2 minutos ele começará!",8;	end;
+//OnTimer210000:	Announce "Corra para conseguir sua vaga no O Evento Sobrevivente, são só "+$max+"!",8;	end;
+OnTimer240000:	Announce "O Evento Sobrevivente está aberto, e em 1 minuto ele começará!",8;	end;
+OnTimer270000:	Announce "Corra para conseguir sua vaga no O Evento Sobrevivente, são só "+$max+"!",8;	end;
+OnTimer300000:	Announce "O Evento Sobrevivente começou!",8;
+disablenpc "Joy#sobre";
+pvpon "g_room1-1";
+set $sob_on,0;
+end;
+
+
+
+
+OnTimer420000:	MapAnnounce "g_room1-1","Em alguns segundos O 2° Round Tera inicio!!",8;
+pvpoff "g_room1-1";
+OnTimer425000:	MapAnnounce "g_room1-1","Enquanto isso recarregue suas Energias!!",0;
+enablenpc "Joy#sobre";
+end;
+
+OnTimer440000:	MapAnnounce "g_room1-1","O 2° Round Começou LUTEM!!!",8;
+disablenpc "Joy#sobre";
+pvpon "g_room1-1";;
+end;
+
+OnTimer560000:	MapAnnounce "g_room1-1","Em alguns segundos O 3° Round Tera inicio!!",8;
+pvpoff "g_room1-1";
+OnTimer565000:	MapAnnounce "g_room1-1","Enquanto isso recarregue suas Energias!!",0;
+enablenpc "Joy#sobre";
+end;
+
+OnTimer580000:	MapAnnounce "g_room1-1","O 3° Round Começou LUTEM!!!",8;
+pvpon "g_room1-1";
+disablenpc "Joy#sobre";
+end;
+
+//OnTimer700000:	Announce "O vento Subrevivente terminou, após sobrar apenas 1 Treinador vivo, o mesmo poderá pegar sua recompensa!!!",8;
+OnTimer700000:	MapAnnounce "g_room1-1","Parabéns! Vocês Sobreviveram ao Evento sobrevivente Retirem seus Prêmios com o NPC 'Saída'!",8;
+//pvpoff "g_room1-1";
+enablenpc "Saída";
+end;
+
+//OnTimer610000:	MapAnnounce "g_room1-1","Parabéns! Vocês Sobreviveram ao Evento sobrevivente Retirem seus Prêmios com o NPC 'Saída'!",8;
+//enablenpc "Saída";
+//end;
+
+}
+
+
+g_room1-1,64,182,3	script	Joy#sobre	48,{
+
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+	
+end;
+
+}

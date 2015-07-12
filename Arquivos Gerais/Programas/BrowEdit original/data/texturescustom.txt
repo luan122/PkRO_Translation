@@ -1,0 +1,6 @@
+custom/mozila\mozila|mozila\mozila.bmp
+custom/mozila\mozila1|mozila\mozila1.bmp
+custom/mozila\mozila2|mozila\mozila2.bmp
+custom/mozila\mozila3|mozila\mozila3.bmp
+custom/mozila\mozila4|mozila\mozila4.bmp
+custom/mozila\mozila5|mozila\mozila5.jpg

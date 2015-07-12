@@ -1,0 +1,41 @@
+-	script	pokeinfo	-1,{
+
+//pallet,54,70,0	script	info	915,{
+
+set .@id, pokeinfo(1);
+
+Query_SQL "SELECT `name` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@name$;
+Query_SQL "SELECT `level` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@level;
+Query_SQL "SELECT `homun_id` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@homid;
+Query_SQL "SELECT `class` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@class;
+Query_SQL "SELECT `str` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@str;
+Query_SQL "SELECT `agi` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@agi;
+Query_SQL "SELECT `vit` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@vit;
+Query_SQL "SELECT `int` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@int;
+Query_SQL "SELECT `dex` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@dex;
+Query_SQL "SELECT `luk` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@luk;
+Query_SQL "SELECT `max_hp` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@hp;
+Query_SQL "SELECT `max_sp` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@sp;
+Query_SQL "SELECT `lvlevo1` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@lvlevo1;
+Query_SQL "SELECT `lvlevo2` FROM `homunculus` WHERE `homun_id`= "+.@id+"",.@lvlevo2;
+
+	mes "Name: "+.@name$;
+	mes "ID: "+.@homid;
+	mes "Class: "+.@class;
+	mes "Level: "+.@level;
+	mes "HP: "+.@hp;
+	mes "SP: "+.@sp;
+	mes "Strength: "+.@str/10;
+	mes "Agility: "+.@agi/10;
+	mes "Vitality: "+.@vit/10;
+	mes "Intelligence: "+.@int/10;
+	mes "Dexterity: "+.@dex/10;
+	mes "Puck: "+.@luk/10;
+	mes "Level until Evolution 1: "+.@lvlevo1;
+	mes "Level until Evolution 2: "+.@lvlevo2;
+
+
+
+	close;
+
+}

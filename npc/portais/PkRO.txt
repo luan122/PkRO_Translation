@@ -1,0 +1,365 @@
+//CP's
+viridian,123,94,0	warp	Viridian-CP	1,1,cpmarkin1,115,48
+pewter,101,36,0	warp	Pewter-CP	1,1,cpmarkin2,115,48
+cerulean,93,111,0	warp	Cerulean-CP	1,1,cpmarkin3,115,48
+saffron,31,37,0	warp	Saffron-CP	1,1,cpmarkin4,115,48
+celadon,80,35,0	warp	Celadon-CP	1,1,cpmarkin5,115,48
+vermilion,153,129,0	warp	Vermilion-CP	1,1,cpmarkin6,115,48
+lavender,36,106,0	warp	Lavender-CP	1,1,cpmarkin7,115,48
+fuchsia,118,164,0	warp	Fuchsia-CP	1,1,cpmarkin8,115,48
+cinnabar,66,42,0	warp	Cinnabar-CP	1,1,cpmarkin9,115,48
+
+
+cpmarkin1,115,46,0	warp	Viridian-CP2	1,1,viridian,123,92
+cpmarkin2,115,46,0	warp	Pewter-CP2	1,1,pewter,101,34	
+cpmarkin3,115,46,0	warp	Cerulean-CP2	1,1,cerulean,93,109	
+cpmarkin4,115,46,0	warp	Saffron-CP2	1,1,saffron,31,35	
+cpmarkin5,115,46,0	warp	Celadon-CP2	1,1,celadon,80,33	
+cpmarkin6,115,46,0	warp	Vermilion-CP2	1,1,vermilion,152,127	
+cpmarkin7,115,46,0	warp	Lavender-CP2	1,1,lavender,36,104	
+cpmarkin8,115,46,0	warp	Fuchsia-CP2	1,1,fuchsia,118,162	
+cpmarkin9,115,46,0	warp	Cinnabar-CP2	1,1,cinnabar,66,40
+
+//Mark's
+viridian,130,132,0	warp	Viridian-Mark	1,1,cpmarkin1,172,118
+pewter,38,34,0	warp	Pewter-Mark	1,1,cpmarkin2,172,118
+cerulean,36,112,0	warp	Cerulean-Mark	1,1,cpmarkin3,172,118
+saffron,77,35,0	warp	Saffron-Mark	1,1,cpmarkin4,172,118
+celadon,97,35,0	warp	Celadon-Mark	1,1,cpmarkin5,172,118
+vermilion,190,153,0	warp	Vermilion-Mark	1,1,cpmarkin6,172,118
+lavender,105,106,0	warp	Lavender-Mark	1,1,cpmarkin7,172,118
+fuchsia,82,164,0	warp	Fuchsia-Mark	1,1,cpmarkin8,172,118
+cinnabar,85,42,0	warp	Cinnabar-Mark	1,1,cpmarkin9,172,118
+
+cpmarkin1,172,116,0	warp	Viridian-Mark2	1,1,viridian,130,130
+cpmarkin2,172,116,0	warp	Pewter-Mark2	1,1,pewter,38,32	
+cpmarkin3,172,116,0	warp	Cerulean-Mark2	1,1,cerulean,36,110	
+cpmarkin4,172,116,0	warp	Saffron-Mark2	1,1,saffron,77,33	
+cpmarkin5,172,116,0	warp	Celadon-Mark2	1,1,celadon,97,33	
+cpmarkin6,172,116,0	warp	Vermilion-Mark2	1,1,vermilion,190,151	
+cpmarkin7,172,116,0	warp	Lavender-Mark2	1,1,lavender,105,104	
+cpmarkin8,172,116,0	warp	Fuchsia-Mark2	1,1,fuchsia,82,162	
+cpmarkin9,172,116,0	warp	Cinnabar-Mark2	1,1,cinnabar,85,40	
+
+
+
+
+//Inside
+housein,128,172,0	warp	QuartoAsh-Sala	1,1,housein,81,176
+housein,83,176,0	warp	Sala-QuartoAsh	1,1,housein,128,170
+housein,72,158,0	warp	Sala-Pallet	1,1,pallet,62,85
+housein,64,84,0	warp	OakLab-Pallet	1,1,pallet,75,45
+
+//Pallet
+pallet,62,87,0	warp	Pallet-Sala	1,1,housein,72,160
+pallet,75,47,0	warp	Pallet-OakLab	1,1,housein,64,86
+pallet,138,30,0	warp	Palt-Rota1	1,1,rota1,6,209
+pallet,10,4,0	warp	Pallta1	1,1,rota21,58,128
+
+//Rota1
+rota1,4,209,0	warp	Rota1-Pallet	1,1,pallet,136,30
+rota1,287,285,0	warp	Rota1-Tunel	1,1,tunel,60,16
+
+//Tunel
+tunel,60,14,0	warp	Tunel-Rota1	1,1,rota1,287,283
+tunel,100,184,0	warp	Tunel-Passagem1	1,1,passagem1,28,14
+
+//Passagem1
+passagem1,28,12,0	warp	Passagem1-Tunel	1,1,tunel,100,182
+passagem1,20,38,0	warp	Passagem1-Viridian	1,1,viridian,95,6
+
+//Viridian
+viridian,95,4,0	warp	Viridian-Passagem1	1,1,passagem1,20,36
+viridian,4,118,0	warp	Viridian-Passagem12	1,1,hunt1,278,92
+viridian,108,195,0	warp	Viridian-Passagem13	1,1,rota2,286,6
+
+//Hunt1
+hunt1,280,92,0	warp	Viridian-Passagem41	1,1,viridian,6,118
+hunt1,22,104,0	warp	Viridian-Passagem51	1,1,bisland,234,157
+hunt1,133,26,0	warp	Viridweian-Passagem51	1,1,hunt4,102,176
+
+//Hunt4
+hunt4,102,178,0	warp	Virisdian-Pas34gem51	1,1,hunt1,133,28
+
+//Bisland
+bisland,236,157,0	warp	Viridian-Pas6sagem1	1,1,hunt1,24,104
+
+//Rota2
+rota2,286,4,0	warp	Viridian-Passag7em1	1,1,viridian,108,193
+rota2,120,361,0	warp	Viridian-Passag8em1	1,1,pewter,90,15
+
+//Pewter
+pewter,90,13,0	warp	Viridian-Passa9gem1	1,1,rota2,120,359
+pewter,126,75,0	warp	Viridianqwe-Pass10agem1	1,1,mtmoon,29,160
+pewter,18,76,0	warp	Viridian1-Passagem1	1,1,hunt2,269,233
+pewter,96,123,0	warp	Viridian-2Passagem1	1,1,passagem2,64,21
+
+//Hunt2
+hunt2,271,233,0	warp	Viridian-P3assagem1	1,1,pewter,20,76
+
+//Passagem2
+passagem2,64,19,0	warp	Viridian-Pa4ssagem1	1,1,pewter,95,121
+passagem2,61,102,0	warp	Viridian5-Passagem1	1,1,vulcan,174,31
+
+//vulcan
+vulcan,174,29,0	warp	Viridian6-Passagem1	1,1,passagem2,61,100
+
+//Mt.Moon
+mtmoon,27,160,0	warp	Viridian7-Passagem1	1,1,pewter,124,75
+mtmoon,141,177,0	warp	Viridia8n-Passagem1	1,1,mtmoon2,185,16
+mtmoon,183,4,0	warp	Viridian-Pas9sagem1	1,1,rota3,101,349
+
+//Mt.Moon2
+mtmoon2,187,16,0	warp	Viridian-Pass10agem1	1,1,mtmoon,143,177
+mtmoon2,21,192,0	warp	Viridian11-Passagem1	1,1,mtmoon3,69,17
+
+//Mt.Moon3
+mtmoon3,69,15,0	warp	Viridian-Pass12agem1	1,1,mtmoon2,21,190
+
+//Rota3
+rota3,101,351,0	warp	Viridian-Passa13gem1	1,1,mtmoon,183,7
+rota3,278,356,0	warp	Viridian-P14assagem1	1,1,cerulean,18,68
+
+//Cerulean
+cerulean,16,68,0	warp	Viridia15n-Passagem1	1,1,rota3,276,356
+cerulean,71,127,0	warp	Viridian16-Passagem1	1,1,cerubeach,124,6
+cerulean,118,105,0	warp	Viridian75-Passagem1	1,1,tunel3,60,16
+cerulean,79,10,0	warp	Viridian-34Passagem1	1,1,rota5,181,286
+
+//CeruBeach
+cerubeach,124,4,0	warp	Viridian-Pa234ssagem1	1,1,cerulean,71,125
+
+//Tunel3
+tunel3,60,14,0	warp	Tunel-R34ota1	1,1,cerulean,118,107
+tunel3,100,184,0	warp	Tunel-Pa565ssagem1	1,1,cerucave,98,23
+
+//CeruCave
+cerucave,98,21,0	warp	Viridian-Pa324ssagem1	1,1,tunel3,100,182
+
+//Rota5
+rota5,181,288,0	warp	Viridianqwd-Passagem1	1,1,cerulean,79,12
+rota5,284,110,0	warp	Viridiafen-Passagem1	1,1,rota8,12,121
+rota5,264,13,0	warp	Viridian-Pgeassagem1	1,1,saffron,67,136
+
+//Saffron
+saffron,67,138,0	warp	Viridiaqwwqn-Passagem1	1,1,rota5,264,15
+saffron,0,69,0	warp	Viridian-weqPassagem1	1,1,rota7,129,96
+saffron,69,0,0	warp	Viridian-Psdassagem1	1,1,rota6,155,260
+
+//Rota7
+rota7,131,96,0	warp	Viridian-Pweassagem1	1,1,saffron,2,69
+rota7,9,81,0	warp	Viridian-Patrssagem1	1,1,celadon,130,92
+
+//Celadon
+celadon,132,92,0	warp	Viridn-Passagem1	1,1,rota7,11,81
+celadon,8,56,0	warp	Viridqwdian-Passagem1	1,1,rota16,235,197
+
+//Rota16
+rota16,237,197,0	warp	Viridqwdian-Pem1	1,1,celadon,10,56
+rota16,145,245,0	warp	Viridqwdissagem1	1,1,ama_dun03,120,11
+
+//Fighter Temple
+ama_dun03,120,9,0	warp	ama_dun2-2	1,1,rota16,145,243
+
+//Rota8
+rota8,10,121,0	warp	Viridiawqen-Passagem1	1,1,rota5,282,110
+rota8,150,18,0	warp	Viridiant-P34asswsdagem1	1,1,tunel2,113,227
+rota8,257,100,0	warp	Viridian-4Passagem1	1,1,lavender,16,64
+
+
+//Lavender
+lavender,14,64,0	warp	Viridian-efrPassagem1	1,1,rota8,255,100
+lavender,83,125,0	warp	Viridian-wePassagem1	1,1,rota10,51,24
+lavender,93,11,0	warp	Viridianft-Passagem1	1,1,rota12,67,372
+lavender,111,53,0	warp	Viridian43-Passagem1	1,1,tunel4,54,99
+
+//Rota10
+rota10,51,22,0	warp	Viridian-Pa324sssagem1	1,1,lavender,83,123
+
+//Rota12
+rota12,67,374,0	warp	Viridian-324Passagem1	1,1,lavender,93,13
+rota12,106,13,0	warp	Viridian-wewePassagem1	1,1,rota13,181,236
+
+//Tunel4
+tunel4,166,84,0	warp	Viridian-Pa34essagem1	1,1,passagem3,36,56
+tunel4,52,99,0	warp	Viridian-P34assagem1	1,1,lavender,109,53
+
+//Passagem3
+passagem3,34,56,0	warp	Viridian-wqePassagem1	1,1,tunel4,164,84
+passagem3,193,138,0	warp	Viridia3n3-Passagem1	1,1,powerplant,119,4
+passagem3,272,65,0	warp	Viridianqwe-Passagem1	1,1,passagem4,4,21
+
+//PowerPlant
+powerplant,119,2,0	warp	Viridi1an-Pas1sagem1	1,1,passagem3,193,136
+powerplant,103,57,0	warp	Viridian1-Pass1agem1	1,1,powerplant1,133,63
+
+//PowerPlant1
+powerplant1,135,63,0	warp	Vir1-Pa1ssagem1	1,1,powerplant,105,57
+powerplant1,72,55,0	warp	Vir1idian-sagem1	1,1,powerplant2,71,54
+
+//PowerPlant2
+powerplant2,71,56,0	warp	Vir1idia1ssagem1	1,1,powerplant1,72,57
+powerplant2,115,94,0	warp	Vir1idiassagem1	1,1,powerplant3,116,95
+
+//PowerPlant3
+powerplant3,118,95,0	warp	Vir1idiaagem1	1,1,powerplant2,117,94
+
+
+//Passagem4
+passagem4,2,21,0	warp	Viridiafdgn1-Passagem1	1,1,passagem3,270,65
+passagem4,31,37,0	warp	V1iridian-1Pasrtsagem1	1,1,desert,70,20
+
+//Desert
+desert,70,18,0	warp	Viri1dian-Passagem1	1,1,passagem4,31,35
+
+//Tunel2
+tunel2,32,46,0	warp	V1irid1ian-Passagem1	1,1,rota6,235,148
+tunel2,241,24,0	warp	Viridia1n-Pas1sagem1	1,1,rota11,170,133
+tunel2,113,229,0	warp	Viridian-Pa1ssa1gem1	1,1,rota8,150,20
+tunel2,243,39,0	warp	Viridian-Pamssa1gem1	1,1,diggletcave,98,35
+
+//DiggletCave
+diggletcave,98,37,0	warp	Viri3dian-Pamssa1gem1	1,1,tunel2,245,39
+
+//Rota6
+rota6,155,262,0	warp	Viridia1n-Pas3sag1em1	1,1,saffron,69,2
+rota6,237,148,0	warp	Viridian1-3Pas2sagem1	1,1,tunel2,34,46
+rota6,182,14,0	warp	Viridia3n-Pas3sagem1	1,1,vermilion,195,251
+
+//vermilion
+vermilion,195,253,0	warp	Viridia3n-Passagem1	1,1,rota6,182,16
+vermilion,253,171,0	warp	Viri3dian-Pas3sagem1	1,1,rota11,22,105
+
+//Rota11
+rota11,20,105,0	warp	Virid3ian-3Pass3agem1	1,1,vermilion,251,171
+rota11,170,135,0	warp	Vir4idian-Pa4ssagem1	1,1,tunel2,241,26
+rota11,280,92,0	warp	Viridian-Pa4ssag4em1	1,1,rota13,158,222
+
+//Rota13
+rota13,156,222,0	warp	Vi4rid4ian-Passagem1	1,1,rota11,278,92
+rota13,181,238,0	warp	4Viridian-Passagem1	1,1,rota12,106,15
+rota13,231,128,0	warp	4Viridian-P4assagem1	1,1,rota14,27,40
+rota13,28,44,0	warp	Viridian-Pa4ssagem14	1,1,fuchsia,185,84
+
+//Rota14
+rota14,25,40,0	warp	Viridian4-Passagem1	1,1,rota13,229,128
+
+//Fuchsia
+fuchsia,187,84,0	warp	5Viridian5-Passagem1	1,1,rota13,30,44
+fuchsia,117,12,0	warp	5Viridian-Passagem1	1,1,passagem5,19,36
+//saffarihouse
+
+//Saffari
+//saffari,361,219,0	warp	Vir5idian-Pa5ssagem1	1,1,rota11,229,128
+
+//Passagem5
+passagem5,19,38,0	warp	Virid7ian-Pass6gem1	1,1,fuchsia,117,14
+passagem5,17,5,0	warp	Viridia8n-Pw4qassagem1	1,1,seafoam,40,153
+
+//seafoam
+seafoam,40,155,0	warp	Viridian-34324Passagem1	1,1,passagem5,17,7
+seafoam,231,151,0	warp	Viridiaagem1	1,1,seafoam1,138,8
+seafoam,10,70,0	warp	Viridia78nsagem1	1,1,rota20,129,87
+
+
+//seafoam1
+seafoam1,138,6,0	warp	Viridian-Pa04ssagem1	1,1,seafoam,231,149
+
+//Rota20
+rota20,8,76,0	warp	Viri-em1	1,1,cinnabar,134,119
+rota20,131,87,0	warp	Viri-Pefgem1	1,1,seafoam,12,70
+
+//Cinnabar
+cinnabar,69,5,0	warp	Viri-weagem1	1,1,passagem6,22,36
+cinnabar,24,136,0	warp	Viri-234sagem1	1,1,rota21,63,11
+cinnabar,136,119,0	warp	Viri-qssagem1	1,1,rota20,10,76
+
+//Passagem6
+passagem6,22,38,0	warp	Viri34ssagem1	1,1,cinnabar,69,7
+passagem6,1,17,0	warp	Viriqdssagem1	1,1,cinaroad,136,73
+passagem6,22,2,0	warp	Virdf4ssagem1	1,1,mtlava,170,214
+
+//Cinaroad
+cinaroad,138,73,0	warp	Virity4ssagem1	1,1,passagem6,3,17
+
+//Mtlava
+mtlava,170,216,0	warp	Viri4fssagem1	1,1,passagem6,22,4
+mtlava,45,215,0	warp	Virief4ssagem1	1,1,mtlava2,103,28
+
+//Mtlava2
+mtlava2,103,26,0	warp	Viri-234ssagem1	1,1,mtlava,45,213
+mtlava2,104,289,0	warp	Viri-234ssagem1	1,1,mtlava3,31,11
+
+//Mtlava3
+mtlava3,31,9,0	warp	Viri-234g6em1	1,1,mtlava2,104,287
+
+//Rota21
+rota21,58,130,0	warp	Viri-fgem1	1,1,pallet,10,6
+rota21,63,9,0	warp	Vifgem1	1,1,cinnabar,24,134
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

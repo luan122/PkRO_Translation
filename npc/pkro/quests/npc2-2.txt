@@ -1,0 +1,68 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+lighthalzen,120,124,4	script	Jimmy	70,{
+	if(npc2p2 == 0){
+	mes "[^CC0000Jimmy^000000]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Como posso ajudar?";
+	next;
+	if( select("Há boatos de que você achou a carteira de brock:Nada Obrigado.") == 2 )
+	{
+		mes "[^CC0000Jimmy^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	mes "[^CC0000Jimmy^000000]";
+	mes "Sim eu achei, estava fazendo uma caminhada e encontrei ela jogada no chão, posso até devolver mas para isso vou precisar de alguns itens para que eu possa terminar as experiencias com meus pokemons";
+	mes "[^CC0000Jimmy^000000]. Garanto que esses itens vão ser muito dificil de conseguir.";
+	mes "Deseja Saber quais itens vou precisar para minha experiencia?";
+	next;
+	switch(select("Sim:Não"))
+	{
+	case 1:
+		mes "[^CC0000Jimmy^000000]";
+		mes "Recompensa:";
+		mes "1x "+getitemname(19001);
+		mes " ";
+		mes "Requerimento:";
+		mes "1x "+getitemname(19002);
+		mes "500 Zenys";
+		next;
+		mes "[^CC0000Jimmy^000000]";
+		mes "Deseja completar a quest agora?";
+		next;
+		if( select("Sim!:Agora não...") == 2 )
+		{
+			mes "[^CC0000Jimmy^000000]";
+			mes "Tudo bem... Até mais!";
+			close;
+		}
+		if(countitem(19002) >= 1 && Zeny >= 500)
+		{
+			delitem 19002,1;
+			set Zeny,Zeny-500;
+			getitem 19001,1;
+			announce "O player "+strcharinfo(0)+" acaba de concluir a quest da "+getitemname(2410)+".",bc_yellow;
+			mes "[^CC0000Jimmy^000000]";
+			mes "Parabéns! Aqui está!";
+			set npc2p2,1;
+			close;
+		}
+		break;
+	case 2:
+		mes "[^CC0000Jimmy^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	mes "[^CC0000Jimmy^000000]";
+	mes "Me desculpe, mas você não tem todos os itens necessários para esta quest.";
+	mes "Volte quando você tiver todos os itens!";
+	close;
+	}else{
+	mes "[^CC0000Jimmy^000000]";
+	mes "Muito obrigado pela ajuda.";
+	close;
+	}
+
+}

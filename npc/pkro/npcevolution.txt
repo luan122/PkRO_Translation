@@ -1,0 +1,56 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+//cpmarkin1,126,70,4	script	Cientista Louth#1	402,{
+housein,157,127,4	script	Cientista Louth#1	402,{	
+		mes "[^CC0000Cientista Louth^000000]";
+		mes "Olá treinador pokemon, meu nome é Louth, sou um cientista pokemon e recentemente estou estudando casos de pokemons que não evoluem no level certo.";
+		mes "Gostaria que eu verificasse se seu pokemon já pode evoluir?";	
+
+		if( select("Sim:Não") == 2 )
+		{
+			mes "[^CC0000Cientista Louth^000000]";
+			mes "Tudo bem, estarei aqui se você precisar.";
+			close;
+		}
+		
+		next;
+		if(pokecanevo(1) == 1){
+			mes "[^CC0000Cientista Louth^000000]";
+			mes "Pelo visto seu pokemon já tem forças suficientes para evoluir.";
+			next;
+			mes "[^CC0000Cientista Louth^000000]";
+			mes "Gostaria que eu fizesse ele evoluir agora?.";	
+			
+		if( select("Sim:Não") == 2 )
+		{
+			mes "[^CC0000Cientista Louth^000000]";
+			mes "Tudo bem, estarei aqui se você precisar.";
+			close;
+		}
+
+		atcommand "@homevolution";
+		
+			mes "[^CC0000Cientista Louth^000000]";
+			mes "Wow, parabéns, seu pokemon está evoluindo!";	
+			close;
+			
+			
+		}else{
+			mes "[^CC0000Cientista Louth^000000]";
+			mes "Desculpe, seu pokemon ainda não pode evoluir.";
+			close;		
+		}
+		
+
+}
+
+
+//cpmarkin2,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#2	402
+//cpmarkin3,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#3	402
+//cpmarkin4,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#4	402
+//cpmarkin5,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#5	402
+//cpmarkin6,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#6	402
+//cpmarkin7,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#7	402
+//cpmarkin8,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#8	402
+//cpmarkin9,126,70,4	duplicate(Cientista Louth#1)	Cientista Louth#9	402

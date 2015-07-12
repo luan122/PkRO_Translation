@@ -1,0 +1,7 @@
+-	script	surfoff#main	-1,{
+
+set surf, 0;
+atcommand "@undisguise";	
+end;
+
+}

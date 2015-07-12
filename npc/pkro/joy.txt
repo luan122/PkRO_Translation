@@ -1,0 +1,337 @@
+//-------------------------------------//
+//	|   _ |	    / / |    _ | ___  |//
+//	|  |_||	   / /	|   |_|||   | |//
+//	|  ___|	    /	|    __||   | |//
+//	| |	|\  \	| |\ \	|   | |//
+//	| |	| \  \	| | \ \	|___| |//
+//	|_|	|  \__\	|_|  \_\______|//
+//-------------------------------------//
+housein.gat,112,71,5	script	Enfermeira Joy#Vip	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";	
+
+	close;
+	end;
+}
+
+
+
+cpmarkin1.gat,112,71,5	script	Enfermeira Joy#Viridian	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city1, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";
+	
+	close;
+	end;
+}
+
+
+cpmarkin2.gat,112,71,5	script	Enfermeira Joy#Pewter	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city2, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";	
+
+	close;
+	end;
+}
+
+
+
+cpmarkin3.gat,112,71,5	script	Enfermeira Joy#Cerulean	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city3, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";
+
+	close;
+	end;
+}
+
+
+cpmarkin4.gat,112,71,5	script	Enfermeira Joy#Saffron	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city4, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";	
+
+	close;
+	end;
+}
+
+
+
+
+cpmarkin5.gat,112,71,5	script	Enfermeira Joy#Celadon	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city5, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";	
+
+	close;
+	end;
+}
+
+
+
+
+cpmarkin6.gat,112,71,5	script	Enfermeira Joy#Vermilion	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city6, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";
+
+	close;
+	end;
+}
+
+
+
+cpmarkin7.gat,112,71,5	script	Enfermeira Joy#Lavender	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city7, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";
+
+	close;
+	end;
+}
+
+
+
+
+cpmarkin8.gat,112,71,5	script	Enfermeira Joy#Fuchsia	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city8, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";
+
+	close;
+	end;
+}
+
+
+cpmarkin9.gat,112,71,5	script	Enfermeira Joy#Cinnabar	48,{
+
+set @nomedonpc$,"Enfermeira Joy";
+
+	set city9, 1;
+	atcommand "@save";
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Olá ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Seus pokemons acabaram de ser curados.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";	
+
+	close;
+	end;
+}
+
+
+
+
+housein.gat,117,71,5	script	Chansey#Vip	49,{
+
+	mes "Chansey...";
+	close;
+	end;
+}
+
+cpmarkin1,117,71,5	duplicate(Chansey#Vip)	Chansey#viridian	49
+cpmarkin2,117,71,5	duplicate(Chansey#Vip)	Chansey#pewter	49
+cpmarkin3,117,71,5	duplicate(Chansey#Vip)	Chansey#cerulean	49
+cpmarkin4,117,71,5	duplicate(Chansey#Vip)	Chansey#saffron	49
+cpmarkin5,117,71,5	duplicate(Chansey#Vip)	Chansey#celadon	49
+cpmarkin6,117,71,5	duplicate(Chansey#Vip)	Chansey#vermilion	49
+cpmarkin7,117,71,5	duplicate(Chansey#Vip)	Chansey#lavender	49
+cpmarkin8,117,71,5	duplicate(Chansey#Vip)	Chansey#fuchsia	49
+cpmarkin9,117,71,5	duplicate(Chansey#Vip)	Chansey#cinnabar	49
+
+
+
+
+
+
+
+
+
+
+
+
+
+prontera.gat,155,190,5	script	Enfermeira Joy#prt	48,{
+
+	atcommand "@warp pewter 99 97";
+	end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

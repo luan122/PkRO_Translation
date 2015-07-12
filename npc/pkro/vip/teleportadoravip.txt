@@ -1,0 +1,39 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+pallet,116,33,4	script	Teleporter Vip#pallet	720,{
+	mes "[^CC0000Teleport Vip^000000]";
+	mes "Would you like to access the VIP room?";
+	next;
+	if( select("Yes:No") == 2 )
+	{
+		mes "[^CC0000Teleport Vip^000000]";
+		mes "Come back if you decide to change your mind.";
+		close;
+	}
+	
+	if(getgmlevel() < 1){
+	mes "[^CC0000Teleport Vip^000000]";
+	mes "Only VIP Users have access to this function.";
+	close;
+	}
+	
+	close2;
+	atcommand "@warp housein 115 59";	
+	end;
+
+}
+
+cpmarkin1,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Viridi	720
+cpmarkin2,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Pewter	720
+cpmarkin3,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Cerule	720
+cpmarkin4,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Saffro	720
+cpmarkin5,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Celado	720
+cpmarkin6,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Vermil	720
+cpmarkin7,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Lavend	720
+cpmarkin8,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Fuchsi	720
+cpmarkin9,103,57,5	duplicate(Teleporter Vip#pallet)	Teleporter Vip#Cinnab	720
+
+
+
+

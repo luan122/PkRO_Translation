@@ -1,0 +1,92 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+pewter,43,69,4	script	Lilith	845,{
+	if(npc3p1 == 0){
+	mes "[^CC0000Lilith^000000]";
+	mes "Estou partindo para mais umas de minhas jornadas pokemon.";
+	mes "Mas para embarcar em mais uma aventura vou precisar de um Trevo de Quatro Folhas para atrair sorte.";
+	mes "Meu amigo Joe me disse que algém tinha achado um, ele costuma andar na cidade de Saffron.";
+	mes "Posso te pedir um favor?";
+	next;
+	if( select("Sim, Qual?:Não.") == 2 )
+	{
+		mes "[^CC0000Lilith^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+
+	if(BaseLevel < 85){
+		mes "[^CC0000Lilith^000000]";
+		mes "Desculpe, apenas jogadores level 85 ou mais possuem força o suficiente para me ajudar.";
+	close;
+	}	
+
+	mes "[^CC0000Lilith^000000]";
+	mes "Serei muito agradecida se puder me ajudar.";
+	mes "Você poderia ir atras do Joe e conseguir esse Trevo?";
+	next;
+	switch(select("Sim!:Não, Obrigado"))
+	{
+	case 1:
+	mes "[^CC0000Lilith^000000]";
+	mes "Muito brigado. Vou aguardar seu retorno";	
+	set npc3p1,1;
+		close;
+	case 2:
+		mes "[^CC0000Lilith^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	}else{
+	
+	
+	if(npc3p4 == 0){	
+	mes "[^CC0000Lilith^000000]";
+	mes "Muito obrigado por querer me ajudar, vou esperar o seu retorno.";
+	close;
+	}else{
+	
+		if(npc3p6 == 0){
+	
+			if(countitem(706) > 0){
+				mes "[^CC0000Lilith^000000]";
+				mes "Muito obrigado. Agora posso viajem ser medo de ter problemas.";
+				mes "Pegue esse Zeny como recompensa.";	
+				next;
+				
+			mes "^CC0000Obs: Você ganhará um bonus de experiência. Certifique-se que possui um pokemon ativo.^000000";	
+			if( select("Receber o Premio agora:Receber o premio depois") == 2 )
+			{
+				mes "[^CC0000Lilith^000000]";
+				mes "Tudo bem, estarei aqui caso queira a recompensa.";
+				close;
+			}
+
+				next;			
+				delitem 706,1;
+			    	set Zeny, Zeny+150000;
+			    	getexp 500000,0;
+					set npc3p6,1;
+				close;
+			}else{
+				mes "[^CC0000Lilith^000000]";
+				mes "Muito obrigado por querer me ajudar, vou esperar o seu retorno.";
+				close;			
+			}
+			
+			}else{
+			mes "[^CC0000Lilith^000000]";
+			mes "Agora sim, posso viajar sem medo.";
+			close;			
+			}
+			
+	
+	}
+	
+	
+	
+	
+	}
+
+}

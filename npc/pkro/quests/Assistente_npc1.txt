@@ -1,0 +1,45 @@
+rota1,15,212,4	script	Assistente	402,{
+
+if(npc1 == 0){
+
+	mes "[Assistente]";
+	mes "Olá jovem aventureiro.";
+	mes "Eu sou assistente do Prof. Oak.";
+	mes "Estou aqui para ajudar os novos treinadores.";
+	mes "Gostaria de uma ajuda?";
+	
+	menu "Sim",-,"Não",nao;
+	
+	mes "[Assistente]";
+	mes "Bom, eu possuo 30 pokeballs.";
+	mes "Se você provar que merece estas pokeballs, vou dar a você.";
+	mes "Se você for level 15 ou maior, vou da-las a você.";
+	next;
+
+	mes "Você possui pelo menos level 15?";
+	menu "Sim",-,"Não",nao;
+	
+	if(BaseLevel > 14){
+		mes "Vejo que você é capaz de se tornar um bom treinador.";
+		mes "Fique com estas pokeballs e boa sorte.";
+		getitem 692,30;		
+		set npc1, 1;
+		close;
+	}else{
+		mes "Desculpe, você ainda não está forte o suficiente para merecer este premio.";
+		close;
+	}
+
+}else{
+	mes "[Assistente]";
+	mes "Espero ter ajudado.";
+	close;
+}
+
+nao:
+	mes "Tudo bem.";
+	close;
+
+end;
+}
+

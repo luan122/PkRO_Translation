@@ -1,0 +1,36 @@
+rota1,212,355,4	script	Velho Pescador	842,{
+
+if(rod1 == 0){
+
+	mes "[Velho Pescador]";
+	mes "Olá, eu sou um velho pescador da cidade de Viridian, mas infelismente não tenho mais idade para me aventurar nos sete mares.";
+	mes "Estou procurando alguém para herdar minha velha vara de pesca.";
+	mes "Ela não é a mais moderna, porém já me rendeu várias ótimas pescarias.";
+	mes "Você me parece ter um grande potencial como Treinador pokemon.";
+	mes "Quem sabe não se torna também um grande pescador.";
+	next;
+	mes "Gostaria de ficar com minha vara de pesca?";
+	
+	menu "Sim",-,"Não",nao;
+	
+	mes "[Velho Pescador]";
+	mes "Ótimo, vou torcer pelo seu sucesso.";
+	mes "Cuide bem dela, que tenho um sentimento especial por esta vara.";
+	getitem 19207,1;
+	set rod1, 1;
+	close;
+
+nao:
+	mes "[Velho Pescador]";
+	mes "É uma pena, você me parece ter grande potencial.";	
+	close;
+
+
+}else{
+	mes "[Velho Pescador]";
+	mes "Espero que você pesque muitos pokemons.";
+	close;
+}
+end;
+}
+

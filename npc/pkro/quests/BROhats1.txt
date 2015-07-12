@@ -1,0 +1,183 @@
+//=====Flex Scripts ================================================
+//===== Quest Boina Alada Colorida
+//===== Por: ==========================================================
+//= César Augusto - Flexx~* «
+//===== Current Version: ==============================================
+//= 1.0
+//===== Compatível com: ===============================================
+//= Cronus
+//===== Funções: ====================================================
+//= NPC de Quest para obtenção das Boinas Aladas Coloridas.
+//= É nescessário possuir o pack adicionado no servidor.
+//= Você pode encontra-lo no Cronus-Emulator(http://cronus-emulator.com/forum/index.php?/topic/62250-boina-alada-colorida/)
+//= ou no meu Blog de Recursos (Em construção) http://flex-resources.blogspot.com/
+//===== Comentários adicionais: =======================================
+//= Não Retire os Créditos
+//= Não publique este NPC em nenhum lugar exceto no Cronus-Emulator http://www.cronus-emulator.com/forum
+//================================Não Retire os Creditos===============
+//
+//
+//
+rota2,230,206,4	script	Alfaiate		929,{
+
+
+show "[Alfaiate]";
+show "Olá, Gostaria de fazer algum chapéu para você?";
+next;
+switch(select("-Sim","- Não")){
+
+	case 1:
+	show "[Alfaiate]";
+	show "Ok! Preciso de 100 Bug gosme, 15 Mushroom, 10 Bottle of Poison, 5 Pinsir Horn e 30k";
+	show "Selecione Qual chapéu você deseja:";
+	next;
+	switch(select("- Grinalda","- Quepe","- Chapéu com Pluma","- Tiara da Kafra","- Trouxinha","- Sombrero","- Faixa de Caratê","- Chapéu de Lontra","- Cabeça de Abóbora","- Boina","- Quepe de Oficial","- Cancelar")){
+
+case 1:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5008,1;
+close;
+end;
+
+case 2:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5016,1;
+close;
+end;
+
+case 3:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5018,1;
+close;
+end;
+
+case 4:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5020,1;
+close;
+end;
+
+case 5:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5023,1;
+close;
+end;
+
+case 6:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5067,1;
+close;
+end;
+
+case 7:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5070,1;
+close;
+end;
+
+case 8:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5078,1;
+close;
+end;
+
+case 9:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5134,1;
+close;
+end;
+
+case 10:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5172,1;
+close;
+end;
+
+case 11:
+if(countitem(19017)<100 || countitem(19109)<15 || countitem(19013)<10 || countitem(19118)<5 || Zeny < 30000){
+	show "[Alfaiate]";
+	show "Desculpe, você não possui os itens necessários.";
+	close;
+}	
+delitem 19017,100;delitem 19109,15;delitem 19013,10;delitem 19118,5;
+set Zeny, Zeny - 30000;
+additem 5184,1;
+close;
+end;
+
+
+
+case 12:
+show "Volte quando Precisar";
+close;
+end;
+}
+
+case 2:
+show "Votle quando Precisar";
+close;
+end;
+
+}
+
+}

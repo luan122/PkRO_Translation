@@ -1,0 +1,23 @@
+-	script	cmdheal	-1,{
+
+set @nomedonpc$,"Nurse Joy";
+
+	homvaporize();
+	progressbar("blue",1);
+	delitem 690,countitem(690);
+	mes "["+@nomedonpc$+"]";
+	mes "Hello ^00BFFF"+strcharinfo(0)+"^000000.";
+	mes "Your Pokemon have just been healed.";
+	heal2();
+	atcommand "@repairall";
+	query_sql "UPDATE `homunculus` SET `hp` = `max_hp` WHERE `char_id`='"+getcharid(0)+"'";
+	query_sql "UPDATE `homunculus` SET `sp` = `max_sp` WHERE `char_id`='"+getcharid(0)+"'";
+
+set surf, 0;
+set ride, 0;
+atcommand "@speed 150";
+atcommand "@undisguise";	
+
+	close;
+	end;
+}

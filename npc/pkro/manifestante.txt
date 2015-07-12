@@ -1,0 +1,24 @@
+viridian,135,92,4	script	Manifestante Brasileiro	913,{
+
+mes "[Manifestante]";
+mes "Estamos cançados de ser explorados por esses políticos corruptos!";
+mes "Queremos saúde, educação...";
+mes "Se você apoia está ideia vou dar um presente para você poder nos ajudar nessa manifestação.";
+menu "Sim eu estou nesta",i_s,"Eu sou a favor da corrupção",n_n;
+
+i_s:
+next;
+mes "[Manifestante]";
+mes "Que bom que você também concorda! pegue o símbolo da nossa nação.";
+getitem 5477,1;
+close;
+
+n_n:
+next;
+mes "[Manifestante]";
+mes "Que pena, então não posso lhe ajudar.";
+close;
+
+
+end;
+}

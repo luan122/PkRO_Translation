@@ -1,0 +1,4156 @@
+-	script	pokedex#main	-1,{
+
+setarray .@menu$[1],"Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","Charizard","Squirtle","Wartortle","Blastoise","Caterpie","Metapod","Butterfree","Weedle","Kakuna","Beedrill","Pidgey","Pidgeotto","Pidgeot","Rattata","Raticate","Spearow","Fearow","Ekans","Arbok","Pikachu","Raichu","Sandshrew","Sandslash","Nidoran F","Nidorina","Nidoqueen","Nidoran M","Nidorino","Nidoking","Clefairy","Clefable","Vulpix","Ninetales","jigglypuff","Wigglytuff","Zubat","Golbat","Oddish","Gloom","Vileplume","Paras","Parasect","Venonat","Venomoth","Diglett","Dugtrio","Meowth","Persian","Psyduck","Golduck","Mankey","Primeape","Growlithe","Arcanine","Poliwag","Poliwhirl","Poliwrath","Abra","Kadabra","Alakazam","Machop","Machoke","Machamp","Bellsprout","Weepinbell","Victreebel","Tentacool","Tentacruel","Geodude","Graveler","Golem","Ponyta","Rapidash","Slowpoke","Slowbro","Magnemite","Magneton","Farfetchd","Doduo","Dodrio","Seel","Dewgong","Grimer","Muk","Next Page";
+
+if(dex_1 == 0)set .@menu$[1],"^CC3300Bulbasaur^0000";
+if(dex_2 == 0)set .@menu$[2],"^CC3300Ivysaur^0000";
+if(dex_3 == 0)set .@menu$[3],"^CC3300Venusaur^0000";
+if(dex_4 == 0)set .@menu$[4],"^CC3300Charmander^0000";
+if(dex_5 == 0)set .@menu$[5],"^CC3300charmeleon^0000";
+if(dex_6 == 0)set .@menu$[6],"^CC3300charizard^0000";
+if(dex_7 == 0)set .@menu$[7],"^CC3300Squirtle^0000";
+if(dex_8 == 0)set .@menu$[8],"^CC3300Wartortle^0000";
+if(dex_9 == 0)set .@menu$[9],"^CC3300Blastoise^0000";
+if(dex_10 == 0)set .@menu$[10],"^CC3300Caterpie^0000";
+if(dex_11 == 0)set .@menu$[11],"^CC3300Metapod^0000";
+if(dex_12 == 0)set .@menu$[12],"^CC3300Butterfree^0000";
+if(dex_13 == 0)set .@menu$[13],"^CC3300Weedle^0000";
+if(dex_14 == 0)set .@menu$[14],"^CC3300Kakuna^0000";
+if(dex_15 == 0)set .@menu$[15],"^CC3300Beedrill^0000";
+if(dex_16 == 0)set .@menu$[16],"^CC3300Pidgey^0000";
+if(dex_17 == 0)set .@menu$[17],"^CC3300Pidgeotto^0000";
+if(dex_18 == 0)set .@menu$[18],"^CC3300Pidgeot^0000";
+if(dex_19 == 0)set .@menu$[19],"^CC3300Rattata^0000";
+if(dex_20 == 0)set .@menu$[20],"^CC3300Raticate^0000";
+if(dex_21 == 0)set .@menu$[21],"^CC3300Spearow^0000";
+if(dex_22 == 0)set .@menu$[22],"^CC3300Fearow^0000";
+if(dex_23 == 0)set .@menu$[23],"^CC3300Ekans^0000";
+if(dex_24 == 0)set .@menu$[24],"^CC3300Arbok^0000";
+if(dex_25 == 0)set .@menu$[25],"^CC3300Pikachu^0000";
+if(dex_26 == 0)set .@menu$[26],"^CC3300Raichu^0000";
+if(dex_27 == 0)set .@menu$[27],"^CC3300Sandshew^0000";
+if(dex_28 == 0)set .@menu$[28],"^CC3300Sandslash^0000";
+//nidoran famyl
+if(dex_29 == 0)set .@menu$[29],"^CC3300Nidoran Femea^0000";
+if(dex_30 == 0)set .@menu$[30],"^CC3300Nidorina^0000";
+if(dex_31 == 0)set .@menu$[31],"^CC3300Nidoqueen^0000";
+if(dex_32 == 0)set .@menu$[32],"^CC3300Nidoran Macho^0000";
+if(dex_33 == 0)set .@menu$[33],"^CC3300Nidorino^0000";
+if(dex_34 == 0)set .@menu$[34],"^CC3300Nidoking^0000";
+//end
+if(dex_35 == 0)set .@menu$[35],"^CC3300Clefairy^0000";
+if(dex_36 == 0)set .@menu$[36],"^CC3300Clefable^0000";
+if(dex_37 == 0)set .@menu$[37],"^CC3300Vulpix^0000";
+if(dex_38 == 0)set .@menu$[38],"^CC3300Ninetales^0000";
+//family jiggly
+if(dex_39 == 0)set .@menu$[39],"^CC3300Jigglypuff^0000";
+if(dex_40 == 0)set .@menu$[40],"^CC3300Wigglytuff^0000";
+//end
+if(dex_41 == 0)set .@menu$[41],"^CC3300Zubat^0000";
+if(dex_42 == 0)set .@menu$[42],"^CC3300Golbat^0000";
+if(dex_43 == 0)set .@menu$[43],"^CC3300Oddish^0000";
+if(dex_44 == 0)set .@menu$[44],"^CC3300Gloom^0000";
+if(dex_45 == 0)set .@menu$[45],"^CC3300Vileplume^0000";
+if(dex_46 == 0)set .@menu$[46],"^CC3300Paras^0000";
+if(dex_47 == 0)set .@menu$[47],"^CC3300Parasect^0000";
+if(dex_48 == 0)set .@menu$[48],"^CC3300Venonat^0000";
+if(dex_49 == 0)set .@menu$[49],"^CC3300Venomoth^0000";
+if(dex_50 == 0)set .@menu$[50],"^CC3300Diglett^0000";
+if(dex_51 == 0)set .@menu$[51],"^CC3300Dugtrio^0000";
+if(dex_52 == 0)set .@menu$[52],"^CC3300Meowth^0000";
+if(dex_53 == 0)set .@menu$[53],"^CC3300Persian^0000";
+if(dex_54 == 0)set .@menu$[54],"^CC3300Psyduck^0000";
+if(dex_55 == 0)set .@menu$[55],"^CC3300Golduck^0000";
+if(dex_56 == 0)set .@menu$[56],"^CC3300Mankey^0000";
+if(dex_57 == 0)set .@menu$[57],"^CC3300Primeape^0000";
+if(dex_58 == 0)set .@menu$[58],"^CC3300Growlithe^0000";
+if(dex_59 == 0)set .@menu$[59],"^CC3300Arcanine^0000";
+if(dex_60 == 0)set .@menu$[60],"^CC3300Poliwag^0000";
+if(dex_61 == 0)set .@menu$[61],"^CC3300Poliwhirl^0000";
+if(dex_62 == 0)set .@menu$[62],"^CC3300Poliwrath^0000";
+if(dex_63 == 0)set .@menu$[63],"^CC3300Abra^0000";
+if(dex_64 == 0)set .@menu$[64],"^CC3300Kadabra^0000";
+if(dex_65 == 0)set .@menu$[65],"^CC3300Alakazam^0000";
+if(dex_66 == 0)set .@menu$[66],"^CC3300Machop^0000";
+if(dex_67 == 0)set .@menu$[67],"^CC3300Machoke^0000";
+if(dex_68 == 0)set .@menu$[68],"^CC3300Machamp^0000";
+if(dex_69 == 0)set .@menu$[69],"^CC3300Bellsprout^0000";
+if(dex_70 == 0)set .@menu$[70],"^CC3300Weepinbell^0000";
+if(dex_71 == 0)set .@menu$[71],"^CC3300Victreebell^0000";
+if(dex_72 == 0)set .@menu$[72],"^CC3300Tentacool^0000";
+if(dex_73 == 0)set .@menu$[73],"^CC3300Tentacruel^0000";
+if(dex_74 == 0)set .@menu$[74],"^CC3300Geodude^0000";
+if(dex_75 == 0)set .@menu$[75],"^CC3300Graveler^0000";
+if(dex_76 == 0)set .@menu$[76],"^CC3300Golem^0000";
+if(dex_77 == 0)set .@menu$[77],"^CC3300Ponyta^0000";
+if(dex_78 == 0)set .@menu$[78],"^CC3300Rapidash^0000";
+if(dex_79 == 0)set .@menu$[79],"^CC3300Slowpoke^0000";
+if(dex_80 == 0)set .@menu$[80],"^CC3300Slowbro^0000";
+if(dex_81 == 0)set .@menu$[81],"^CC3300Magnemite^0000";
+if(dex_82 == 0)set .@menu$[82],"^CC3300Magneton^0000";
+if(dex_83 == 0)set .@menu$[83],"^CC3300Farfeth'd^0000";
+if(dex_84 == 0)set .@menu$[84],"^CC3300Doduo^0000";
+if(dex_85 == 0)set .@menu$[85],"^CC3300Dodrio^0000";
+if(dex_86 == 0)set .@menu$[86],"^CC3300Seel^0000";
+if(dex_87 == 0)set .@menu$[87],"^CC3300Dewgong^0000";
+if(dex_88 == 0)set .@menu$[88],"^CC3300Grimer^0000";
+if(dex_89 == 0)set .@menu$[89],"^CC3300Muk^0000";
+
+	mes "                      ^CC3300[Pokedex]^0000";
+	select(.@menu$[1],.@menu$[2],.@menu$[3],.@menu$[4],.@menu$[5],.@menu$[6],.@menu$[7],.@menu$[8],.@menu$[9],.@menu$[10],.@menu$[11],.@menu$[12],.@menu$[13],.@menu$[14],.@menu$[15],.@menu$[16],.@menu$[17],.@menu$[18],.@menu$[19],.@menu$[20],.@menu$[21],.@menu$[22],.@menu$[23],.@menu$[24],.@menu$[25],.@menu$[26],.@menu$[27],.@menu$[28],.@menu$[29],.@menu$[30],.@menu$[31],.@menu$[32],.@menu$[33],.@menu$[34],.@menu$[35],.@menu$[36],.@menu$[37],.@menu$[38],.@menu$[39],.@menu$[40],.@menu$[41],.@menu$[42],.@menu$[43],.@menu$[44],.@menu$[45],.@menu$[46],.@menu$[47],.@menu$[48],.@menu$[49],.@menu$[50],.@menu$[51],.@menu$[52],.@menu$[53],.@menu$[54],.@menu$[55],.@menu$[56],.@menu$[57],.@menu$[58],.@menu$[59],.@menu$[60],.@menu$[61],.@menu$[62],.@menu$[63],.@menu$[64],.@menu$[65],.@menu$[66],.@menu$[67],.@menu$[68],.@menu$[69],.@menu$[70],.@menu$[71],.@menu$[72],.@menu$[73],.@menu$[74],.@menu$[75],.@menu$[76],.@menu$[77],.@menu$[78],.@menu$[79],.@menu$[80],.@menu$[81],.@menu$[82],.@menu$[83],.@menu$[84],.@menu$[85],.@menu$[86],.@menu$[87],.@menu$[88],.@menu$[89],.@menu$[90]);
+	
+switch(@menu)
+{
+
+case 1:
+if(dex_1 == 1){
+
+	cutin "bulba",2;
+	soundeffect "01_bulba.wav",0;
+	mes "Nome: ^008000Bulbasaur^0000";
+	mes "Level: ^00800020^0000";
+	mes "^FF0000Plant^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Ivysaur^000000, Required level^00800045^0000";
+	mes "^FF0000Description:^0000";
+	mes "^003300Grows seeds on it's back. OG Pokemon.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 6 - Leaves Dance nv.6";
+	mes "Level 10 - Poison Attack nv.5";
+	mes "Level 13 - Headbutt nv.5";
+close2;
+cutin "bulba",255;
+break;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 2:
+if(dex_2 == 1){
+
+	cutin "ivy",2;
+	soundeffect "02_ivy.wav",0;
+	mes "Nome: ^008000Ivysaur^0000";
+	mes "Level: ^00800045^0000";
+	mes "^FF0000Plant^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Venusaur^000000, Required level ^00800080^0000";
+	mes "^FF0000Description:^0000";
+	mes "^003300None so far^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 6 - Leaves Dance nv.8";
+	mes "Level 10 - Poison Attack nv.6";
+	mes "Level 13 - Headbutt nv.7";
+close2;
+cutin "ivy",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 3:
+if(dex_3 == 1){
+
+	cutin "venu",2;
+	soundeffect "venu.wav",0;
+	mes "Nome: ^008000Venusaur^0000";
+	mes "^FF0000Plant^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000^0000";
+	mes "^FF0000Description:^0000";
+	mes "^003300None so far^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 6 - Leaves Dance nv.10";
+	mes "Level 10 - Poison Attack nv.7";
+	mes "Level 13 - Headbutt nv.10";
+	mes "Level 80 - Absorv nv.8";
+	mes "Level 85 - Leaf Storm.10";
+close2;
+cutin "venu",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 4:
+if(dex_4 == 1){
+
+	cutin "charmander",2;
+	soundeffect "charmander.wav",0;
+	mes "Nome: ^008000Charmander^0000";
+	mes "Level: ^00800026^0000";
+	mes "Tipo: ^FF6600Fogo^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Charmeleon^000000, Required level^00800045^0000";
+	mes "^FF0000Description:^0000";
+	mes "^003300None so far^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 4 - Ember nv.5";
+	mes "Level 10 - Flame Throw nv.6";
+	mes "Level 15 - Rage nv.3";
+close2;
+cutin "charmander",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 5:
+if(dex_5 == 1){
+
+	cutin "charmeleon",2;
+	soundeffect "charmeleon.wav",0;
+	mes "Nome: ^008000Charmeleon^0000";
+	mes "Level: ^00800045^0000";
+	mes "Tipo: ^FF6600Fogo^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Charizard^000000, Required level ^00800080^0000";
+	mes "^FF0000Description:^0000";
+	mes "^003300None so far^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 4 - Ember nv.7";
+	mes "Level 10 - Flame Throw nv.8";
+	mes "Level 15 - Rage nv.4";
+close2;
+cutin "charmeleon",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 6:
+if(dex_6 == 1){
+
+	cutin "charizard",2;
+	soundeffect "charizard.wav",0;
+	mes "Nome: ^008000Charizard^0000";
+	mes "Tipo: ^FF6600Fogo^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000^0000";
+	mes "^FF0000Description:^0000";
+	mes "^003300None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 4 - Ember nv.10";
+	mes "Level 10 - Flame Throw nv.10";
+	mes "Level 15 - Rage nv.5";
+	mes "Level 80 - Wing Attack nv.8";
+	mes "Level 85 - Magma Storm nv.10";
+close2;
+cutin "charizard",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 7:
+if(dex_7 == 1){
+
+	cutin "squirtle",2;
+	soundeffect "squirtle.wav",0;
+	mes "Nome: ^008000Squirtle^0000";
+	mes "Level: ^00800020^0000";
+	mes "^FF0000Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Wartortle^000000, Required level^00800045^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 7 - Harden nv.4";
+	mes "Level 15 - Water Tornado nv.5";
+close2;
+cutin "Squirtle",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 8:
+if(dex_8 == 1){
+
+	cutin "Wartortle",2;
+	soundeffect "Wartortle.wav",0;
+	mes "Nome: ^008000Wartortle^0000";
+	mes "Level: ^00800045^0000";
+	mes "^FF0000Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Blastoise^000000, Required level ^00800080^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Water Gun nv.7";
+	mes "Level 7 - Harden nv.5";
+	mes "Level 15 - Water Tornado nv.7";
+close2;
+cutin "Wartortle",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 9:
+if(dex_9 == 1){
+
+	cutin "Blastoise",2;
+	soundeffect "Blastoise.wav",0;
+	mes "Nome: ^008000Blastoise^0000";
+	mes "^FF0000Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Water Gun nv.10";
+	mes "Level 7 - Harden nv.7";
+	mes "Level 15 - Water Tornado nv.10";
+	mes "Level 80 - Rage nv.4";
+	mes "Level 85 - Hydropump nv.10";
+close2;
+cutin "Blastoise",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 10:
+if(dex_10 == 1){
+
+	cutin "caterpie",2;
+	soundeffect "caterpie.wav",0;
+	mes "Nome: ^008000Caterpie^0000";
+	mes "Level: ^00800010^0000";
+	mes "^FF0000Plant^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Metapod^000000, Required level^00800030^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Headbutt nv.6";
+close2;
+cutin "caterpie",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+
+case 11:
+if(dex_11 == 1){
+
+	cutin "metapod",2;
+	soundeffect "metapod.wav",0;
+	mes "Nome: ^008000Metapod^0000";
+	mes "Level: ^00800030^0000";
+	mes "^FF0000Plant^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Butterfree^000000, Required level ^00800050^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Headbutt nv.8";
+	mes "Level 7 - Harden nv.10";
+close2;
+cutin "metapod",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 12:
+if(dex_12 == 1){
+
+	cutin "butterfree",2;
+	soundeffect "butterfree.wav",0;
+	mes "Nome: ^008000Butterfree^0000";
+	mes "Tipo: ^008000Plant^000000/^808080Flying^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Headbutt nv.10";
+	mes "Level 7 - Harden nv.4";
+	mes "Level 9 - Gust nv.6";
+	mes "Level 30 - Sleep Power nv.6";
+	mes "Level 55 - Confusion nv7";
+close2;
+cutin "butterfree",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 13:
+if(dex_13 == 1){
+
+	cutin "weedle",2;
+	soundeffect "weedle.wav",0;
+	mes "Nome: ^008000Weedle^0000";
+	mes "Level: ^00800010^0000";
+	mes "Tipo: ^008000Plant^000000/^800080Veneno^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Kakuna^000000, Required level^00800030^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Headbutt nv.6";
+close2;
+cutin "weedle",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 14:
+if(dex_14 == 1){
+
+	cutin "kakuna",2;
+	soundeffect "kakuna.wav",0;
+	mes "Nome: ^008000Kakuna^0000";
+	mes "Level: ^00800030^0000";
+	mes "^FF0000Plant^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Beedrill^000000, Required level ^00800050^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Headbutt nv.8";
+	mes "Level 7 - Harden nv.10";
+close2;
+cutin "kakuna",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 15:
+if(dex_15 == 1){
+
+	cutin "beedrill",2;
+	soundeffect "beedrill.wav",0;
+	mes "Nome: ^008000Beedrill^0000";
+	mes "Tipo: ^008000Planta^000000/^808080Voador^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Headbutt nv.10";
+	mes "Level 7 - Harden nv.4";
+	mes "Level 9 - Poison Attack nv.7";
+	mes "Level 30 - Extreme Agility nv.6";
+	mes "Level 55 - Triple Blow nv.7";
+close2;
+cutin "beedrill",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 16:
+if(dex_16 == 1){
+
+	cutin "pidgey",2;
+	soundeffect "pidgey.wav",0;
+	mes "Nome: ^008000Pidgey^0000";
+	mes "Level: ^00800010^0000";
+	mes "Tipo: ^808080Voador^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Pidgeotto^000000, Required level^00800040^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 7 - Gust nv.5";
+	mes "Level 12 - Extreme Agility nv.6";
+close2;
+cutin "pidgey",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 17:
+if(dex_17 == 1){
+
+	cutin "pidgeotto",2;
+	soundeffect "pidgeotto.wav",0;
+	mes "Nome: ^008000Pidgeotto^0000";
+	mes "Level: ^00800040^0000";
+	mes "Tipo: ^808080Voador^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Pidgeot^000000, Required level ^00800080^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 7 - Gust nv.7";
+	mes "Level 12 - Extreme Agility nv.8";
+	mes "Level 40 - Wing Attack nv.7";
+close2;
+cutin "pidgeotto",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+
+case 18:
+if(dex_18 == 1){
+
+	cutin "Pidgeot",2;
+	soundeffect "Pidgeot.wav",0;
+	mes "Nome: ^008000Pidgeot^0000";
+	mes "Tipo: ^808080Voador^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.10";
+	mes "Level 7 - Gust nv.10";
+	mes "Level 12 - Extreme Agility nv.10";
+	mes "Level 40 - Wing Attack nv.10";
+	mes "Level 70 - Tornado nv.10";
+close2;
+cutin "pidgeot",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 19:
+if(dex_19 == 1){
+
+	cutin "Rattata",2;
+	soundeffect "rattata.wav",0;
+	mes "Nome: ^008000Rattata^0000";
+	mes "Level: ^00800010^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Raticate^000000, Required level ^00800035^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.6";
+	mes "Level 9 - Headbutt nv.7";
+close2;
+cutin "rattata",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 20:
+if(dex_20 == 1){
+
+	cutin "Raticate",2;
+	soundeffect "raticate.wav",0;
+	mes "Nome: ^008000Raticate^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.7";
+	mes "Level 9 - Headbutt nv.10";
+	mes "Level 20 - Extreme Agility nv.6";
+	mes "Level 40 - Triple Blow nv.7";
+close2;
+cutin "raticate",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 21:
+if(dex_21 == 1){
+
+	cutin "spearow",2;
+	soundeffect "spearow.wav",0;
+	mes "Nome: ^008000Spearow^0000";
+	mes "Level: ^00800015^0000";
+	mes "Tipo: ^808080Voador^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Fearow^000000, Required level ^00800060^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.6";
+	mes "Level 7 - Gust nv.7";
+	mes "Level 12 - Extreme Agility nv.8";
+close2;
+cutin "spearow",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 22:
+if(dex_22 == 1){
+
+	cutin "Fearow",2;
+	soundeffect "Fearow.wav",0;
+	mes "Nome: ^008000Fearow^0000";
+	mes "Tipo: ^808080Voador^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 7 - Gust nv.10";
+	mes "Level 12 - Extreme Agility nv.10";
+	mes "Level 60 - Wing Attack nv.8";
+	mes "Level 70 - Tornado nv.8";
+close2;
+cutin "Fearow",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 23:
+if(dex_23 == 1){
+
+	cutin "Ekans",2;
+	soundeffect "Ekans.wav",0;
+	mes "Nome: ^008000Ekans^0000";
+	mes "Level: ^00800015^0000";
+	mes "^FF0000Poison:^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Arbok^000000, Required level ^00800055^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 7 - Poison Attack nv.7";
+close2;
+cutin "Ekans",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 24:
+if(dex_24 == 1){
+
+	cutin "Arbok",2;
+	soundeffect "Arbok.wav",0;
+	mes "Nome: ^008000Arbok^0000";
+	mes "^FF0000Poison:^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 7 - Poison Attack nv.10";
+	mes "Level 12 - Extreme Agility nv.7";
+	mes "Level 20 - Body Slam nv.8";
+close2;
+cutin "Arbok",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 25:
+if(dex_25 == 1){
+
+	cutin "Pikachu",2;
+	soundeffect "Pikachu.wav",0;
+	mes "Nome: ^008000Pikachu^0000";
+	mes "Level: ^00800020^0000";
+	mes "^FF0000Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Raichu^000000, Required level ^00800070^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.6";
+	mes "Level 7 - Thunder Shock nv.7";
+	mes "Level 14 - Extreme Agility nv.7";
+	mes "Level 20 - Thunder Punch nv.7";
+close2;
+cutin "pikachu",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 26:
+if(dex_26 == 1){
+
+	cutin "Raichu",2;
+	soundeffect "raichu.wav",0;
+	mes "Nome: ^008000raichu^0000";
+	mes "^FF0000Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.9";
+	mes "Level 7 - Thunder Shock nv.10";
+	mes "Level 14 - Extreme Agility nv.9";
+	mes "Level 20 - Thunder Punch nv.10";
+	mes "Level 55 - Thunder Storm nv.8";
+close2;
+cutin "raichu",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 27:  
+if(dex_27 == 1){
+
+	cutin "sandshrew",2;  
+	soundeffect "sandshrew.wav",0;
+	mes "Nome: ^008000Sandshrew^0000";
+	mes "Level: ^00800020^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Sandslash^000000, Required level ^00800055^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Harden nv.4";
+	mes "Level 5 - Quick Attack nv.5";
+	mes "Level 10 - Headbutt nv.4";
+close2;
+cutin "sandshrew",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 28:  
+if(dex_28 == 1){
+
+	cutin "sandslash",2;  
+	soundeffect "sandslash.wav",0;
+	mes "Nome: ^008000Sandslash^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Harden nv.5";
+	mes "Level 5 - Quick Attack nv.7";
+	mes "Level 10 - Headbutt nv.8";
+	mes "Level 55 -  Rage nv.4";
+	mes "Level 65 - Earth Quake nv.8";
+close2;
+cutin "sandslash",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 29:  
+if(dex_29 == 1){
+
+	cutin "Nidoran F",2;  
+	soundeffect "nidoranf.wav",0;
+	mes "Nome: ^008000Nidoran F^0000";
+	mes "Level: ^00800015^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Nidorina^000000, Required level ^00800040^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 8 - Poison Attack nv.5";
+
+close2;
+cutin "nidoran F",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 30:  
+if(dex_30 == 1){
+
+	cutin "Nidorina",2;  
+	soundeffect "nidorina.wav",0;
+	mes "Nome: ^008000Nidorina^0000";
+	mes "Level: ^00800040^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Nidoqueen^000000, Required level ^00800075^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Quick Attack nv.6";
+	mes "Level 8 - Poison Attack nv.7";
+	mes "Level 13 - Headbutt nv.7";
+close2;
+cutin "nidorina",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 31:  
+if(dex_31 == 1){
+
+	cutin "nidoqueen",2;  
+	soundeffect "nidoqueen.wav",0;
+	mes "Nome: ^008000Nidoqueen^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.7";
+	mes "Level 8 - Poison Attack nv.10";
+	mes "Level 13 - Headbutt nv.10";
+	mes "Level 75 - Rage nv.4";
+	mes "Level 80 - Poison Gas nv.10";
+close2;
+cutin "nidoqueen",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 32:  
+if(dex_32 == 1){
+
+	cutin "nidoran m",2;  
+	soundeffect "nidoranm.wav",0;
+	mes "Nome: ^008000Nidoran m^0000";
+	mes "Level: ^00800015^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Nidorino^000000, Required level ^00800040^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 8 - Poison Attack nv.5";
+close2;
+cutin "nidoran",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 33:  
+if(dex_33 == 1){
+
+	cutin "nidorino",2;  
+	soundeffect "nidorino.wav",0;
+	mes "Nome: ^008000Nidorino^0000";
+	mes "Level: ^00800040^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Nidoqueen^000000, Required level ^00800075^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Quick Attack nv.6";
+	mes "Level 8 - Poison Attack nv.7";
+	mes "Level 13 - Headbutt nv.7";
+close2;
+cutin "nidorino",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 34:  
+if(dex_34 == 1){
+
+	cutin "nidoking",2;  
+	soundeffect "nidoking.wav",0;
+	mes "Nome: ^008000Nidoking^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.7";
+	mes "Level 8 - Poison Attack nv.10";
+	mes "Level 13 - Headbutt nv.10";
+	mes "Level 75 - Rage nv.6";
+	mes "Level 80 - Mega Punch nv.10";
+close2;
+cutin "nidoking",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 35:  
+if(dex_35 == 1){
+
+	cutin "clefairy",2;  
+	soundeffect "clefairy.wav",0;
+	mes "Nome: ^008000Clefairy^0000";
+	mes "Level: ^00800020^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Clefable^000000, Required level ^00800050^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Sleep Power nv.7";
+	mes "Level 10 - Recover nv.6";
+close2;
+cutin "clefairy",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 36:  
+if(dex_36 == 1){
+
+	cutin "clefable",2;  
+	soundeffect "clefable.wav",0;
+	mes "Nome: ^008000Clefable^0000";
+	mes "Level: ^00800050^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No further Evolution.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Sleep Power nv.10";
+	mes "Level 10 - Recover nv.10";
+	mes "Level 15 - Mega Punch nv.6";
+	mes "Level 25 - Healarea nv.7";
+close2;
+cutin "clefable",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 37:  
+if(dex_37 == 1){
+
+	cutin "Vulpix",2;  
+	soundeffect "vulpix.wav",0;
+	mes "Nome: ^008000Vulpix^0000";
+	mes "Level: ^00800015^0000";
+	mes "Type :^99330Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Ninetales^000000, Required level ^00800070^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 4 - Ember nv.5";
+	mes "Level 10 - Flame Throw nv.7";
+close2;
+cutin "vulpix",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 38:  
+if(dex_38 == 1){
+
+	cutin "ninetales",2;  
+	soundeffect "ninetales.wav",0;
+	mes "Nome: ^008000Ninetales^0000";
+	mes "Level: ^00800070^0000";
+	mes "Type :^99330Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No further Evolution.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.9";
+	mes "Level 4 - Ember nv.8";
+	mes "Level 10 - Flame Throw nv.10";
+	mes "Level 70 - Extreme Agility nv.7";
+	mes "Level 70 - Magma Storm nv.10";
+close2;
+cutin "ninetales",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 39:  
+if(dex_39 == 1){
+
+	cutin "jigglypuff",2;  
+	soundeffect "jigglypuff.wav",0;
+	mes "Nome: ^008000Jigglypuff^0000";
+	mes "Level: ^00800020^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000wigglytuff^000000, Required level ^00800050^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Sleep Power nv.7";
+	mes "Level 10 - Recover nv.6";
+close2;
+cutin "jigglypuff",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 40:  
+if(dex_40 == 1){
+
+	cutin "wigglytuff",2;  
+	soundeffect "wigglytuff.wav",0;
+	mes "Nome: ^008000Nidorino^0000";
+	mes "Level: ^00800050^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No further Evolution.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Sleep Power nv.10";
+	mes "Level 10 - Recover nv.10";
+	mes "Level 15 - Body Slam nv.6";
+	mes "Level 25 - Healarea nv.7";
+close2;
+cutin "wigglytuff",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 41:  
+if(dex_41 == 1){
+
+	cutin "zubat",2;  
+	soundeffect "zubat.wav",0;
+	mes "Nome: ^008000Zubat^0000";
+	mes "Level: ^00800010^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Golbat^000000, Required level ^00800035^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Absorv nv.7";
+close2;
+cutin "zubat",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 42:  
+if(dex_42 == 1){
+
+	cutin "golbat",2;  
+	soundeffect "golbat.wav",0;
+	mes "Nome: ^008000Golbat^0000";
+	mes "Level: ^00800035^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Absorv nv.10";
+	mes "Level 35 - Wing Attack nv.7";
+	mes "Level 40 - Triple Blow nv.7";
+close2;
+cutin "golbat",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 43:  
+if(dex_43 == 1){
+
+	cutin "oddish",2;  
+	soundeffect "oddish.wav",0;
+	mes "Nome: ^008000Oddish^0000";
+	mes "Level: ^00800015^0000";
+	mes "^FF0000Grass/Poison.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000gloom^000000, Required level ^00800040^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 4 - Absorv nv.5";
+	mes "Level 10 - Sleep Power nv.4";
+close2;
+cutin "oddish",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 44:  
+if(dex_44 == 1){
+
+	cutin "gloom",2;  
+	soundeffect "gloom.wav",0;
+	mes "Nome: ^008000Gloom^0000";
+	mes "Level: ^00800040^0000";
+	mes "^FF0000Grass/Poison.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Vileplume^000000, Required level ^00800070^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 4 - Absorv nv.7";
+	mes "Level 10 - Sleep Power nv.6";
+	mes "Level 40 - Leaves Dance nv.7";
+close2;
+cutin "gloom",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 45:  
+if(dex_45 == 1){
+
+	cutin "vileplume",2;  
+	soundeffect "vileplume.wav",0;
+	mes "Nome: ^008000Vileplume^0000";
+	mes "Level: ^00800070^0000";
+	mes "^FF0000Grass/Poison.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 4 - Absorv nv.10";
+	mes "Level 10 - Sleep Power nv.8";
+	mes "Level 40 - Leaves Dance nv.9";
+	mes "Level 60 - Poison Gas nv.10";
+close2;
+cutin "vileplume",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 46:  
+if(dex_46 == 1){
+
+	cutin "paras",2;  
+	soundeffect "paras.wav",0;
+	mes "Nome: ^008000Paras^0000";
+	mes "Level: ^00800010^0000";
+	mes "Tipo: ^993300Insect/Poison^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Parasect^000000, Required level ^00800050^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Absorv nv.6";
+	mes "Level 7 - Sleep Power nv.4";
+close2;
+cutin "paras",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 47:  
+if(dex_47 == 1){
+
+	cutin "parasect",2;  
+	soundeffect "parasect.wav",0;
+	mes "Nome: ^008000Parasect^0000";
+	mes "Level: ^00800050^0000";
+	mes "^FF0000Insect/Poison.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Absorv nv.9";
+	mes "Level 7 - Sleep Power nv.5";
+	mes "Level 20 - Triple Blow nv.8";
+close2;
+cutin "parasect",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 48:  
+if(dex_48 == 1){
+
+	cutin "venonat",2;  
+	soundeffect "venonat.wav",0;
+	mes "Nome: ^008000Venonat^0000";
+	mes "Level: ^00800020^0000";
+	mes "Tipo: ^993300Insect/Poison^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Venomoth^000000, Required level ^00800060^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Absorv nv.6";
+	mes "Level 7 - Headbutt nv.6";
+close2;
+cutin "venonat",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 49:  
+if(dex_49 == 1){
+
+	cutin "venomoth",2;  
+	soundeffect "venomoth.wav",0;
+	mes "Nome: ^008000Venomoth^0000";
+	mes "Level: ^00800060^0000";
+	mes "Tipo: ^993300Insect/Poison^0000";
+	mes "^FF0000Evolution^0000"; 
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Absorv nv.8";
+	mes "Level 7 - Headbutt nv.7";
+	mes "Level 60 - Confusion nv.9";
+close2;
+cutin "venomoth",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 50:  
+if(dex_50 == 1){
+
+	cutin "Digglet",2;  
+	soundeffect "Digglet.wav",0;
+	mes "Nome: ^008000Diglett^0000";
+	mes "Level: ^00800020^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Dugtrio^000000, Required level ^00800055^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 2 - Rage nv.3";
+	mes "Level 5 - Headbutt nv.8";
+close2;
+cutin "Digglet",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 51:  
+if(dex_51 == 1){
+
+	cutin "dugtrio",2;  
+	soundeffect "dugtrio.wav",0;
+	mes "Nome: ^008000dugtrio^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 2 - Rage nv.4";
+	mes "Level 5 - Headbutt nv.10";
+	mes "Level 55 - Earth Quake nv.8";
+close2;
+cutin "dugtrio",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 52:  
+if(dex_52 == 1){
+
+	cutin "meowth",2;  
+	soundeffect "meowth.wav",0;
+	mes "Nome: ^008000Meowth^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Persian^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.7";
+	mes "Level 15 - Extreme Agility nv.6";
+close2;
+cutin "meowth",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 53:  
+if(dex_53 == 1){
+
+	cutin "persian",2;  
+	soundeffect "persian.wav",0;
+	mes "Nome: ^008000Persian^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.9";
+	mes "Level 15 - Extreme Agility nv.10";
+	mes "Level 35 - Rage nv.8";
+	mes "Level 55 - Triple Blow nv.8";
+close2;
+cutin "persian",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 54:  
+if(dex_54 == 1){
+
+	cutin "psyduck",2;  
+	soundeffect "psyduck.wav",0;
+	mes "Nome: ^008000Psyduck^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Golduck^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 7 - Psy Beam nv.5";
+close2;
+cutin "psyduck",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 55:  
+if(dex_55 == 1){
+
+	cutin "golduck",2;  
+	soundeffect "golduck.wav",0;
+	mes "Nome: ^008000Golduck^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 7 - Psy Beam nv.8";
+	mes "Level 40 - Confusion nv.8";
+close2;
+cutin "golduck",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 56:  
+if(dex_56 == 1){
+
+	cutin "mankey",2;  
+	soundeffect "mankey.wav",0;
+	mes "Nome: ^008000Mankey^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Primeape^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Rage nv.7";
+	mes "Level 6 - Headbutt nv.5";
+close2;
+cutin "mankey",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 57:  
+if(dex_57 == 1){
+
+	cutin "primeape",2;  
+	soundeffect "primeape.wav",0;
+	mes "Nome: ^008000Primeape^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Rage nv.10";
+	mes "Level 6 - Headbutt nv.8";
+	mes "Level 20 - Extreme Agility nv.6";
+	mes "Level 35 - Mega Punch nv.10";
+close2;
+cutin "primeape",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 58:  
+if(dex_58 == 1){
+
+	cutin "growlithe",2;  
+	soundeffect "growlithe.wav",0;
+	mes "Nome: ^008000Growlithe^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Arcanine^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 8 - Ember nv.5";
+	mes "Level 14 - Flame Throw nv.8";
+close2;
+cutin "growlithe",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 59:  
+if(dex_59 == 1){
+
+	cutin "arcanine",2;  
+	soundeffect "arcanine.wav",0;
+	mes "Nome: ^008000Aecanine^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.9";
+	mes "Level 8 - Ember nv.10";
+	mes "Level 14 - Flame Throw nv.10";
+	mes "Level 25 - Rage nv.7";
+	mes "Level 50 - Meteor Flame nv.10";
+close2;
+cutin "arcanine",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 60:  
+if(dex_60 == 1){
+
+	cutin "poliwag",2;  
+	soundeffect "poliwag.wav",0;
+	mes "Nome: ^008000Poliwag^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Poliwhirl^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 10 - Headbutt nv.5";
+close2;
+cutin "poliwag",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 61:  
+if(dex_61 == 1){
+
+	cutin "poliwhirl",2;  
+	soundeffect "poliwhirl.wav",0;
+	mes "Nome: ^008000Poliwhirl^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Poliwrath^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Water Gun nv.7";
+	mes "Level 10 - Headbutt nv.7";
+close2;
+cutin "poliwhirl",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 62:  
+if(dex_62 == 1){
+
+	cutin "poliwrath",2;  
+	soundeffect "poliwrath.wav",0;
+	mes "Nome: ^008000Poliwrath^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Water/Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Water Gun nv.10";
+	mes "Level 10 - Headbutt nv.9";
+	mes "Level 25 - Mega Punch nv.8";
+	mes "Level 50 - Water Tornado nv.7";
+close2;
+cutin "poliwrath",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 63:  
+if(dex_63 == 1){
+
+	cutin "abra",2;  
+	soundeffect "abra.wav",0;
+	mes "Nome: ^008000Abra^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Kadabra^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Psy Beam nv.6";
+	mes "Level 8 - Recover nv.3";
+	mes "Level 13 - Teleport nv.2";
+close2;
+cutin "abra",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 64:  
+if(dex_64 == 1){
+
+	cutin "kadabra",2;  
+	soundeffect "kadabra.wav",0;
+	mes "Nome: ^008000Kadabra^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Alazakam^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Psy Beam nv.8";
+	mes "Level 8 - Recover nv.5";
+	mes "Level 13 - Teleport nv.2";
+	mes "Level 30 - Confusion nv.8";
+close2;
+cutin "kadabra",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 65:  
+if(dex_65 == 1){
+
+	cutin "alakazam",2;  
+	soundeffect "alakazam.wav",0;
+	mes "Nome: ^008000Alakazam^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Psy Beam nv.10";
+	mes "Level 8 - Recover nv.8";
+	mes "Level 13 - Teleport nv.2";
+	mes "Level 30 - Confusion nv.10";
+	mes "Level 55 - Psychic nv.10";
+close2;
+cutin "alakazam",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 66:  
+if(dex_66 == 1){
+
+	cutin "machop",2;  
+	soundeffect "machop.wav",0;
+	mes "Nome: ^008000Machop^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Machoke^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Rage nv.6";
+	mes "Level 8 - Extreme Agility nv.6";
+
+close2;
+cutin "machop",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 67:  
+if(dex_67 == 1){
+
+	cutin "machoke",2;  
+	soundeffect "machoke.wav",0;
+	mes "Nome: ^008000Machoke^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Machamp^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Rage nv.8";
+	mes "Level 8 - Extreme Agility nv.8";
+	mes "Level 30 - Mega Punch nv.7";
+close2;
+cutin "machoke",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 68:  
+if(dex_68 == 1){
+
+	cutin "machamp",2;  
+	soundeffect "machamp.wav",0;
+	mes "Nome: ^008000Machamp^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Rage nv.10";
+	mes "Level 8 - Extreme Agility nv.10";
+	mes "Level 30 - Mega Punch nv.10";
+	mes "Level 55 - Triple Blow nv.10";
+close2;
+cutin "champ",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 69:  
+if(dex_69 == 1){
+
+	cutin "bellsprout",2;  
+	soundeffect "bellsprout.wav",0;
+	mes "Nome: ^008000Bellsprout^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Grass/Poison.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Weepinbell^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 6 - Leaves Dance nv.6";
+close2;
+cutin "bellsprout",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 70:  
+if(dex_70 == 1){
+
+	cutin "weepinbell",2;  
+	soundeffect "weepinbell.wav",0;
+	mes "Nome: ^008000Weepinbell^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Grass/Poison.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Victreebel^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 6 - Leaves Dance nv.8";
+	mes "Level 10 - Poison Attack nv.5";
+close2;
+cutin "weepinbell",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 71:  
+if(dex_71 == 1){
+
+	cutin "victreebel",2;  
+	soundeffect "victreebel.wav",0;
+	mes "Nome: ^008000Victreebel^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Grass/Poison.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 6 - Leaves Dance nv.10";
+	mes "Level 10 - Poison Attack nv.7";
+	mes "Level 50 - Leaf Storm nv.8";
+close2;
+cutin "victreebel",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 72:  
+if(dex_72 == 1){
+
+	cutin "tentacool",2;  
+	soundeffect "tentacool.wav",0;
+	mes "Nome: ^008000Tentacool^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Water/Poison^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Tentacruel^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.6";
+	mes "Level 8 - Psy Beam nv.5";
+
+close2;
+cutin "tentacool",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 73:  
+if(dex_73 == 1){
+
+	cutin "tentacruel",2;  
+	soundeffect "tentacruel.wav",0;
+	mes "Nome: ^008000Tentacruel^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Water/Poison^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Water Gun nv.9";
+	mes "Level 8 - Psy Beam nv.7";
+	mes "Level 70 - Poison Attack nv.7";
+	mes "Level 75 - Hydropump nv.7";
+close2;
+cutin "tentacruel",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 74:  
+if(dex_74 == 1){
+
+	cutin "geodude",2;  
+	soundeffect "geodude.wav",0;
+	mes "Nome: ^008000Geodude^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Earth/Stone^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Graveler^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Rock Throw nv.5";
+	mes "Level 8 - Harden nv.6";
+close2;
+cutin "geodude",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 75:  
+if(dex_75 == 1){
+
+	cutin "graveler",2;  
+	soundeffect "graveler.wav",0;
+	mes "Nome: ^008000Graveler^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Earth/Stone^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Golem^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Rock Throw nv.7";
+	mes "Level 8 - Harden nv.8";
+	mes "Level 20 - Rage nv.4";
+close2;
+cutin "graveler",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 76:  
+if(dex_76 == 1){
+
+	cutin "golem",2;  
+	soundeffect "golem.wav",0;
+	mes "Nome: ^008000Golem^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Earth/Stone^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Rock Throw nv.10";
+	mes "Level 8 - Harden nv.10";
+	mes "Level 20 - Rage nv.6";
+	mes "Level 55 - Stone Concussion nv.10";
+close2;
+cutin "golem",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 77:  
+if(dex_77 == 1){
+
+	cutin "ponyta",2;  
+	soundeffect "ponyta.wav",0;
+	mes "Nome: ^008000Ponyta^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Rapidash^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 8 - Ember nv.6";
+	mes "Level 14 - Flame Throw nv.6";
+close2;
+cutin "ponyta",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 78:  
+if(dex_78 == 1){
+
+	cutin "rapidash",2;  
+	soundeffect "rapidash.wav",0;
+	mes "Nome: ^008000Rapidash^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.7";
+	mes "Level 8 - Ember nv.8";
+	mes "Level 14 - Flame Throw nv.8";
+	mes "Level 20 - Extreme Agility nv.6";
+	mes "Level 35 - Body Slam nv.8";
+	mes "Level 55 - Meteor Flame nv.8";
+close2;
+cutin "rapidash",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 79:  
+if(dex_79 == 1){
+
+	cutin "slowpoke",2;  
+	soundeffect "slowpoke.wav",0;
+	mes "Nome: ^008000Slowpoke^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Water/Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Slowbro^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 8 - Psy Beam nv.5";
+close2;
+cutin "slowpoke",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 80:  
+if(dex_80 == 1){
+
+	cutin "slowbro",2;  
+	soundeffect "slowbro.wav",0;
+	mes "Nome: ^008000Slowbro^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Water/Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 8 - Psy Beam nv.8";
+	mes "Level 35 - Water Tornado nv.7";
+	mes "Level 60 - Psychic nv.8";
+close2;
+cutin "slowbro",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 81:  
+if(dex_81 == 1){
+
+	cutin "magnemite",2;  
+	soundeffect "magnemite.wav",0;
+	mes "Nome: ^008000Magnemite^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Magneton^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 9 - Thunder Shock nv.7";
+close2;
+cutin "magnemite",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 82:  
+if(dex_82 == 1){
+
+	cutin "magneton",2;  
+	soundeffect "magneton.wav",0;
+	mes "Nome: ^008000Magneton^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 9 - Thunder Shock nv.9";
+	mes "Level 45 - Thunder Storm nv.7";
+close2;
+cutin "magneton",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 83:  
+if(dex_83 == 1){
+
+	cutin "farfetchd",2;  
+	soundeffect "farfetchd.wav",0;
+	mes "Nome: ^008000Farfetch'd^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.7";
+	mes "Level 8 - Extreme Agility nv.8";
+	mes "Level 12 - Rage nv.7";
+	mes "Level 17 - Triple Blow nv.6";
+close2;
+cutin "farfetch'd",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 84:  
+if(dex_84 == 1){
+
+	cutin "doduo",2;  
+	soundeffect "doduo.wav",0;
+	mes "Nome: ^008000Doduo^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Dodrio^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 8 - Extreme Agility nv.7";
+close2;
+cutin "doduo",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 85:  
+if(dex_85 == 1){
+
+	cutin "dodrio",2;  
+	soundeffect "dodrio.wav",0;
+	mes "Nome: ^008000Dodrio^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 8 - Extreme Agility nv.10";
+	mes "Level 12 - Triple Blow nv.7";
+close2;
+cutin "dodrio",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 86:  
+if(dex_86 == 1){
+
+	cutin "seel",2;  
+	soundeffect "seel.wav",0;
+	mes "Nome: ^008000Seel^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Dewgong^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Ice Spikes nv.6";
+	mes "Level 9 - Body Slam nv.5";
+	mes "Level 13 - Water Gun nv.5";
+close2;
+cutin "seel",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 87:  
+if(dex_87 == 1){
+
+	cutin "dewgong",2;  
+	soundeffect "dewgong.wav",0;
+	mes "Nome: ^008000Dewgong^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water/Ice^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Golduck^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Ice Spikes nv.10";
+	mes "Level 9 - Body Slam nv.9";
+	mes "Level 13 - Water Gun nv.9";
+	mes "Level 40 - Rest nv.7";
+	mes "Level 78 - Blizzard nv.9";
+close2;
+cutin "dewgong",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 88:  
+if(dex_88 == 1){
+
+	cutin "grimer",2;  
+	soundeffect "grimer.wav",0;
+	mes "Nome: ^008000Grimer^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Muk^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 2 - Harden nv.3";
+	mes "Level 6 - Poison Attack nv.7";
+close2;
+cutin "grimer",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 89:  
+if(dex_89 == 1){
+
+	cutin "muk",2;  
+	soundeffect "muk.wav",0;
+	mes "Nome: ^008000Muk^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 2 - Harden nv.5";
+	mes "Level 6 - Poison Attack nv.10";
+	mes "Level 25 - Body Slam nv.7";
+	mes "Level 55 - Poison Gas nv.10";
+close2;
+cutin "muk",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 90:  
+//----------------------------------------Page 2--------------------------------
+setarray .@menu$[1],"Shellder","Cloyster","Gastly","Haunter","Gengar","Onix","Drowzee","Hypno","Krabby","Kingler","Voltorb","Electrode","Exeggcute","Exeggutor","Cubone","Marowak","Hitmonlee","Hitmonchan","Lickitung","Koffing","Weezing","Rhyhorn","Rhydon","Chansey","Tangela","Kangaskhan","Horsea","Seadra","Goldeen","Seaking","Staryu","Starmie","Mr.Mime","Scyther","Jynx","Electrobuzz","Magmar","Pinsir","Tauros","Magikarp","Gyarados","Lapras","Ditto","Eevee","Vaporeon","Jolteon","Flareon","Porygon","Omanyte","Omastar","Kabuto","Kabutops","Aerodactyl","Snorlax","Articuno","Zapdos","Moltres","Dratini","Dragonair","Dragonite","Mewtwo","Mew";
+
+if(dex_90 == 0)set .@menu$[1],"^CC3300Shellder^0000";
+if(dex_91 == 0)set .@menu$[2],"^CC3300Cloyster^0000";
+if(dex_92 == 0)set .@menu$[3],"^CC3300Gastly^0000";
+if(dex_93 == 0)set .@menu$[4],"^CC3300Haunter^0000";
+if(dex_94 == 0)set .@menu$[5],"^CC3300Gengar^0000";
+if(dex_95 == 0)set .@menu$[6],"^CC3300Onix^0000";
+if(dex_96 == 0)set .@menu$[7],"^CC3300Drowzee^0000";
+if(dex_97 == 0)set .@menu$[8],"^CC3300Hypno^0000";
+if(dex_98 == 0)set .@menu$[9],"^CC3300Krabby^0000";
+if(dex_99 == 0)set .@menu$[10],"^CC3300Kingler^0000";
+if(dex_100 == 0)set .@menu$[11],"^CC3300Voltorb^0000";
+if(dex_101 == 0)set .@menu$[12],"^CC3300Electrode^0000";
+if(dex_102 == 0)set .@menu$[13],"^CC3300Exeggcute^0000";
+if(dex_103 == 0)set .@menu$[14],"^CC3300Exeggutor^0000";
+if(dex_104 == 0)set .@menu$[15],"^CC3300Cubone^0000";
+if(dex_105 == 0)set .@menu$[16],"^CC3300Marowak^0000";
+if(dex_106 == 0)set .@menu$[17],"^CC3300Hitmonlee^0000";
+if(dex_107 == 0)set .@menu$[18],"^CC3300Hitmonchan^0000";
+if(dex_108 == 0)set .@menu$[19],"^CC3300Lickitung^0000";
+if(dex_109 == 0)set .@menu$[20],"^CC3300Koffing^0000";
+if(dex_110 == 0)set .@menu$[21],"^CC3300Weezing^0000";
+if(dex_111 == 0)set .@menu$[22],"^CC3300Rhyhorn^0000";
+if(dex_112 == 0)set .@menu$[23],"^CC3300Rhydon^0000";
+if(dex_113 == 0)set .@menu$[24],"^CC3300Chansey^0000";
+if(dex_114 == 0)set .@menu$[25],"^CC3300Tangela^0000";
+if(dex_115 == 0)set .@menu$[26],"^CC3300Kangaskhan^0000";
+if(dex_116 == 0)set .@menu$[27],"^CC3300Horsea^0000";
+if(dex_117 == 0)set .@menu$[28],"^CC3300Seadra^0000";
+if(dex_118 == 0)set .@menu$[29],"^CC3300Goldeen^0000";
+if(dex_119 == 0)set .@menu$[30],"^CC3300Seaking^0000";
+if(dex_120 == 0)set .@menu$[31],"^CC3300Staryu^0000";
+if(dex_121 == 0)set .@menu$[32],"^CC3300Starmie^0000";
+if(dex_122 == 0)set .@menu$[33],"^CC3300Mr.Mime^0000";
+if(dex_123 == 0)set .@menu$[34],"^CC3300Scyther^0000";
+if(dex_124 == 0)set .@menu$[35],"^CC3300Jynx^0000";
+if(dex_125 == 0)set .@menu$[36],"^CC3300Electrobuzz^0000";
+if(dex_126 == 0)set .@menu$[37],"^CC3300Magmar^0000";
+if(dex_127 == 0)set .@menu$[38],"^CC3300Pinsir^0000";
+if(dex_128 == 0)set .@menu$[39],"^CC3300Tauros^0000";
+if(dex_129 == 0)set .@menu$[40],"^CC3300Magikarp^0000";
+if(dex_130 == 0)set .@menu$[41],"^CC3300Gyarados^0000";
+if(dex_131 == 0)set .@menu$[42],"^CC3300Lapras^0000";
+if(dex_132 == 0)set .@menu$[43],"^CC3300Ditto^0000";
+if(dex_133 == 0)set .@menu$[44],"^CC3300Eevee^0000";
+if(dex_134 == 0)set .@menu$[45],"^CC3300Vaporeon^0000";
+if(dex_135 == 0)set .@menu$[46],"^CC3300Jolteon^0000";
+if(dex_136 == 0)set .@menu$[47],"^CC3300Flareon^0000";
+if(dex_137 == 0)set .@menu$[48],"^CC3300Porygon^0000";
+if(dex_138 == 0)set .@menu$[49],"^CC3300Omanyte^0000";
+if(dex_139 == 0)set .@menu$[50],"^CC3300Omastar^0000";
+if(dex_140 == 0)set .@menu$[51],"^CC3300Kabuto^0000";
+if(dex_141 == 0)set .@menu$[52],"^CC3300Kabutops^0000";
+if(dex_142 == 0)set .@menu$[53],"^CC3300Aerodactyl^0000";
+if(dex_143 == 0)set .@menu$[54],"^CC3300Snorlax^0000";
+if(dex_144 == 0)set .@menu$[55],"^CC3300Articuno^0000";
+if(dex_145 == 0)set .@menu$[56],"^CC3300Zapdos^0000";
+if(dex_146 == 0)set .@menu$[57],"^CC3300Moltres^0000";
+if(dex_147 == 0)set .@menu$[58],"^CC3300Dratini^0000";
+if(dex_148 == 0)set .@menu$[59],"^CC3300Dragonair^0000";
+if(dex_149 == 0)set .@menu$[60],"^CC3300Dragonite^0000";
+if(dex_150 == 0)set .@menu$[61],"^CC3300Mewtwo^0000";
+if(dex_151 == 0)set .@menu$[62],"^CC3300Mew^0000";
+
+//	mes "                      ^CC3300[Pokedex]^0000";
+	select(.@menu$[1],.@menu$[2],.@menu$[3],.@menu$[4],.@menu$[5],.@menu$[6],.@menu$[7],.@menu$[8],.@menu$[9],.@menu$[10],.@menu$[11],.@menu$[12],.@menu$[13],.@menu$[14],.@menu$[15],.@menu$[16],.@menu$[17],.@menu$[18],.@menu$[19],.@menu$[20],.@menu$[21],.@menu$[22],.@menu$[23],.@menu$[24],.@menu$[25],.@menu$[26],.@menu$[27],.@menu$[28],.@menu$[29],.@menu$[30],.@menu$[31],.@menu$[32],.@menu$[33],.@menu$[34],.@menu$[35],.@menu$[36],.@menu$[37],.@menu$[38],.@menu$[39],.@menu$[40],.@menu$[41],.@menu$[42],.@menu$[43],.@menu$[44],.@menu$[45],.@menu$[46],.@menu$[47],.@menu$[48],.@menu$[49],.@menu$[50],.@menu$[51],.@menu$[52],.@menu$[53],.@menu$[54],.@menu$[55],.@menu$[56],.@menu$[57],.@menu$[58],.@menu$[59],.@menu$[60],.@menu$[61],.@menu$[62]);
+
+switch(@menu)
+{
+
+case 1:  
+if(dex_90 == 1){
+
+	cutin "shellder",2;  
+	soundeffect "shellder.wav",0;
+	mes "Nome: ^008000Shellder^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Cloyster^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 6 - Harden nv.5";
+	mes "Level 15 - Ice Spikes nv.6";
+close2;
+cutin "shellder",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 2:  
+if(dex_91 == 1){
+
+	cutin "cloyster",2;  
+	soundeffect "cloyster.wav",0;
+	mes "Nome: ^008000Cloyster^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Water Gun nv.9";
+	mes "Level 6 - Harden nv.7";
+	mes "Level 15 - Ice Spikes nv.9";
+	mes "Level 78 - Blizzard nv.9";
+close2;
+cutin "cloyster",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 3:  
+if(dex_92 == 1){
+
+	cutin "gastly",2;  
+	soundeffect "gastly.wav",0;
+	mes "Nome: ^008000Gastly^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Ghost/Poison^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Haunter^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Dark Ball nv.5";
+	mes "Level 8 - Confusion nv.4";
+close2;
+cutin "gastly",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 4:  
+if(dex_93 == 1){
+
+	cutin "haunter",2;  
+	soundeffect "haunter.wav",0;
+	mes "Nome: ^008000Haunter^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Ghost/Poison^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Gengar^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Dark Ball nv.7";
+	mes "Level 8 - Confusion nv.6";
+	mes "Level 14 - Shadow Punch nv.7";
+close2;
+cutin "haunter",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 5:  
+if(dex_94 == 1){
+
+	cutin "gengar",2;  
+	soundeffect "gengar.wav",0;
+	mes "Nome: ^008000Shellder^0000";
+	mes "Level: ^00800085^0000";
+	mes "Tipo: ^993300CP0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Dark Ball nv.10";
+	mes "Level 8 - Confusion nv.8";
+	mes "Level 14 - Shadow Punch nv.10";
+	mes "Level 55 - Shadow Storm nv.10";
+close2;
+cutin "gengar",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 6:  
+if(dex_95 == 1){
+
+	cutin "onix",2;  
+	soundeffect "onix.wav",0;
+	mes "Nome: ^008000Onix^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Stone/Earth^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Rock Throw nv.10";
+	mes "Level 8 - Harden nv.6";
+	mes "Level 45 - Stone Concussion nv.8";
+close2;
+cutin "onix",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 7:  
+if(dex_96 == 1){
+
+	cutin "drowzee",2;  
+	soundeffect "drowzee.wav",0;
+	mes "Nome: ^008000Drowzee^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Hypno^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Psy Beam nv.7";
+	mes "Level 8 - Confusion nv.8";
+	mes "Level 15 - Teleport nv.2";
+close2;
+cutin "drowzee",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 8:  
+if(dex_97 == 1){
+
+	cutin "hypno",2;  
+	soundeffect "hypno.wav",0;
+	mes "Nome: ^008000Hypno^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Psy Beam nv.10";
+	mes "Level 8 - Confusion nv.10";
+	mes "Level 15 - Teleport nv.2";
+	mes "Level 35 - Psychic nv.7";
+close2;
+cutin "hypno",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 9:  
+if(dex_98 == 1){
+
+	cutin "krabby",2;  
+	soundeffect "krabby.wav",0;
+	mes "Nome: ^008000Krabby^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Kingler^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 7 - Harden nv.5";
+close2;
+cutin "krabby",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 10:  
+if(dex_99 == 1){
+
+	cutin "kingler",2;  
+	soundeffect "kingler.wav",0;
+	mes "Nome: ^008000Kingle^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 7 - Harden nv.6";
+	mes "Level 35 - Body Slam nv.8";
+	mes "Level 55 - Water Tornado nv.7";
+close2;
+cutin "kingler",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 11:  
+if(dex_100 == 1){
+
+	cutin "voltorb",2;
+	mes "Nome: ^008000Voltorb^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Electrode^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.1";
+	mes "Level 3 - Thunder Shock nv.3";
+	mes "Level 10 - Body Slam nv.10";
+close2;
+cutin "voltorb",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 12:  
+if(dex_101 == 1){
+
+	cutin "electrode",2;  
+	soundeffect "electrode.wav",0;
+	mes "Nome: ^008000Electrode^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Thunder Shock nv.10";
+	mes "Level 10 - Body Slam nv.8";
+	mes "Level 45 - Thunder Storm nv.7";
+close2;
+cutin "electrode",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 13:  
+if(dex_102 == 1){
+
+	cutin "exeggcute",2;  
+	soundeffect "exeggcute.wav",0;
+	mes "Nome: ^008000Exeggcute^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Grass/Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Exeggutor^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Absorv nv.4";
+	mes "Level 8 - Sleep Power nv.3";
+	mes "Level 15 - Psy Beam nv.5";
+close2;
+cutin "exeggcute",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 14:  
+if(dex_103 == 1){
+
+	cutin "exeggutor",2;  
+	soundeffect "exeggutor.wav",0;
+	mes "Nome: ^008000Exeggutor^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Grass/Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Absorv nv.6";
+	mes "Level 8 - Sleep Power nv.5";
+	mes "Level 15 - Psy Beam nv.9";
+	mes "Level 40 - Leaves Dance nv.8";
+	mes "Level 65 - Confusion nv.8";
+close2;
+cutin "exeggutor",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 15:  
+if(dex_104 == 1){
+
+	cutin "cubone",2;  
+	soundeffect "cubone.wav",0;
+	mes "Nome: ^008000Cubone^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Marowak^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.5";
+	mes "Level 6 - Harden nv.2";
+	mes "Level 12 - Headbutt nv.8";
+close2;
+cutin "cubone",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 16:  
+if(dex_105 == 1){
+
+	cutin "marowak",2;  
+	soundeffect "marowak.wav",0;
+	mes "Nome: ^008000Marowak^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 6 - Harden nv.3";
+	mes "Level 12 - Headbutt nv.10";
+	mes "Level 25 - Rage nv.5";
+	mes "Level 50 - Earth Quake nv.10";
+close2;
+cutin "marowak",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 17:  
+if(dex_106 == 1){
+
+	cutin "hitmonlee",2;  
+	soundeffect "hitmonlee.wav",0;
+	mes "Nome: ^008000Hitmonlee^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Hitmonchan^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.10";
+	mes "Level 10 - Extreme Agility nv.10";
+	mes "Level 14 - Triple Blow nv.10";
+	mes "Level 20 - Rage nv.10";
+	mes "Level 60 - Demon Kick nv.10";
+close2;
+cutin "hitmonlee",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 18:  
+if(dex_107 == 1){
+
+	cutin "hitmonchan",2;  
+	soundeffect "hitmonchan.wav",0;
+	mes "Nome: ^008000Hitmonchan^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Fighter^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000No Future Evolutions.0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.10";
+	mes "Level 01 - Extreme Agility nv.10";
+	mes "Level 14 - Thunder Punch nv.8";
+	mes "Level 14 - Shadow Punch nv.8";
+	mes "Level 20 - Rage nv.10";
+	mes "Level 60 - Mega Punch nv.10";
+close2;
+cutin "hitmonchan",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 19:  
+if(dex_108 == 1){
+
+	cutin "lickitung",2;  
+	soundeffect "lickitung.wav",0;
+	mes "Nome: ^008000Luckitung^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 2 - Harden nv.5";
+	mes "Level 5 - Rest nv.8";
+	mes "Level 15 - Body Slam nv.10";
+close2;
+cutin "lickitung",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 20:  
+if(dex_109 == 1){
+
+	cutin "koffing",2;  
+	soundeffect "koffing.wav",0;
+	mes "Nome: ^008000Koffing^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Weezing^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Poison Attack nv.7";
+	mes "Level 10 - Headbutt nv.6";
+close2;
+cutin "koffing",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 21:  
+if(dex_110 == 1){
+
+	cutin "weezing",2;  
+	soundeffect "weezing.wav",0;
+	mes "Nome: ^008000Weezing^0000";
+	mes "Level: ^00800085^0000";
+	mes "^FF0000Ground.^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Poison Attack nv.10";
+	mes "Level 10 - Headbutt nv.8";
+	mes "Level 20 - Body Slam nv.7";
+	mes "Level 35 - Poison Gas nv.10";
+close2;
+cutin "weezing",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 22:  
+if(dex_111 == 1){
+
+	cutin "rhyhorn",2;  
+	soundeffect "rhyhorn.wav",0;
+	mes "Nome: ^008000Rhyhorn^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Earth/Stone^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Rhydon^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.6";
+	mes "Level 3 - Rock Throw nv.7";
+	mes "Level 8 - Rage nv.5";
+close2;
+cutin "rhyhorn",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 23:  
+if(dex_112 == 1){
+
+	cutin "rhydon",2;  
+	soundeffect "rhydon.wav",0;
+	mes "Nome: ^008000Rhydon^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Earth/Stone^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Rock Throw nv.10";
+	mes "Level 8 - Rage nv.8";
+	mes "Level 30 - Earth Quake nv.10";
+	mes "Level 50 - Stone Concussion nv.10";
+close2;
+cutin "rhydon",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 24:  
+if(dex_113 == 1){
+
+	cutin "chansey",2;  
+	soundeffect "chansey.wav",0;
+	mes "Nome: ^008000Chansey^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 4 - Recover nv.10";
+	mes "Level 10 - Body Slam nv.10";
+	mes "Level 25 - Healarea nv.10";
+close2;
+cutin "chansey",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 25:  
+if(dex_114 == 1){
+
+	cutin "tangela",2;  
+	soundeffect "tangela.wav",0;
+	mes "Nome: ^008000Tangela^0000";
+	mes "Level: ^00800085^0000";
+	mes "Tipo: ^993300Grass^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 4 - Leaves Dance nv.8";
+	mes "Level 10 - Sleep Power nv.7";
+	mes "Level 15 - Absorv nv.7";
+close2;
+cutin "tangela",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 26:  
+if(dex_115 == 1){
+
+	cutin "kangaskhan",2;  
+	soundeffect "kangaskhan.wav",0;
+	mes "Nome: ^008000Kangaskhan^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Mega Punch nv.8";
+	mes "Level 11 - Rage nv.5";
+	mes "Level 18 - Body Slam nv.10";
+	mes "Level 50 - Earth Quake nv.10";
+close2;
+cutin "kangaskhan",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 27:  
+if(dex_116 == 1){
+
+	cutin "horsea",2;  
+	soundeffect "horsea.wav",0;
+	mes "Nome: ^008000Horsea^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Seadra^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 10 - Extreme Agility nv.7";
+close2;
+cutin "horsea",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 28:  
+if(dex_117 == 1){
+
+	cutin "seadra",2;  
+	soundeffect "seadra.wav",0;
+	mes "Nome: ^008000seadra^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 10 - Extreme Agility nv.10";
+	mes "Level 45 - Water Tornado nv.10";
+close2;
+cutin "seadra",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 29:  
+if(dex_118 == 1){
+
+	cutin "goldeen",2;  
+	mes "Nome: ^008000Goldeen^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Seaking^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 12 - Poison Attack nv.5";
+close2;
+cutin "goldeen",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 30:  
+if(dex_119 == 1){
+
+	cutin "seaking",2;  
+	soundeffect "seaking.wav",0;
+	mes "Nome: ^008000Seaking^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 12 - Poison Attack nv.7";
+	mes "Level 45 - Water Tornado nv.8";
+close2;
+cutin "seaking",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 31:  
+if(dex_120 == 1){
+
+	cutin "staryu",2;  
+	mes "Nome: ^008000Staryu^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Starmie^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 13 - Recover nv.4";
+close2;
+cutin "staryu",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 32:  
+if(dex_121 == 1){
+
+	cutin "starmie",2;  
+	mes "Nome: ^008000Starmie^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Water/Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 13 - Recover nv.6";
+	mes "Level 20 - Extreme Agility nv.6";
+	mes "Level 45 - Water Tornado nv.7";
+close2;
+cutin "starmie",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 33:  
+if(dex_122 == 1){
+
+	cutin "mr.mime",2;  
+	soundeffect "mr.mime.wav",0;
+	mes "Nome: ^008000Mr.mime^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.1";
+	mes "Level 3 - Psy Beam nv.3";
+	mes "Level 10 - Confusion nv.10";
+	mes "Level 15 - Teleport nv.2";
+	mes "Level 45 - Psychic nv.8";
+close2;
+cutin "mr.mime",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 34:  
+if(dex_123 == 1){
+
+	cutin "scyther",2;  
+	soundeffect "scyther.wav",0;
+	mes "Nome: ^008000Scyther^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Insect/Flying^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Quick Attack nv.10";
+	mes "Level 10 - Extreme Agility nv.6";
+	mes "Level 15 - Triple Blow nv.10";
+	mes "Level 20 - Rage nv.10";
+close2;
+cutin "scyther",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 35:  
+if(dex_124 == 1){
+
+	cutin "jynx",2;  
+	soundeffect "jynx.wav",0;
+	mes "Nome: ^008000Jynx^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Ice/Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Psy Beam nv.10";
+	mes "Level 7 - Ice Spikes nv.10";
+	mes "Level 13 - Confusion nv.8";
+	mes "Level 45 - Blizzard nv.10";
+close2;
+cutin "jynx",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 36:  
+if(dex_125 == 1){
+
+	cutin "electabuzz",2;  
+	soundeffect "electabuzz.wav",0;
+	mes "Nome: ^008000Electabuzz^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Thunder Shock nv.10";
+	mes "Level 8 - Rage nv.8";
+	mes "Level 15 - Thunder Punch nv.10";
+	mes "Level 45 - Thunder Storm nv.10";
+close2;
+cutin "electabuzz",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 37:  
+if(dex_126 == 1){
+
+	cutin "magmar",2;  
+	soundeffect "magmar.wav",0;
+	mes "Nome: ^008000Magmar^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 4 - Ember nv.10";
+	mes "Level 9 - Flame Throw nv.10";
+	mes "Level 20 - Meteor Flame nv.10";
+	mes "Level 45 - Magma Storm nv.10";
+close2;
+cutin "magmar",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 38:  
+if(dex_127 == 1){
+
+	cutin "pinsir",2;  
+	soundeffect "pinsir.wav",0;
+	mes "Nome: ^008000Pinsir^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Insect^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 2 - Harden nv.4";
+	mes "Level 7 - Body Slam nv.8";
+	mes "Level 12 - Rage nv.7";
+	mes "Level 20 - Triple Blow nv.8";
+close2;
+cutin "pinsir",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 39:  
+if(dex_128 == 1){
+
+	cutin "tauros",2;  
+	soundeffect "tauros.wav",0;
+	mes "Nome: ^008000Tauros^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 2 - Extreme Agility nv.6";
+	mes "Level 7 - Body Slam nv.10";
+	mes "Level 11 - Rage nv.6";
+	mes "Level 20 - Rest nv.10";
+close2;
+cutin "tauros",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 40:  
+if(dex_129 == 1){
+
+	cutin "magikarp",2;  
+	soundeffect "magikarp.wav",0;
+	mes "Nome: ^008000Magikarp^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Gyarados^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Water Gun nv.5";
+close2;
+cutin "magikarp",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 41:  
+if(dex_94 == 1){
+
+	cutin "gyarados",2;  
+	soundeffect "gyarados.wav",0;
+	mes "Nome: ^008000Gyarados^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Water Gun nv.10";
+	mes "Level 10 - Water Tornado nv.10";
+	mes "Level 15 - Rage nv.7";
+	mes "Level 87 - Hydropump nv.10";
+close2;
+cutin "gyarados",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 42:  
+if(dex_131 == 1){
+
+	cutin "lapras",2;  
+	soundeffect "lapras.wav",0;
+	mes "Nome: ^008000Lapras^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water/Ice^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 7 - Ice Spikes nv.10";
+	mes "Level 13 - Sleep Power nv.8";
+	mes "Level 40 - Blizzard nv.8";
+	mes "Level 55 - Hydropump nv.8";
+close2;
+cutin "lapras",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 43:  
+if(dex_132 == 1){
+
+	cutin "ditto",2;  
+	soundeffect "ditto.wav",0;
+	mes "Nome: ^008000Ditto^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills: ^CC3300Indisponivel^000000 ";
+close2;
+cutin "ditto",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 44:  
+if(dex_133 == 1){
+
+	cutin "eevee",2;  
+	soundeffect "eevee.wav",0;
+	mes "Nome: ^008000Eevee^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - Quick Attack nv.6";
+	mes "Level 7 - Extreme Agility nv.7";
+	mes "Level 10 - Headbutt nv.10";
+close2;
+cutin "eevee",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 45:  
+if(dex_134 == 1){
+
+	cutin "vaporeon",2;  
+	soundeffect "vaporeon.wav",0;
+	mes "Nome: ^008000Vaporeon^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.9";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 7 - Extreme Agility nv.7";
+	mes "Level 10 - Water Gun nv.10";
+	mes "Level 50 - Hydropump nv.8";
+close2;
+cutin "vaporeon",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 46:  
+if(dex_135 == 1){
+
+	cutin "jolteon",2;  
+	soundeffect "jolteon.wav",0;
+	mes "Nome: ^008000Jolteon^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.9";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 7 - Extreme Agility nv.7";
+	mes "Level 10 - Thunder Shock nv.10";
+	mes "Level 50 - Thunder Storm nv.8";
+close2;
+cutin "Jolteon",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 47:  
+if(dex_136 == 1){
+
+	cutin "flareon",2;  
+	soundeffect "flareon.wav",0;
+	mes "Nome: ^008000Flareon^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^FF0000 Fire^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.9";
+	mes "Level 3 - Quick Attack nv.8";
+	mes "Level 7 - Extreme Agility nv.7";
+	mes "Level 10 - Flame Throw nv.10";
+	mes "Level 50 - Magma Storm nv.8";
+close2;
+cutin "flareon",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 48:  
+if(dex_137 == 1){
+
+	cutin "porygon",2;  
+	soundeffect "porygon.wav",0;
+	mes "Nome: ^008000Porygon^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.8";
+	mes "Level 2 - Psy Beam nv.10";
+	mes "Level 7 - Recover nv.10";
+	mes "Level 12 - Confusion nv.7";
+	mes "Level 20 - Teleport nv.2";
+close2;
+cutin "porygon",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 49:  
+if(dex_138 == 1){
+
+	cutin "omanyte",2;  
+	soundeffect "omanyte.wav",0;
+	mes "Nome: ^008000Omanyte^0000";
+	mes "Level: ^00800085^0000";
+	mes "^99330Stone/Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Omastar^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 7 - Rock Throw nv.7";
+	mes "Level 11 - Harden nv.4";
+close2;
+cutin "omanyte",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 50:  
+if(dex_139 == 1){
+
+	cutin "omastar",2;  
+	soundeffect "omastar.wav",0;
+	mes "Nome: ^008000Omastar^0000";
+	mes "Level: ^00800085^0000";
+	mes "^99330Stone/Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 7 - Rock Throw nv.10";
+	mes "Level 11 - Harden nv.5";
+	mes "Level 45 - Water Tornado nv.8";
+	mes "Level 55 - Stone Concussion nv.10";
+close2;
+
+cutin "omastar",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+case 51:  
+if(dex_140 == 1){
+
+	cutin "kabuto",2;  
+	soundeffect "kabuto.wav",0;
+	mes "Nome: ^008000Kabuto^0000";
+	mes "Level: ^00800085^0000";
+	mes "^99330Stone/Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Kabutops^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - Water Gun nv.5";
+	mes "Level 7 - Absorv nv.5";
+close2;
+cutin "kabuto",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 52:  
+if(dex_141 == 1){
+
+	cutin "kabutops",2;  
+	soundeffect "kabutops.wav",0;
+	mes "Nome: ^008000Kabutops^0000";
+	mes "Level: ^00800085^0000";
+	mes "^99330Stone/Water^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Water Gun nv.8";
+	mes "Level 7 - Absorv nv.10";
+	mes "Level 12 - Extreme Agility nv.6";
+	mes "Level 30 - Triple Blow nv.10";
+	mes "Level 55 - Stone Concussion nv.10";
+close2;
+cutin "kabutops",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 53:  
+if(dex_142 == 1){
+
+	cutin "Aerodactyl",2;  
+	mes "Nome: ^008000Aerodactyl^0000";
+	mes "Level: ^00800085^0000";
+	mes "^99330Stone/Flying^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 4 - Rock Throw nv.10";
+	mes "Level 10 - Rage nv.8";
+	mes "Level 20 - Triple Blow nv.10";
+	mes "Level 40 - Tornado nv.10";
+	mes "Level 60 - Stone Concussion nv.10";
+close2;
+cutin "aerodactyl",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 54:  
+if(dex_143 == 1){
+
+	cutin "snorlax",2;  
+	soundeffect "snorlax.wav",0;
+	mes "Nome: ^008000Snorlax^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type :^99330Electric^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - Headbutt nv.10";
+	mes "Level 7 - Mega Punch nv.10";
+	mes "Level 13 - Rest nv.10";
+	mes "Level 18 - Rage nv.8";
+	mes "Level 30 - Body Slam nv.10";
+close2;
+cutin "snorlax",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 55:  
+if(dex_144 == 1){
+
+	cutin "articuno",2;  
+	soundeffect "articuno.wav",0;
+	mes "Nome: ^008000Articuno^0000";
+	mes "Level: ^00800085^0000";
+	mes "^99330Ice/Flying^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Water Gun nv.10";
+	mes "Level 3 - Extreme Agility nv.10";
+	mes "Level 7 - Ice Spikes nv.10";
+	mes "Level 12 - Rage nv.10";
+	mes "Level 40 - Blizzard nv.10";
+close2;
+cutin "articuno",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 56:  
+if(dex_145 == 1){
+
+	cutin "zapdos",2;  
+	soundeffect "zapdos.wav",0;
+	mes "Nome: ^008000Zapdos^0000";
+	mes "Level: ^00800085^0000";
+	mes "^99330Electric/Flying^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Thunder Shock nv.10";
+	mes "Level 3 - Extreme Agility nv.10";
+	mes "Level 7 - Thunder Punch nv.10";
+	mes "Level 12 - Rage nv.10";
+	mes "Level 40 - Thunder Storm nv.10";
+close2;
+cutin "zapdos",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 57:  
+if(dex_146 == 1){
+
+	cutin "moltres",2;  
+	soundeffect "moltres.wav",0;
+	mes "Nome: ^008000Moltres^0000";
+	mes "Level: ^00800085^0000";
+	mes "^993300Fire/Flying^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Ember nv.10";
+	mes "Level 1 - Flame Throw nv.10";
+	mes "Level 3 - Extreme Agility nv.10";
+	mes "Level 7 - Meteor Flame nv.10";
+	mes "Level 12 - Rage nv.10";
+	mes "Level 40 - Magma Storm nv.10";
+close2;
+cutin "moltres",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 58:  
+if(dex_147 == 1){
+
+	cutin "dratini",2;  
+	soundeffect "dratini.wav",0;
+	mes "Nome: ^008000Dratini^0000";
+	mes "Level: ^00800085^0000";
+	mes "^993300Dragon^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Dragonair^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.5";
+	mes "Level 3 - QuickAttack nv.8";
+	mes "Level 7 - Rage nv.3";
+	mes "Level 10 - Headbutt nv.10";
+close2;
+cutin "dratini",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 59:  
+if(dex_148 == 1){
+
+	cutin "dragonair",2;  
+	soundeffect "dragonair.wav",0;
+	mes "Nome: ^008000Dragonair^0000";
+	mes "Level: ^00800085^0000";
+	mes "^993300Dragon^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^008000Dragonite^000000, Required level ^00800085^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.7";
+	mes "Level 3 - QuickAttack nv.10";
+	mes "Level 7 - Rage nv.4";
+	mes "Level 10 - Headbutt nv.10";
+	mes "Level 10 - Ember nv.7";
+	mes "Level 10 - Dark Ball nv.7";
+	mes "Level 10 - Thunder Shock nv.7";
+close2;
+cutin "dragonair",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 60:  
+if(dex_149 == 1){
+
+	cutin "dragonite",2;  
+	soundeffect "dragonite.wav",0;
+	mes "Nome: ^008000Dragonite^0000";
+	mes "Level: ^00800085^0000";
+	mes "^993300Dragon/Flying^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Tackle nv.10";
+	mes "Level 3 - QuickAttack nv.10";
+	mes "Level 8 - Rage nv.5";
+	mes "Level 14 - Headbutt nv.10";
+	mes "Level 20 - Ember nv.10";
+	mes "Level 35 - Dark Ball nv.10";
+	mes "Level 55 - Thunder Shock nv.10";
+	mes "Level 35 - Body Slam nv.10";
+	mes "Level 55 - Draco Meteor nv.10";
+close2;
+cutin "dragonite",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 61:  
+if(dex_150 == 1){
+
+	cutin "mewtwo",2;  
+	soundeffect "mewtwo.wav",0;
+	mes "Nome: ^008000Mewtwo^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Psy Beam nv.10";
+	mes "Level 3 - Recover nv.10";
+	mes "Level 8 - Shadow Punch nv.10";
+	mes "Level 14 - Extreme Agility nv.10";
+	mes "Level 20 - Confusion nv.10";
+	mes "Level 55 - Rage nv.10";
+	mes "Level 35 - Psychic nv.10";
+close2;
+cutin "mewtwo",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+case 62:  
+if(dex_151 == 1){
+
+	cutin "mew",2;  
+	soundeffect "mew.wav",0;
+	mes "Nome: ^008000Mew^0000";
+	mes "Level: ^00800085^0000";
+	mes "Type: ^993300Psychic^0000";
+	mes "^FF0000Evolution^0000";
+	mes "^FF0000No Future Evolutions.^0000";
+	mes "^FF0000Description:^0000";
+	mes "^FF0000None so far.^0000";
+	mes "Skills:";
+	mes "Level 1 - Psy Beam nv.10";
+	mes "Level 3 - Recover nv.10";
+	mes "Level 8 - Dark Ball nv.10";
+	mes "Level 14 - Extreme Agility nv.10";
+	mes "Level 20 - Confusion nv.10";
+	mes "Level 55 - Rage nv.10";
+	mes "Level 35 - Psychic nv.10";
+close2;
+cutin "mew",255;
+end;
+}else{
+	mes "^FF0000Pokemon is registered.^0000";
+close;
+}
+break;
+
+
+}
+//------------------------------------------------------------------------------
+}
+}

@@ -1,0 +1,86 @@
+Info: [23:52:47] //////////////////////////////////////////////////////////////
+Info: [23:52:47] //     ____                    ______    _ _ _              //
+Info: [23:52:47] //    |  _ \                  |  ____|  | (_) |             //
+Info: [23:52:47] //    | |_) |_ __ _____      _| |__   __| |_| |_            //
+Info: [23:52:47] //    |  _ <| '__/ _ \ \ /\ / /  __| / _` | | __|           //
+Info: [23:52:47] //    | |_) | | | (_) \ V  V /| |___| (_| | | |_            //
+Info: [23:52:47] //    |____/|_|  \___/ \_/\_/ |______\__,_|_|\__|	     //
+Info: [23:52:47] //                                                          //
+Info: [23:52:47] //                   Coded by:      Borf                    //
+Info: [23:52:47] //                   Fixes by:      Henko                   //
+Info: [23:52:47] //                                                          //
+Info: [23:52:47] //                     Libraries used:                      //
+Info: [23:52:47] //            - OpenGL                                      //
+Info: [23:52:47] //            - SDL                                         //
+Info: [23:52:47] //            - zlib                                        //
+Info: [23:52:47] //            - gd2                                         //
+Info: [23:52:47] //            - (win)sockets                                //
+Info: [23:52:47] //                                                          //
+Info: [23:52:47] //////////////////////////////////////////////////////////////
+Info: [23:52:47] 
+Info: [23:52:47] 
+Info: [23:52:47]        Public Beta Release, don't bug about any bugs...
+Info: [23:52:47]        Version 586
+Info: [23:52:47] 
+Info: [23:52:48] Status: Lendo grf  C:\Users\Brunno\Desktop\Ragnarok Original\data.grf
+Info: [23:52:49] Status: Lendo grf  C:\Users\Brunno\Desktop\TestServ\bdata.grf
+Error: [23:52:49] Erro: Erro ao abrir grf C:\Users\Brunno\Desktop\mozila.grf
+Info: [23:52:49] Status: Lendo grf  data/browedit.grf
+Info: [23:52:49] Inicializando interface gráfica
+Info: [23:52:49] Abrindo texturas gerais
+Info: [23:52:49] Loading font data/fonts/tahoma.tga
+Info: [23:52:49] Done loading font data/fonts/tahoma.tga
+Info: [23:52:49] Inicializando WM
+Info: [23:52:49] Loading font data/fonts/tahoma.tga
+Info: [23:52:49] Done loading font data/fonts/tahoma.tga
+Info: [23:52:49] Window Manager initialized
+Info: [23:52:49] Cargando plugin: '3ds2rsm.dll'
+Info: [23:52:49] Cargando plugin: 'clearmap.dll'
+Info: [23:52:49] Cargando plugin: 'gat.dll'
+Info: [23:52:49] Cargando plugin: 'generators.dll'
+Info: [23:52:49] Cargando plugin: 'lightmap.dll'
+Info: [23:52:49] Cargando arquivo data/keymap.txt
+Info: [23:52:49] Arquivo data/keymap.txt carregado
+Info: [23:52:49] Cargando arquivo data/effects.txt
+Info: [23:52:49] Arquivo data/effects.txt carregado
+Info: [23:52:49] Inicializazando lista
+Info: [23:52:57] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\articuno_temple.gnd
+Info: [23:52:57] Status: Carregado gnd
+Info: [23:52:57] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\articuno_temple.rsw
+Info: [23:52:58] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\articuno_temple.rsw
+Info: [23:52:58] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\articuno_temple.gat
+Info: [23:52:58] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\articuno_temple.gat
+Info: [23:52:58] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\articuno_temple
+Info: [23:53:06] Status: 2001 tiles em uso
+Info: [23:53:06] Quadtree: olhando os modelos 0 out of 38 (0.00%)
+Info: [23:53:06] Quadtree: olhando os modelos 10 out of 38 (26.32%)
+Info: [23:53:06] Quadtree: olhando os modelos 20 out of 38 (52.63%)
+Info: [23:53:06] Quadtree: olhando os modelos 30 out of 38 (78.95%)
+Info: [23:53:06] Status: 38 modelos criados
+Info: [23:53:11] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\moltres_temple.gnd
+Info: [23:53:11] Status: Carregado gnd
+Info: [23:53:11] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\moltres_temple.rsw
+Info: [23:53:11] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\moltres_temple.rsw
+Info: [23:53:11] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\moltres_temple.gat
+Info: [23:53:11] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\moltres_temple.gat
+Info: [23:53:11] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\moltres_temple
+Info: [23:53:17] Status: 2001 tiles em uso
+Info: [23:53:17] Quadtree: olhando os modelos 0 out of 47 (0.00%)
+Info: [23:53:17] Quadtree: olhando os modelos 10 out of 47 (21.28%)
+Info: [23:53:17] Quadtree: olhando os modelos 20 out of 47 (42.55%)
+Info: [23:53:17] Quadtree: olhando os modelos 30 out of 47 (63.83%)
+Info: [23:53:17] Quadtree: olhando os modelos 40 out of 47 (85.11%)
+Info: [23:53:17] Status: 47 modelos criados
+Info: [23:53:21] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\zapdos_temple.gnd
+Info: [23:53:21] Status: Carregado gnd
+Info: [23:53:21] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\zapdos_temple.rsw
+Info: [23:53:21] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\zapdos_temple.rsw
+Info: [23:53:21] Status: Carregando C:\Users\Brunno\Desktop\Mapas pkRO\att\zapdos_temple.gat
+Info: [23:53:21] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\zapdos_temple.gat
+Info: [23:53:22] Status: Carregado C:\Users\Brunno\Desktop\Mapas pkRO\att\zapdos_temple
+Info: [23:53:26] Status: 2173 tiles em uso
+Info: [23:53:26] Quadtree: olhando os modelos 0 out of 28 (0.00%)
+Info: [23:53:26] Quadtree: olhando os modelos 10 out of 28 (35.71%)
+Info: [23:53:26] Quadtree: olhando os modelos 20 out of 28 (71.43%)
+Info: [23:53:26] Status: 28 modelos criados
+Info: [23:53:29] TextureCache: No textures left (that's a good thing when you're closing down)

@@ -1,0 +1,329 @@
+//-----------rota1
+rota1.gat,0,0,0,0	monster	Spearow	2521,7,5000,0,0
+rota1.gat,0,0,0,0	monster	Pidgey	2516,20,5000,0,0
+rota1.gat,0,0,0,0	monster	Caterpie	2510,20,5000,0,0
+rota1.gat,0,0,0,0	monster	Weedle	2513,15,5000,0,0
+
+//-----------tunel
+tunel.gat,0,0,0,0	monster	Rattata	2519,7,5000,0,0
+tunel.gat,0,0,0,0	monster	Zubat	2541,7,5000,0,0
+
+//-----------passagem1
+passagem1.gat,0,0,0,0	monster	Tangela	2614,1,60000,0,0
+
+//-----------hunt1
+hunt1.gat,0,0,0,0	monster	Mankey	2556,10,5000,0,0
+hunt1.gat,0,0,0,0	monster	Exeggcute	2602,10,5000,0,0
+hunt1.gat,0,0,0,0	monster	Primeape	2557,7,5000,0,0
+hunt1.gat,0,0,0,0	monster	Tauros	2628,5,5000,0,0
+
+
+//-----------bisland
+bisland.gat,0,0,0,0	monster	Squirtle	2507,15,5000,0,0
+bisland.gat,0,0,0,0	monster	Wartortle	2508,15,5000,0,0
+bisland.gat,0,0,0,0	monster	Blastoise	2509,30,5000,0,0
+
+//-----------hunt4
+hunt4.gat,0,0,0,0	monster	Gloom	2544,30,5000,0,0
+hunt4.gat,0,0,0,0	monster	Weepinbell	2570,30,5000,0,0
+hunt4.gat,0,0,0,0	monster	Vileplume	2545,15,20000,0,0
+hunt4.gat,0,0,0,0	monster	Victreebell	2571,15,20000,0,0
+
+
+//-----------rota2
+rota2.gat,0,0,0,0	monster	Paras	2546,30,5000,0,0
+rota2.gat,0,0,0,0	monster	Kakuna	2514,10,5000,0,0
+rota2.gat,0,0,0,0	monster	Metapod	2511,10,5000,0,0
+rota2.gat,0,0,0,0	monster	Butterfree	2512,10,5000,0,0
+rota2.gat,0,0,0,0	monster	Beedril	2515,10,5000,0,0
+rota2.gat,0,0,0,0	monster	Pinsir	2627,5,5000,0,0
+
+//-----------hunt2
+hunt2.gat,0,0,0,0	monster	Graveler	2575,20,5000,0,0
+hunt2.gat,0,0,0,0	monster	Sandslash	2528,20,5000,0,0
+hunt2.gat,0,0,0,0	monster	Marowak	2605,20,5000,0,0
+hunt2.gat,0,0,0,0	monster	Dugtrio	2551,20,5000,0,0
+hunt2.gat,263,368,0,0	monster	Rhydon	2612,1,30000,0,0
+hunt2.gat,307,337,0,0	monster	Rhydon	2612,1,30000,0,0
+hunt2.gat,344,350,0,0	monster	Rhydon	2612,1,30000,0,0
+hunt2.gat,353,338,0,0	monster	Rhydon	2612,1,30000,0,0
+
+//-----------passagem2
+passagem2.gat,0,0,0,0	monster	Shellder	2590,5,5000,0,0
+
+//-----------vulcan
+vulcan.gat,0,0,0,0	monster	Vulpix	2537,10,5000,0,0
+vulcan.gat,0,0,0,0	monster	Charmander	2504,10,30000,0,0
+vulcan.gat,0,0,0,0	monster	Growlithe	2558,10,5000,0,0
+vulcan.gat,0,0,0,0	monster	Charmeleon	2505,2,30000,0,0
+
+//-----------mtmoon
+mtmoon.gat,0,0,0,0	monster	Rattata	2519,10,5000,0,0
+mtmoon.gat,0,0,0,0	monster	Zubat	2541,10,5000,0,0
+mtmoon.gat,0,0,0,0	monster	Geodude	2574,10,5000,0,0
+mtmoon.gat,0,0,0,0	monster	Golbat	2542,5,5000,0,0
+mtmoon.gat,0,0,0,0	monster	Graveler	2575,5,5000,0,0
+
+//-----------mtmoon2
+mtmoon2.gat,0,0,0,0	monster	Clefary	2535,10,5000,0,0
+mtmoon2.gat,0,0,0,0	monster	Jigglypuff	2539,10,5000,0,0
+mtmoon2.gat,0,0,0,0	monster	Graveler	2575,10,5000,0,0
+mtmoon2.gat,0,0,0,0	monster	Onix	2595,10,5000,0,0
+mtmoon2.gat,0,0,0,0	monster	Golem	2576,7,5000,0,0
+
+//-----------mtmoon3
+mtmoon3.gat,0,0,0,0	monster	Clefary	2535,10,5000,0,0
+mtmoon3.gat,0,0,0,0	monster	Jigglypuff	2539,10,5000,0,0
+mtmoon3.gat,0,0,0,0	monster	Clefable	2536,5,5000,0,0
+mtmoon3.gat,0,0,0,0	monster	Wigglytuff	2540,5,5000,0,0
+
+//-----------rota3
+rota3.gat,35,250,265,358	monster	Koffing	2609,20,5000,0,0
+rota3.gat,35,250,265,358	monster	Ekans	2523,20,5000,0,0
+rota3.gat,35,250,265,358	monster	Grimer	2588,20,5000,0,0
+rota3.gat,35,104,100,250	monster	Weezing	2610,10,5000,0,0
+rota3.gat,35,104,100,250	monster	Arbok	2524,10,5000,0,0
+rota3.gat,35,104,100,250	monster	Muk	2589,10,5000,0,0
+rota3.gat,100,146,270,250	monster	Weezing	2610,10,5000,0,0
+rota3.gat,100,146,270,250	monster	Arbok	2524,10,5000,0,0
+rota3.gat,100,146,270,250	monster	Muk	2589,10,5000,0,0
+rota3.gat,106,146,266,35	monster	Venonat	2548,20,5000,0,0
+rota3.gat,106,146,266,35	monster	Venomoth	2549,10,5000,0,0
+rota3.gat,42,96,103,45	monster	Venomoth	2549,10,5000,0,0
+
+//-----------cerubeach
+cerubeach.gat,9,171,234,39	monster	Psyduck	2554,15,5000,0,0
+cerubeach.gat,9,171,234,39	monster	Golduck	2555,10,5000,0,0
+cerubeach.gat,9,171,234,39	monster	Staryu	2620,15,5000,0,0
+cerubeach.gat,9,171,234,39	monster	Starmie	2621,10,5000,0,0
+
+//-----------tunel3
+tunel3.gat,0,0,0,0	monster	Rattata	2519,7,5000,0,0
+tunel3.gat,0,0,0,0	monster	Zubat	2541,7,5000,0,0
+
+//-----------cerucave
+cerucave.gat,0,0,0,0	monster	Digglet	2550,5,5000,0,0
+cerucave.gat,0,0,0,0	monster	Cubone	2604,5,5000,0,0
+cerucave.gat,0,0,0,0	monster	Sandshrew	2527,5,5000,0,0
+cerucave.gat,0,0,0,0	monster	Gastly	2592,20,5000,0,0
+cerucave.gat,14,112,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,79,154,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,88,156,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,24,184,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,26,183,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,152,141,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,180,108,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,185,105,0,0	monster	Haunter	2593,1,60000,0,0
+cerucave.gat,187,65,0,0	monster	Haunter	2593,1,60000,0,0
+
+//-----------rota5
+rota5.gat,0,0,0,0	monster	Oddish	2543,25,5000,0,0
+rota5.gat,0,0,0,0	monster	Bellsprount	2569,25,5000,0,0
+rota5.gat,0,0,0,0	monster	Gloom	2544,25,5000,0,0
+rota5.gat,0,0,0,0	monster	Weepinbell	2570,25,5000,0,0
+
+//-----------rota8
+rota8.gat,0,0,0,0	monster	Meowth	2552,15,5000,0,0
+rota8.gat,0,0,0,0	monster	Paras	2546,15,5000,0,0
+rota8.gat,0,0,0,0	monster	Parasect	2547,15,5000,0,0
+rota8.gat,0,0,0,0	monster	Tangela	2614,8,5000,0,0
+rota8.gat,0,0,0,0	monster	Pidgeotto	2517,15,5000,0,0
+
+//-----------rota7
+rota7.gat,0,0,0,0	monster	Pidgey	2516,15,5000,0,0
+rota7.gat,0,0,0,0	monster	Oddish	2543,15,5000,0,0
+rota7.gat,0,0,0,0	monster	Bellsprount	2569,15,5000,0,0
+rota7.gat,77,23,0,0	monster	Pidgeotto	2517,1,20000,0,0
+
+//-----------rota16
+rota16.gat,0,0,0,0	monster	Machop	2566,20,5000,0,0
+rota16.gat,0,0,0,0	monster	Tangela	2614,30,5000,0,0
+rota16.gat,0,0,0,0	monster	Snorlax	2643,1,1800000,0,0
+
+//-----------ama_dun03
+ama_dun03.gat,0,0,0,0	monster	Machok	2567,30,5000,0,0
+ama_dun03.gat,0,0,0,0	monster	Primeape	2557,30,5000,0,0
+ama_dun03.gat,0,0,0,0	monster	Machamp	2568,40,5000,0,0
+
+
+//-----------rota6
+rota6.gat,0,0,0,0	monster	Pidgey	2516,20,5000,0,0
+rota6.gat,0,0,0,0	monster	Caterpie	2510,20,5000,0,0
+rota6.gat,0,0,0,0	monster	Weedle	2513,20,5000,0,0
+rota6.gat,0,0,0,0	monster	Nidoran	2529,15,5000,0,0
+rota6.gat,0,0,0,0	monster	Nidoran	2532,15,5000,0,0
+rota6.gat,23,113,0,0	monster	Pidgeotto	2517,1,5000,0,0
+
+//-----------saffron
+//saffron.gat,23,125,0,0	monster	Hitmonlee	2606,1,300000,0,0
+//saffron.gat,50,125,0,0	monster	Hitmonchan	2607,1,300000,0,0
+
+//-----------vermilion
+//vermilion.gat,217,161,0,0	monster	Tauros	2628,1,30000,0,0
+//vermilion.gat,234,151,0,0	monster	Tauros	2628,1,30000,0,0
+//vermilion.gat,243,164,0,0	monster	Tauros	2628,1,30000,0,0
+//vermilion.gat,247,147,0,0	monster	Tauros	2628,1,30000,0,0
+//vermilion.gat,241,126,0,0	monster	Tauros	2628,1,30000,0,0
+//vermilion.gat,228,133,0,0	monster	Tauros	2628,1,30000,0,0
+//vermilion.gat,215,124,0,0	monster	Tauros	2628,1,30000,0,0
+//vermilion.gat,224,142,0,0	monster	Tauros	2628,1,30000,0,0
+
+//-----------tunel2
+tunel2.gat,0,0,0,0	monster	Geodude	2574,15,5000,0,0
+tunel2.gat,0,0,0,0	monster	Machop	2566,15,5000,0,0
+tunel2.gat,0,0,0,0	monster	Machoke	2567,10,5000,0,0
+tunel2.gat,0,0,0,0	monster	Rhyhorn	2611,10,5000,0,0
+
+//-----------rota11
+rota11.gat,0,0,0,0	monster	Doduo	2584,15,5000,0,0
+rota11.gat,0,0,0,0	monster	Dodrio	2585,10,5000,0,0
+rota11.gat,0,0,0,0	monster	Raticate	2520,15,5000,0,0
+rota11.gat,0,0,0,0	monster	Tauros	2628,7,5000,0,0
+rota11.gat,0,0,0,0	monster	Snorlax	2643,1,1800000,0,0
+
+//-----------diggletcave
+diggletcave.gat,0,0,0,0	monster	Digglet	2550,20,5000,0,0
+diggletcave.gat,0,0,0,0	monster	Cubone	2604,20,5000,0,0
+diggletcave.gat,0,0,0,0	monster	Sandshrew	2527,20,5000,0,0
+
+//-----------rota10
+rota10.gat,0,0,0,0	monster	Slowpoke	2579,10,5000,0,0
+rota10.gat,0,0,0,0	monster	Slowbro	2580,5,5000,0,0
+
+//-----------tunel4
+tunel4.gat,0,0,0,0	monster	Raticate	2520,5,5000,0,0
+tunel4.gat,0,0,0,0	monster	Golbat	2542,5,5000,0,0
+
+//-----------passagem3
+passagem3.gat,52,108,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,76,102,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,62,87,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,50,71,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,66,56,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,54,41,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,35,52,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,8,59,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+passagem3.gat,14,55,0,0	monster	Squirtle	2507,1,30000,0,0    //73 114
+
+//-----------powerplant
+powerplant.gat,0,0,0,0	monster	Magnemite	2581,10,5000,0,0
+powerplant.gat,0,0,0,0	monster	Voltorb	2600,10,5000,0,0
+
+//-----------powerplant1
+powerplant1.gat,0,0,0,0	monster	Magnemite	2581,15,5000,0,0
+powerplant1.gat,0,0,0,0	monster	Voltorb	2600,15,5000,0,0
+powerplant1.gat,0,0,0,0	monster	Pikachu	2525,10,5000,0,0
+
+//-----------powerplant2
+powerplant2.gat,0,0,0,0	monster	Magneton	2582,15,5000,0,0
+powerplant2.gat,0,0,0,0	monster	Electrode	2601,15,5000,0,0
+powerplant2.gat,0,0,0,0	monster	Richu	2526,10,5000,0,0
+
+//-----------powerplant2
+powerplant3.gat,0,0,0,0	monster	Richu	2526,20,5000,0,0
+powerplant3.gat,0,0,0,0	monster	Electabuzz	2625,20,5000,0,0
+
+
+//-----------rota13
+rota13.gat,0,0,0,0	monster	Bulbasaur	2501,25,30000,0,0
+rota13.gat,0,0,0,0	monster	Farfeth'd	2583,20,5000,0,0
+
+//-----------rota14
+rota14.gat,0,0,0,0	monster	Pidgeot	2518,10,5000,0,0
+rota14.gat,0,0,0,0	monster	Fearow	2522,15,5000,0,0
+
+//-----------fuchsia
+//fuchsia.gat,138,45,0,0	monster	Voltorb	2600,1,30000,0,0
+//fuchsia.gat,125,49,0,0	monster	Voltorb	2600,1,30000,0,0
+//fuchsia.gat,133,56,0,0	monster	Voltorb	2600,1,30000,0,0
+//fuchsia.gat,132,49,0,0	monster	Electrode	2601,1,35000,0,0
+//fuchsia.gat,145,80,0,0	monster	Nidorina	2530,1,30000,0,0
+//fuchsia.gat,155,88,0,0	monster	Nidorina	2530,1,30000,0,0
+//fuchsia.gat,138,98,0,0	monster	Nidoqueen	2531,1,35000,0,0
+//fuchsia.gat,130,96,0,0	monster	Nidorino	2533,1,30000,0,0
+//fuchsia.gat,140,110,0,0	monster	Nidorino	2533,1,30000,0,0
+//fuchsia.gat,135,98,0,0	monster	Nidoking	2534,1,35000,0,0
+//fuchsia.gat,117,119,0,0	monster	Chansey	2613,1,120000,0,0
+//fuchsia.gat,155,160,0,0	monster	Lapras	2631,1,90000,0,0
+//fuchsia.gat,45,161,0,0	monster	Kangaskhan	2615,1,120000,0,0
+//fuchsia.gat,82,128,0,0	monster	Doduo	2584,1,30000,0,0
+//fuchsia.gat,91,125,0,0	monster	Doduo	2584,1,30000,0,0
+//fuchsia.gat,90,137,0,0	monster	Doduo	2584,1,30000,0,0
+//fuchsia.gat,82,137,0,0	monster	Dodrio	2585,1,35000,0,0
+//fuchsia.gat,69,82,0,0	monster	Ponyta	2577,1,30000,0,0
+//fuchsia.gat,53,81,0,0	monster	Ponyta	2577,1,30000,0,0
+//fuchsia.gat,56,102,0,0	monster	Ponyta	2577,1,30000,0,0
+//fuchsia.gat,69,103,0,0	monster	Ponyta	2577,1,30000,0,0
+//fuchsia.gat,77,92,0,0	monster	Ponyta	2577,1,30000,0,0
+//fuchsia.gat,47,93,0,0	monster	Ponyta	2577,1,30000,0,0
+//fuchsia.gat,55,90,0,0	monster	Rapidash	2578,1,35000,0,0
+//fuchsia.gat,67,95,0,0	monster	Rapidash	2578,1,35000,0,0
+
+//-----------passagem4
+passagem4.gat,31,33,,	monster	Mr.Mime	2622,1,30000,0,0
+
+//-----------desert
+desert.gat,0,0,0,0	monster	Abra	2563,20,5000,0,0
+desert.gat,0,0,0,0	monster	Drowzee	2596,15,5000,0,0
+desert.gat,0,0,0,0	monster	Meowth	2552,10,5000,0,0
+desert.gat,0,0,0,0	monster	Persian	2553,10,5000,0,0
+desert.gat,0,0,0,0	monster	Kadabra	2564,5,60000,0,0
+
+//-----------saffari
+saffari.gat,0,0,0,0	monster	Exeggcute	2602,20,5000,0,0
+saffari.gat,0,0,0,0	monster	Exegutor	2603,15,5000,0,0
+saffari.gat,0,0,0,0	monster	Nidoran	2529,15,5000,0,0
+saffari.gat,0,0,0,0	monster	Nidoran	2532,15,5000,0,0
+saffari.gat,0,0,0,0	monster	Nidorino	2530,15,5000,0,0
+saffari.gat,0,0,0,0	monster	Nidorina	2533,15,5000,0,0
+saffari.gat,0,0,0,0	monster	Eevee	2633,1,720000,0,0
+saffari.gat,0,0,0,0	monster	Ditto	2632,1,720000,0,0
+saffari.gat,0,0,0,0	monster	Licktung	2608,5,5000,0,0
+saffari.gat,0,0,0,0	monster	Mr.Mime	2622,5,5000,0,0
+saffari.gat,0,0,0,0	monster	Kangaskhan	2615,5,30000,0,0
+
+//-----------seafoam
+seafoam.gat,0,0,0,0	monster	Poliwag	2560,15,5000,0,0
+seafoam.gat,0,0,0,0	monster	Seel	2586,25,5000,0,0
+seafoam.gat,0,0,0,0	monster	Poliwhirl	2561,15,5000,0,0
+seafoam.gat,0,0,0,0	monster	Lapras	2631,7,5000,0,0
+
+//-----------seafoam1
+//seafoam1.gat,0,0,0,0	monster	Poliwrath	2562,10,5000,0,0
+seafoam1.gat,0,0,0,0	monster	Jynx	2624,20,5000,0,0
+seafoam1.gat,0,0,0,0	monster	Cloyster	2591,20,5000,0,0
+seafoam1.gat,0,0,0,0	monster	Dewgong	2587,20,5000,0,0
+//seafoam1.gat,0,0,0,0	monster	Dratini	2647,1,5000,0,0
+seafoam1.gat,255,255,0,0	monster	Dratini	2647,1,1800000,0,0
+seafoam1.gat,230,251,0,0	monster	Dragonair	2648,1,1800000,0,0
+seafoam1.gat,252,250,0,0	monster	Dragonite	2649,1,1800000,0,0
+
+
+//-----------cinaroad
+cinaroad.gat,0,0,0,0	monster	Ponyta	2577,10,5000,0,0
+cinaroad.gat,0,0,0,0	monster	Rapidash	2578,5,30000,0,0
+
+
+//-----------mtlava
+mtlava.gat,0,0,0,0	monster	Vulpix	2537,10,5000,0,0
+mtlava.gat,0,0,0,0	monster	Charmander	2504,10,30000,0,0
+mtlava.gat,0,0,0,0	monster	Growlithe	2558,10,5000,0,0
+mtlava.gat,0,0,0,0	monster	Charmeleon	2505,5,30000,0,0
+
+//-----------mtlava2
+mtlava2.gat,0,0,0,0	monster	Charmeleon	2505,30,5000,0,0
+mtlava2.gat,0,0,0,0	monster	Ninetales	2538,20,5000,0,0
+mtlava2.gat,0,0,0,0	monster	Charizard	2506,20,5000,0,0
+mtlava2.gat,0,0,0,0	monster	Arcanine	2559,20,5000,0,0
+
+//-----------mtlava3
+mtlava3.gat,0,0,0,0	monster	Magmar	2626,50,5000,0,0
+
+//-----------moltres_temple
+moltres_temple.gat,0,0,0,0	monster	Moltres	2646,1,86400000,0,0
+
+//-----------zapdos_temple
+zapdos_temple.gat,0,0,0,0	monster	Zapdos	2645,1,86400000,0,0
+
+//-----------articuno_temple
+articuno_temple.gat,0,0,0,0	monster	Articuno	2644,1,86400000,0,0

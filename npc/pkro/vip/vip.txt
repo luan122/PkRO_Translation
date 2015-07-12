@@ -1,0 +1,193 @@
+// =================================================================================
+// Script iniciado e terminado por Kabal.
+// Em exclusividade para o f�rum http://brathena.org.
+// Use-o da maneira que quiser, apenas n�o retire os cr�ditos.
+// =================================================================================
+
+// ========================================================
+// Ferramenta do Aministrador: Configura��es; =============
+// ========================================================
+
+pallet,58,80,4	script	configs#vipt1	-1,{
+
+// ================================================================================================================
+// OBS:
+// Favor conferir as coordenadas dos npcs.
+// Favor criar uma coluna na tabela login denominada "check_lg".
+// Poder� utilizar o seguinte comando no mysql: ALTER TABLE `login` ADD `check_lg` INT NOT NULL ;
+// Caso n�o saiba como criar a tabela para controle dos dias vip, favor usar o seguinte comando no mysql: ALTER TABLE `login` ADD `dias` INT NOT NULL ;
+// O nome dos NPC's est�o setados no script dos mesmos.
+// ================================================================================================================
+
+OnInit:
+
+set $dona,1000; // Ap�s a v�rgula, coloque a quantidade de ROPS que um player ganha a cada R$1 em doa��o. (Padr�o = 1000)
+set $value,333; // Ap�s a v�rgula, coloque o valor em ROPS de 1 dia VIP. (Padr�o = 200)
+set $nomec$,"Cash Points"; // Ap�s a v�rgula, coloque o nome da moeda do seu servidor. (Padr�o = ROPs)
+set $lvlgm,99; // Ap�s a v�rgula, coloque o level m�nimo de GM para poder acessar o NPC Adicionador de dias VIP in-game. (Padr�o = 60)
+set $bdias$,"diasvip"; // Ap�s a v�rgula, coloque o nome da coluna que voc� usa para contar os dias dos VIP's na tabela login. (Padr�o = dias)
+set $lvl,1; // Ap�s a v�rgula, coloque o level que voc� usa para um jogador ser considerado Vip. (Padr�o = 2)
+set $lvlfree,1; // Ap�s a v�rgula, coloque o level que voc� usa para um jogador ser considerado Vip gr�tis (Poder� ser igual ao VIP normal caso queira). (Padr�o = 1)
+set $dvf,0; // Ap�s a v�rgula, coloque quantos dias que um player novo ganha de vip gr�tis. (Padr�o = 5. Para desativar = 0)
+set $npc1$,"[^0000FFVendor VIP^000000]"; // Ap�s a v�rgula, coloque aqui o nome do NPC desejado para o Vendedor Vip. (Padr�o = Adicionar dias VIP)
+set $npc$,"[^0000FFAdd VIP days^000000]"; // Ap�s a v�rgula, coloque aqui o nome do NPC desejado para o Adicionador de dias Vip. (Padr�o = Adicionar dias VIP)
+
+}
+// ========================================================
+// Ferramenta dos Players: VIP Gr�tis para jogador novo; ==
+// ========================================================
+
+//- script vipfree#vipt2 -1,{
+//if($dvf == 0){
+//end;
+//}
+//OnPCLoginEvent:
+//Query_SQL "SELECT `check_lg` FROM `login` WHERE `account_id`='"+getcharid(3)+"'",.@is;
+//if(.@is == 0){
+//Query_SQL "UPDATE `login` SET `"+$bdias$+"`='"+$dvf+"' WHERE `account_id`='"+getcharid(3)+"'";
+//Query_SQL "UPDATE `login` SET `group_id`='"+$lvlfree+"' WHERE `account_id`='"+getcharid(3)+"'";
+//Query_SQL "UPDATE `login` SET `check_lg`='1' WHERE `account_id`='"+getcharid(3)+"'";
+//announce "Voc� acaba de receber "+$dvf+" dias vip gratuitamente. Vou relogar voc� em 10 segundos para surtir efeito.",bc_self;
+//sleep2 10000;
+//atcommand "@kick "+strcharinfo(0);
+//end;
+//}
+//end;
+//}
+
+// ========================================================
+// Ferramenta dos Players: Vendedor VIP; ==================
+// ========================================================
+
+housein,120,66,4	script	Vendedor VIP#vipt3	100,{
+
+mes $npc1$;
+mes "Hello^0000FF"+strcharinfo(0)+"^000000";
+mes "Want to aqcqire a VIP Account?";
+if(select("Yes:No") == 2){
+close;
+}
+mes $npc1$;
+//mes "Digite quantos dias deseja comprar:";
+//input .@dias;
+
+set .@dias, 30;
+
+next;
+//set .@cost,.@dias*$value;
+
+set .@cost, 10000;
+
+mes $npc1$;
+mes "30 day VIP costs "+(.@cost)+" "+$nomec$+", is that okay?";
+if(select("yes:No") == 2){
+close;
+}
+next;
+if(#CASHPOINTS < (.@cost)){
+mes $npc1$;
+mes "You don't have sufficient"+$nomec$+" for this.";
+close;
+}
+
+if (.@dias == 0){
+mes $npc1$;
+mes "You cannot purchase 0 days.";
+close;
+}
+
+set #CASHPOINTS,#CASHPOINTS - .@cost;
+Query_SQL "UPDATE `login` SET `"+$bdias$+"`=`"+$bdias$+"` + "+.@dias+" WHERE `account_id`='"+getcharid(3)+"'";
+Query_SQL "UPDATE `login` SET `level`='"+$lvl+"' WHERE `account_id`='"+getcharid(3)+"'";
+announce "You just bought a VIP account. You will be logged out in 10 seconds to allow VIP access to your account.",bc_self;
+sleep2 10000;
+atcommand "@kick "+strcharinfo(0);
+end;
+}
+
+// =================================================
+// Ferramenta da Staff: Adicionador de dias VIP; ===
+// =================================================
+
+housein,155,132,4	script	Adicionar dias VIP#vipt4	867,{
+
+if (getgmlevel() < $lvlgm) goto nogm;
+if (getgmlevel() >= $lvlgm) goto inicio;
+
+inicio:
+mes $npc$;
+mes "To add days to a VIP player get his necessary FF2000account_id ^ ^ 000000. To find the account_id of any player, simply click the right button on it and the last option is: ^ ^ FF20002000000 000000 -. This number account_id is the player. ";
+menu "Add VIP Days",adddias,"Exit",nada;
+
+adddias:
+next;
+mes $npc$;
+mes "Enter ^FF2000account_id^000000 to allow VIP access to specified player.";
+next;
+input .account_id$;
+next;
+mes $npc$;
+mes "Enter how many ^FF2000dias^000000 of VIP access you want to add:";
+input .dias$;
+next;
+Query_SQL "SELECT `userid` FROM `login` WHERE `account_id`='"+.account_id$+"'",.login$;
+mes $npc$;
+mes "You're about to add ^FF2000"+.dias$+"^000000 days VIP access to the player of lign details: ^FF2000"+.login$+"^000000.";
+mes "---------";
+mes "^008000Is this correct?^000000";
+switch(select("Yes:No")){
+
+case 1:
+next;
+Query_SQL "UPDATE `login` SET `"+$bdias$+"`=`"+$bdias$+"` + '"+.dias$+"' WHERE `account_id`='"+.account_id$+"'";
+Query_SQL "UPDATE `login` SET `level`='"+$lvl+"' WHERE `account_id`='"+.account_id$+"'";
+mes $npc$;
+mes "Ok, os dias foram adicionados com sucesso.";
+next;
+goto inicio;
+
+case 2:
+next;
+mes "Invalid input, correct your input.";
+next;
+goto inicio;
+}
+
+nada:
+close;
+
+nogm:
+mes $npc$;
+mes "Restricted Access.";
+close;
+
+}
+
+// =================================================
+// Ferramenta do Servidor: Controle dos VIPs; ======
+// =================================================
+
+-	script	Controle VIP#vipt5	-1,{
+
+OnClock0000:
+
+Query_SQL "UPDATE `login` SET `"+$bdias$+"`=`"+$bdias$+"`-'1' WHERE `level`='"+$lvl+"'";
+//Query_SQL "UPDATE `login` SET `"+$bdias$+"`=`"+$bdias$+"`-'1' WHERE `level`='"+$lvlfree+"'";
+Query_SQL "UPDATE `login` SET `level`='0' WHERE `"+$bdias$+"` <= '0'";
+Query_SQL "UPDATE `login` SET `"+$bdias$+"`='0' WHERE `"+$bdias$+"` < '0'";
+end;
+}
+
+
+pallet,80,23,4	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#pallet	100
+cpmarkin1,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Viridian	100
+cpmarkin2,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Pewter	100
+cpmarkin3,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Cerulean	100
+cpmarkin4,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Saffron	100
+cpmarkin5,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Celadon	100
+cpmarkin6,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Vermilio	100
+cpmarkin7,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Lavender	100
+cpmarkin8,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Fuchsia	100
+cpmarkin9,103,70,5	duplicate(Vendedor VIP#vipt3)	Vendedor VIP#Cinnabar	100
+
+

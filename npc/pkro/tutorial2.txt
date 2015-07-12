@@ -1,0 +1,110 @@
+housein,61,130,0	script	Tutorial#oak	111,{
+
+
+mes "[Tutorial PkRO Adventure]";
+mes "Bem vindo ao tutorial do PkRO!";
+mes "Gostaria de ler o tutorial do jogo?";
+
+	menu "Sim",-,"Não",nao;
+	
+next;
+mes "[Tutorial PkRO Adventure]";
+mes "PkRO é um jogo baseado no anime Pokemon, sem fins lucrativos que tem como objetivo a divulgação e entretenimento de todos os fãns e outros deste Anime.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Ao iniciar o jogo, você não possuirá nada. Para conseguir seu primeiro pokemon, dirija-se ao laboratório do Prof. Oak em Pallet, e fale com o mesmo.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "O sistema básico dos pokemons funciona através de 2 itens. A pokeball do pokemon e um item para retorna-lo. Existe um delay de 5 segundos na re-utilização do item Retornar.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Apertando Alt + R você abrirá o painel de controle do seu pokemon. Dentre as informações e botões, vale ressaltar a barra de fome e a lealdade do seu pokemon.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Você deve alimentar periodicamente seu pokemon para que ele ganhe lealdade com você. Existem vários tipos de alimentos que são conseguidos pelo jogo. A lealdade varia de 0~1000 sendo representada por níveis como: Baixa, Alta, entre outras.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "A cada ponto de fome preenchido, seu pokemon ganha um ponto de lealdade. Esta lealdade influencia no dano das habilidades de seu pokemon, podendo aumentar em até 10% o dano final. Caso seu pokemon morra de fome (Fome = 0), ele terá sua lealdade zerada, e caso ele morra em batalha, ele perderá 5% da lealdade atual.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Junto ao seu primeiro pokemon, você receberá uma pokedex que pode registrar pokemons selvagens. Assim você obterá várias informações sobre o mesmo. Ela tem 3 funções: Registrar um pokemon nos dados da Pokedex, ler as informações gravadas, e a explicada a seguir.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "A terceira função da pokedex é um limite do jogo que está em desenvolvimento, para que seja feito de uma forma mais prática. Se você atacar um alvo sem a pokedex equipada, o seu personagem andará em direção ao alvo (oque atrapalha a jogabilidade). Por isso, mantenha sua pokedex o tempo todo equipada, para atacar de longe.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Para poder abrir um chat, dar trade em alguem, sentar, entre outras funções básicas, você deverá passar de level sua habilidade chamada Basic Skill.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Seu pokemon aprenderá novas habilidades ao decorrer dos leveis que ele alcançar. Para que estas habilidades apareçam na janela de habilidades do pokemon, você deve remove-lo e liberta-lo de novo. O level que cada pokemon aprende novas habilidades, pode ser visto na pokedex.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Para seu pokemon andar à um certo local, segure o botão Alt e aperte no local desejado com o botão direito do mouse.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Para que seu pokemon pare de atacar um alvo, você tem duas opções: ou ordena que ele ande para qualquer local, ou utiliza do comando @stop.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Por limites do jogo, em determinados momentos seu pokemon pode parar de segui-lo. Para que o mesmo volte a acompanhar você, utilize a combinação  Alt + T  , se não der certo, utilize o já comentado comando  @stop.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Vários comandos estão disponíveis para você no jogo (Alguns só estão liberados para players Vip). Para verificar quais comandos você pode usar, digite  @commands.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Existem vários tipos de pokebolas no jogo, cada uma com uma certa chance de captura. Quanto menor estiver o HP do pokemon e o level do mesmo, maior será a chance de captura.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Para você não perder a experiência do pokemon que tentou capturar, a vida do mesmo deve estar menor que 10% na hora da captura. Assim, você e seu pokemon ativo ganharão a experiência dele normalmente.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Qualquer Problema ou Bug no jogo, avise rápidamente no nosso fórum   http://pkro.forumj.net   , caso seja comprovado que um jogador abusou de Bugs para se beneficiar no jogo, ele poderá ser banido do server.";    
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Qualquer dúvida, pergunte aos jogadores mais experientes, poste elas no fórum, ou até tente entrar em contato com alguem da Staff, que rapidamente seu problema será resolvido.";
+next;
+
+mes "[Tutorial PkRO Adventure]";
+mes "Espero que tenhamos le passado pelo menos o básico para ajudar em sua jornada. Muitas outras coisas precisam, e serão aprendidas durante sua experiência nesse mundo. O tutorial termina por aqui. Boa Sorte!";
+close;
+
+nao:
+mes "[Tutorial PkRO Adventure]";
+mes "Muito bem. Boa sorte em sua jornada.";
+mes "O tutorial estará sempre disponível neste livro.";
+close;
+
+end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

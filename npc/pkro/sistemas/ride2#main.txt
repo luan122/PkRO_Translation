@@ -1,0 +1,179 @@
+-	script	ride2#main	-1,{
+
+//setarray .@menu$[1],"Venusaur","Charizard","Pidgeot","Fearow","Ninetales","Venomoth","Arcanine","Ponyta","Rapidash","Dodrio","Onix","Rhyhorn","Tauros","Aerodactyl","Articuno","Zapdos","Moltres","Dragonite";
+setarray .@menu$[1],"Arcanine","Rapidash","Onix","Rhyhorn","Tauros","Dragonite";
+
+//if( countitem(8033) == 0 )set .@menu$[1],"";
+//if( countitem(8036) == 0 )set .@menu$[2],"";
+//if( countitem(8048) == 0 )set .@menu$[3],"";
+//if( countitem(8052) == 0 )set .@menu$[4],"";
+//if( countitem(8068) == 0 )set .@menu$[5],"";
+//if( countitem(8079) == 0 )set .@menu$[6],"";
+//if( countitem(8089) == 0 )set .@menu$[7],"";
+//if( countitem(8107) == 0 )set .@menu$[8],"";
+//if( countitem(8108) == 0 )set .@menu$[9],"";
+//if( countitem(8115) == 0 )set .@menu$[10],"";
+//if( countitem(8125) == 0 )set .@menu$[11],"";
+//if( countitem(8141) == 0 )set .@menu$[12],"";
+//if( countitem(8158) == 0 )set .@menu$[13],"";
+//if( countitem(8172) == 0 )set .@menu$[14],"";
+//if( countitem(8174) == 0 )set .@menu$[15],"";
+//if( countitem(8175) == 0 )set .@menu$[16],"";
+//if( countitem(8176) == 0 )set .@menu$[17],"";
+//if( countitem(8179) == 0 )set .@menu$[18],"";
+
+
+
+if( countitem(8089) == 0 )set .@menu$[1],"";
+if( countitem(8108) == 0 )set .@menu$[2],"";
+if( countitem(8125) == 0 )set .@menu$[3],"";
+if( countitem(8141) == 0 )set .@menu$[4],"";
+if( countitem(8158) == 0 )set .@menu$[5],"";
+if( countitem(8179) == 0 )set .@menu$[6],"";
+
+
+if( ride == 0 ){
+
+	mes "                      ^CC3300[Ride]^000000";
+//	select(.@menu$[1],.@menu$[2],.@menu$[3],.@menu$[4],.@menu$[5],.@menu$[6],.@menu$[7],.@menu$[8],.@menu$[9],.@menu$[10],.@menu$[11],.@menu$[12],.@menu$[13],.@menu$[14],.@menu$[15],.@menu$[16],.@menu$[17],.@menu$[18]);
+	select(.@menu$[1],.@menu$[2],.@menu$[3],.@menu$[4],.@menu$[5],.@menu$[6]);
+	
+switch(@menu)
+{
+case 1:
+atcommand "@disguise 1059";
+atcommand "@speed 90";
+set ride, 1059;
+set ride2, 90;
+setstate(2);
+close;
+break;
+
+case 2:
+atcommand "@disguise 1078";
+atcommand "@speed 90";
+set ride, 1078;
+set ride2, 90;
+setstate(2);
+close;
+break;
+
+case 3:
+atcommand "@disguise 1095";
+atcommand "@speed 120";
+set ride, 1095;
+set ride2, 120;
+setstate(2);
+close;
+break;
+
+case 4:
+atcommand "@disguise 1111";
+atcommand "@speed 120";
+set ride, 1111;
+set ride2, 120;
+setstate(2);
+close;
+break;
+
+case 5:
+atcommand "@disguise 1128";
+atcommand "@speed 100";
+set ride, 1128;
+set ride2, 100;
+setstate(2);
+close;
+break;
+
+case 6:
+atcommand "@disguise 1149";
+atcommand "@speed 90";
+set ride, 1149;
+set ride2, 90;
+setstate(2);
+close;
+break;
+
+//case 7:
+//atcommand "@disguise 2559";
+//set ride, 2559;
+//close;
+//break;
+
+//case 8:
+//atcommand "@disguise 2577";
+//set ride, 2577;
+//close;
+//break;
+
+//case 9:
+//atcommand "@disguise 2578";
+//set ride, 2578;
+//close;
+//break;
+
+//case 10:
+//atcommand "@disguise 2585";
+//set ride, 2585;
+//close;
+//break;
+
+//case 11:
+//atcommand "@disguise 2595";
+//set ride, 2595;
+//close;
+//break;
+
+//case 12:
+//atcommand "@disguise 2611";
+//set ride, 2611;
+//close;
+//break;
+
+//case 13:
+//atcommand "@disguise 2628";
+//set ride, 2628;
+//close;
+//break;
+
+//case 14:
+//atcommand "@disguise 2642";
+//set ride, 2642;
+//close;
+//break;
+
+//case 15:
+//atcommand "@disguise 2644";
+//set ride, 2644;
+//close;
+//break;
+
+//case 16:
+//atcommand "@disguise 2645";
+//set ride, 2645;
+//close;
+//break;
+
+//case 17:
+//atcommand "@disguise 2646";
+//set ride, 2646;
+//close;
+//break;
+
+//case 18:
+//atcommand "@disguise 2649";
+//set ride, 2649;
+//close;
+//break;
+
+}
+}else{
+set ride, 0;
+set ride2, 0;
+setstate(0);
+atcommand "@undisguise";
+atcommand "@speed 150";
+close;
+}
+
+}

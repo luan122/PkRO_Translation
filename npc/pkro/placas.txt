@@ -1,0 +1,125 @@
+rota1,6,211,0	script	Placa#1	837,{
+
+mes "                      Pallet";
+
+close;
+end;
+}
+
+//------------------------------------------
+
+passagem1,22,32,0	script	Placa#2	837,{
+
+mes "                      Viridian";
+
+close;
+end;
+}
+
+hunt1,277,95,0	duplicate(Placa#2)	Placa#3	837
+rota2,289,7,0	duplicate(Placa#2)	Placa#4	837
+
+//------------------------------------------
+
+rota2,123,360,0	script	Placa#5	837,{
+
+mes "                      Pewter";
+
+close;
+end;
+}
+
+hunt2,268,236,0	duplicate(Placa#5)	Placa#6	837
+passagem2,66,23,4	duplicate(Placa#5)	Placa#7	837
+mtmoon,30,163,0	duplicate(Placa#5)	Placa#8	837
+
+//------------------------------------------
+
+rota3,273,358,0	script	Placa#9	837,{
+
+mes "                      Cerulean";
+
+close;
+end;
+}
+
+cerubeach,128,7,0	duplicate(Placa#9)	Placa#10	837
+tunel3,63,16,0	duplicate(Placa#9)	Placa#11	837
+rota5,185,286,0	duplicate(Placa#9)	Placa#12	837
+
+//------------------------------------------
+
+rota5,268,18,0	script	Placa#13	837,{
+
+mes "                      Saffron";
+
+close;
+end;
+}
+
+rota7,126,99,0	duplicate(Placa#13)	Placa#14	837
+rota6,152,259,0	duplicate(Placa#13)	Placa#15	837
+
+//------------------------------------------
+
+rota7,14,84,0	script	Placa#16	837,{
+
+mes "                      Celadon";
+
+close;
+end;
+}
+
+//------------------------------------------
+
+rota6,186,15,0	script	Placa#17	837,{
+
+mes "                      Vermilion";
+
+close;
+end;
+}
+
+rota11,24,109,0	duplicate(Placa#17)	Placa#18	837
+
+//------------------------------------------
+
+rota10,55,27,0	script	Placa#19	837,{
+
+mes "                      Lavender";
+
+close;
+end;
+}
+
+rota8,253,103,0	duplicate(Placa#19)	Placa#20	837
+tunel4,55,102,0	duplicate(Placa#19)	Placa#21	837
+rota12,65,370,0	duplicate(Placa#19)	Placa#22	837
+
+//------------------------------------------
+
+rota13,32,48,0	script	Placa#23	837,{
+
+mes "                      Fuchsia";
+
+close;
+end;
+}
+
+passagem5,18,32,0	duplicate(Placa#23)	Placa#24	837
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

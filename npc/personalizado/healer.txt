@@ -1,0 +1,10 @@
+pallet,62,75,4	script	JoyTemporaria	863,{
+
+atcommand "@repairall";
+healhomun2 50000,0;
+
+}
+
+
+
+pallet,60,75,5	shop	Loja de Testes	83,19149:500,19070:800,692:500,18005:1200,18012:4000,18006:10000;

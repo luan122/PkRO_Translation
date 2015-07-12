@@ -1,0 +1,91 @@
+//=============================================
+//== Autor: Wendell ===================================
+//=============================================
+vermilion,165,155,4	script	Dilan	841,{
+	
+	if(npc3p4 == 0){
+	if(npc3p2 == 1){
+	if(npc3p3 == 0){
+	
+	mes "[^CC0000Dilan^000000]";
+	mes "Olá "+StrCharInfo(0)+"!";
+	mes "Oque você faz aqui?";
+	next;
+	if( select("Estou aqui em nome de Joe para negociar o Trevo de Quatro Folhas:Só estava passando") == 2 )
+	{
+		mes "[^CC0000Dilan^000000]";
+		mes "Tudo bem, estarei aqui se você precisar.";
+		close;
+	}
+	mes "[^CC0000Dilan^000000]";
+	mes "Eu tive muita sorte de achar esse Trevo.";
+	mes "Para consegui-lo, vc vai ter que me trazer uma flor de Izidor que o Snorlax da rota11 comeu.";
+	mes "Vai trazer o item para mim?";
+	next;
+	switch(select("Sim!:Não Obrigado"))
+	{
+	case 1:
+		mes "[^CC0000Dilan^000000]";
+		mes "Ok, vou esperar você voltar.";		
+		set npc3p3,1;
+		close;
+		
+	case 2:
+		mes "[^CC0000Dilan^000000]";
+		mes "Tudo bem, estarei aqui se você mudar de idéia.";
+		close;
+	}
+	}else{
+	
+		if(countitem(709) > 0){
+			mes "[^CC0000Dilan^000000]";
+			mes "Wow, vejo que você é forte mesmo.";
+			mes "Muito Obrigado pela ajuda. Pegue, aqui está o Trevo de Quatro Folhas.";
+			next;
+
+			mes "^CC0000Obs: Você ganhará um bonus de experiência. Certifique-se que possui um pokemon ativo.^000000";	
+			if( select("Receber o Premio agora:Receber o premio depois") == 2 )
+			{
+				mes "[^CC0000Dilan^000000]";
+				mes "Tudo bem, estarei aqui caso queira a recompensa.";
+				close;
+			}
+
+
+			next;
+			delitem 709,1;
+			additem 706,1;
+			getexp 700000,0;
+			set npc3p4,1;
+			close;
+		
+		}else{
+	
+	
+	
+		mes "[^CC0000Dilan^000000]";
+		mes "Vejo que ainda não conseguiu minha Izidor.";
+		mes "Vou esperar aqui.";	
+		close;	
+		
+		}
+		
+		
+		
+	}
+	}else{
+		mes "[^CC0000Dilan^000000]";
+		mes "Olá, estou ocupado planejando como conseguir minha Izidor de volta.";
+		close;		
+	}
+	
+	
+}else{
+		mes "[^CC0000Dilan^000000]";
+		mes "Obrigado pela ajuda. Você se tornará um grande treinador.";
+		close;
+}
+	
+	
+	
+}

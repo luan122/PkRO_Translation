@@ -1,0 +1,104 @@
+//-------------------------------------//
+//	|   _ |	    / / |    _ | ___  |//
+//	|  |_||	   / /	|   |_|||   | |//
+//	|  ___|	    /	|    __||   | |//
+//	| |	|\  \	| |\ \	|   | |//
+//	| |	| \  \	| | \ \	|___| |//
+//	|_|	|  \__\	|_|  \_\______|//
+//-------------------------------------//
+housein,162,131,0	script	Computer#GM	111,{
+
+set @nomedonpc$,"Computer";
+
+	mes "["+@nomedonpc$+"]";
+	mes "Pokedex connected to: ^00BFFF"+strcharinfo(0)+"^000000.";
+	next;
+
+//	menu "PokeStorage",i_s,"E-mails",e_s,"Ranking Level-Jogador",level,"Ranking Caught",caught,"Ranking Level-Pokemon",level2,"Cancelar",n_n;
+	menu "PokeStorage",i_s,"Cancelar",n_n;
+
+i_s:
+    	openstorage;
+
+close;
+
+
+//e_s:
+//	openmail;
+//close;
+
+
+//level:
+//query_sql "SELECT `name`,`base_level` FROM `char` WHERE `char_id` > 150002 ORDER BY `base_level` DESC,`job_level` DESC,`char_id` DESC LIMIT 10", .@name$,.@level;
+//	mes "[Top 10 Levels]";
+//	for (set .@i,0; .@i<getarraysize(.@name$); set .@i,.@i+1)
+//		mes .@name$[.@i] + ":  " + ((.@level[.@i] >=0) ? "^008000 Level "+.@level[.@i] : "^FF0000-"+.@level[.@i]) + " ^000000";
+//	close;
+
+
+//caught:
+//query_sql "SELECT `value`,`char_id` FROM `global_reg_value` WHERE `str` = 'caught', `char_id` > 150002 ORDER BY `value` DESC,`char_id` DESC LIMIT 10",.@caught,.@char_id;
+//	mes "[Top 10 Caughts]";
+//	for (set .@i,0; .@i<getarraysize(.@name$); set .@i,.@i+1)
+//		mes .@char_id[.@i] + ":  " + ((.@caught[.@i] >=0) ? "^008000"+.@caught[.@i] : "^FF0000-"+.@caught[.@i]) + " Caughts^000000";
+//	close;
+
+
+//level2:
+//query_sql "SELECT `name`,`level`,`char_id` FROM `homunculus` WHERE `char_id` > 150002 ORDER BY `level` DESC,`char_id` DESC LIMIT 10", .@namepk$,.@level,.@char_id;
+//	mes "[Top 10 Levels Pokemon]";
+//	for (set .@i,0; .@i<getarraysize(.@namepk$); set .@i,.@i+1)
+//		mes .@char_id + " - " +.@namepk$[.@i] + ":  " + ((.@level[.@i] >=0) ? "^008000 Level "+.@level[.@i] : "^FF0000-"+.@level[.@i]) + " ^000000";
+//	close;	
+
+
+n_n:
+	mes "["+@nomedonpc$+"]";
+	mes "Logging off Computer...";
+close;
+}
+
+// --------- NPC Clones ---------//
+housein.gat,118,177,5	duplicate(Computer#GM)	Computer#AshRoom	111	//AshRoom
+
+housein.gat,129,57,5	duplicate(Computer#GM)	Computer#Vip1	111	//Viridian1
+housein.gat,129,63,5	duplicate(Computer#GM)	Computer#Vip2	111	//Viridian1
+
+cpmarkin1.gat,129,57,5	duplicate(Computer#GM)	Computer#viridian1	111	//Viridian1
+cpmarkin1.gat,129,63,5	duplicate(Computer#GM)	Computer#viridian2	111	//Viridian1
+
+cpmarkin2.gat,129,57,5	duplicate(Computer#GM)	Computer#pewter1	111	//Viridian1
+cpmarkin2.gat,129,63,5	duplicate(Computer#GM)	Computer#pewter2	111	//Viridian1
+
+cpmarkin3.gat,129,57,5	duplicate(Computer#GM)	Computer#cerulean1	111	//Viridian1
+cpmarkin3.gat,129,63,5	duplicate(Computer#GM)	Computer#cerulean2	111	//Viridian1
+
+cpmarkin4.gat,129,57,5	duplicate(Computer#GM)	Computer#saffron1	111	//Viridian1
+cpmarkin4.gat,129,63,5	duplicate(Computer#GM)	Computer#saffron2	111	//Viridian1
+
+cpmarkin5.gat,129,57,5	duplicate(Computer#GM)	Computer#celadon1	111	//Viridian1
+cpmarkin5.gat,129,63,5	duplicate(Computer#GM)	Computer#celadon2	111	//Viridian1
+
+cpmarkin6.gat,129,57,5	duplicate(Computer#GM)	Computer#vermilion1	111	//Viridian1
+cpmarkin6.gat,129,63,5	duplicate(Computer#GM)	Computer#vermilion2	111	//Viridian1
+
+cpmarkin7.gat,129,57,5	duplicate(Computer#GM)	Computer#lavender1	111	//Viridian1
+cpmarkin7.gat,129,63,5	duplicate(Computer#GM)	Computer#lavender2	111	//Viridian1
+
+cpmarkin8.gat,129,57,5	duplicate(Computer#GM)	Computer#fuchsia1	111	//Viridian1
+cpmarkin8.gat,129,63,5	duplicate(Computer#GM)	Computer#fuchsia2	111	//Viridian1
+
+cpmarkin9.gat,129,57,5	duplicate(Computer#GM)	Computer#cinnabar1	111	//Viridian1
+cpmarkin9.gat,129,63,5	duplicate(Computer#GM)	Computer#cinnabar2	111	//Viridian1
+
+
+
+
+
+
+
+
+
+
+
+
